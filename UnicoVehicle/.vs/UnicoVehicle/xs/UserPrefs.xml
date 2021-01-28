@@ -1,17 +1,29 @@
 ﻿<Properties StartupConfiguration="{113FDCED-19CE-4C54-A260-12C37E137339}|Default">
   <MonoDevelop.Ide.ItemProperties.UnicoVehicle.BLL FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle.BLL/Class1.cs">
+  <MonoDevelop.Ide.ItemProperties.UnicoVehicle.DLL FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.UnicoVehicle.Utilities FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle.Utilities/Class1.cs">
     <Files>
       <File FileName="UnicoVehicle.BLL/Class1.cs" Line="1" Column="1" />
+      <File FileName="UnicoVehicle.DAL/Class1.cs" Line="1" Column="1" />
+      <File FileName="UnicoVehicle.DLL/Class1.cs" Line="1" Column="1" />
+      <File FileName="UnicoVehicle.Utilities/Class1.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="UnicoVehicle" expanded="True" />
+          <Node name="UnicoVehicle" expanded="True">
+            <Node name="UnicoVehicle.DAL" expanded="True" />
+            <Node name="UnicoVehicle.DLL" expanded="True" />
+            <Node name="UnicoVehicle.Utilities" expanded="True">
+              <Node name="Class1.cs" selected="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.UnicoVehicle.DAL FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
