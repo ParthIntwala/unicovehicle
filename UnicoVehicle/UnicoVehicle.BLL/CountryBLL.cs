@@ -22,16 +22,22 @@ namespace UnicoVehicle.BLL
             return _countries;
         }
 
+        public Country getCountrybyId(int id)
+        {
+            Country _country = _countryDAL.getCountrybyId(id);
+            return _country;
+        }
+
         public bool insertCountry(string country)
         {
             _status = _countryDAL.insertCountry(country);
             return _status;
         }
 
-        public Country getCountrybyId(int id)
+        public bool deleteCountry(int id)
         {
-            Country _country = _countryDAL.getCountrybyId(id);
-            return _country;
+            _status = _countryDAL.deleteCountry(id);
+            return _status;
         }
     }
 }

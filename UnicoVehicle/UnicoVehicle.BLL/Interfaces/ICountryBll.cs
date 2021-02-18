@@ -8,5 +8,6 @@ namespace UnicoVehicle.BLL
         List<Country> get();
         public bool insertCountry(string country);
         public Country getCountrybyId(int id);
+        public bool deleteCountry(int id);
     }
 }

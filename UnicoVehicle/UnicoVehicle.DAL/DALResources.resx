@@ -15,10 +15,13 @@
     <data name="GetCountry" xml:space="preserve">
     <value>select CountryId, Country from [UnicoVehicle].[country].[Country] where DeletedDate is null</value>
     </data>
-     <data name="InsertCountry" xml:space="preserve">
+    <data name="InsertCountry" xml:space="preserve">
     <value>insert into [UnicoVehicle].[country].[Country] (Country, CreatedDate) values (@country, @createdDate)</value>
     </data>
-     <data name="GetCountrybyId" xml:space="preserve">
+    <data name="GetCountrybyId" xml:space="preserve">
     <value>select Country from [UnicoVehicle].[country].[Country] where DeletedDate is null and CountryId = @countryId</value>
+    </data>
+    <data name="DeleteCountry" xml:space="preserve">
+    <value>Update [UnicoVehicle].[country].[Country] set DeletedDate = @deletedDate where CountryId = @countryId</value>
     </data>
 </root>

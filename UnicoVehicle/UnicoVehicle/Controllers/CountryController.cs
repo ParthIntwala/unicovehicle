@@ -42,5 +42,12 @@ namespace UnicoVehicle.Controllers
             _status = _countryBll.insertCountry(country.CountryName);
             return _status;
         }
+
+        [HttpDelete("{Id}")]
+        public bool deleteCountry(int id)
+        {
+            _status = _countryBll.deleteCountry(id);
+            return _status;
+        }
     }
 }

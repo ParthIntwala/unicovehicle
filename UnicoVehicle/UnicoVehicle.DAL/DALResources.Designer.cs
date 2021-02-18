@@ -64,5 +64,11 @@ namespace UnicoVehicle.DAL {
                 return ResourceManager.GetString("GetCountrybyId", resourceCulture);
             }
         }
+        
+        internal static string DeleteCountry {
+            get {
+                return ResourceManager.GetString("DeleteCountry", resourceCulture);
+            }
+        }
     }
 }

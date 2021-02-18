@@ -86,5 +86,24 @@ namespace UnicoVehicle.DAL
                 return false;
             }
         }
+
+        public bool deleteCountry(int id)
+        {
+            _countryCommand = _utils.CommandGenerator(DALResources.DeleteCountry);
+            _countryCommand.Parameters.AddWithValue("@countryId", id);
+            _countryCommand.Parameters.AddWithValue("@deletedDate", DateTime.Now);
+
+            _success = _countryCommand.ExecuteNonQuery();
+            _connection.CloseConnection();
+
+            if (_success > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
