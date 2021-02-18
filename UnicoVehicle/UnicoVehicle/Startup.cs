@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using UnicoVehicle.Utilities;
+using UnicoVehicle.DAL;
+using UnicoVehicle.BLL;
 
 namespace UnicoVehicle
 {
@@ -25,6 +28,15 @@ namespace UnicoVehicle
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            ConnectionProvider connection = new ConnectionProvider();
+
+            Configuration.Bind("ConnectionStrings", connection);
+            services.AddSingleton(connection);
+            services.AddScoped<Connection>();
+            services.AddTransient<IUtils, Utils>();
+            services.AddTransient<ICountryDAL, CountryDAL>();
+            services.AddTransient<ICountryBll, CountryBll>();
+
             services.AddControllers();
         }
 

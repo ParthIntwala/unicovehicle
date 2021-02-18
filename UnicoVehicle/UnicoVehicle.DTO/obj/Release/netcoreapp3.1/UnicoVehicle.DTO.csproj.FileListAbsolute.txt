@@ -1,0 +1,9 @@
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/bin/Release/netcoreapp3.1/UnicoVehicle.DTO.deps.json
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/bin/Release/netcoreapp3.1/UnicoVehicle.DTO.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/bin/Release/netcoreapp3.1/UnicoVehicle.DTO.pdb
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/obj/Release/netcoreapp3.1/UnicoVehicle.DTO.csprojAssemblyReference.cache
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/obj/Release/netcoreapp3.1/UnicoVehicle.DTO.AssemblyInfoInputs.cache
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/obj/Release/netcoreapp3.1/UnicoVehicle.DTO.AssemblyInfo.cs
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/obj/Release/netcoreapp3.1/UnicoVehicle.DTO.csproj.CoreCompileInputs.cache
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/obj/Release/netcoreapp3.1/UnicoVehicle.DTO.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/obj/Release/netcoreapp3.1/UnicoVehicle.DTO.pdb

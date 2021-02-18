@@ -4,4 +4,23 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\UnicoVehicle.Utilities\UnicoVehicle.Utilities.csproj" />
+    <ProjectReference Include="..\UnicoVehicle.DTO\UnicoVehicle.DTO.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="util\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="DALResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DALResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="DALResources.Designer.cs">
+      <DependentUpon>DALResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
