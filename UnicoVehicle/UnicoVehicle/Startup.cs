@@ -35,7 +35,9 @@ namespace UnicoVehicle
             services.AddScoped<Connection>();
             services.AddTransient<IUtils, Utils>();
             services.AddTransient<ICountryDAL, CountryDAL>();
+            services.AddTransient<IStateDAL, StateDAL>();
             services.AddTransient<ICountryBll, CountryBll>();
+            services.AddTransient<IStateBLL, StateBLL>();
 
             services.AddControllers();
         }

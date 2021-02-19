@@ -70,5 +70,29 @@ namespace UnicoVehicle.DAL {
                 return ResourceManager.GetString("DeleteCountry", resourceCulture);
             }
         }
+        
+        internal static string GetState {
+            get {
+                return ResourceManager.GetString("GetState", resourceCulture);
+            }
+        }
+        
+        internal static string InsertState {
+            get {
+                return ResourceManager.GetString("InsertState", resourceCulture);
+            }
+        }
+        
+        internal static string GetStatebyId {
+            get {
+                return ResourceManager.GetString("GetStatebyId", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteState {
+            get {
+                return ResourceManager.GetString("DeleteState", resourceCulture);
+            }
+        }
     }
 }

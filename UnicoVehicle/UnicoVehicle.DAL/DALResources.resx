@@ -24,4 +24,16 @@
     <data name="DeleteCountry" xml:space="preserve">
     <value>Update [UnicoVehicle].[country].[Country] set DeletedDate = @deletedDate where CountryId = @countryId</value>
     </data>
+    <data name="GetState" xml:space="preserve">
+    <value>select StateId, State, CountryId from [UnicoVehicle].[country].[State] where DeletedDate is null</value>
+    </data>
+    <data name="InsertState" xml:space="preserve">
+    <value>insert into [UnicoVehicle].[country].[State] (State, CountryId, CreatedDate) values (@state, @countryId, @createdDate)</value>
+    </data>
+    <data name="GetStatebyId" xml:space="preserve">
+    <value>select StateId, State, CountryId from [UnicoVehicle].[country].[State] where DeletedDate is null and StateId = @stateId</value>
+    </data>
+    <data name="DeleteState" xml:space="preserve">
+    <value>Update [UnicoVehicle].[country].[State] set DeletedDate = @deletedDate where StateId = @stateId</value>
+    </data>
 </root>
