@@ -17,38 +17,38 @@ namespace UnicoVehicle.BLL
             _countryDAL = countryDAL;
         }
 
-        public List<State> get()
+        public List<State> Get()
         {
-            List<State> _states = _stateDAL.getState();
+            List<State> _states = _stateDAL.GetState();
 
             foreach(State state in _states)
             {
-                Country country = _countryDAL.getCountrybyId(state.CountryName.CountryId);
+                Country country = _countryDAL.GetCountrybyId(state.CountryName.CountryId);
                 state.CountryName = country;
             }
 
             return _states;
         }
 
-        public State getStatebyId(int id)
+        public State GetStatebyId(int id)
         {
-            State _state = _stateDAL.getStatebyId(id);
+            State _state = _stateDAL.GetStatebyId(id);
 
-            Country country = _countryDAL.getCountrybyId(_state.CountryName.CountryId);
+            Country country = _countryDAL.GetCountrybyId(_state.CountryName.CountryId);
             _state.CountryName = country;
 
             return _state;
         }
 
-        public bool insertState(string state, int countryId)
+        public bool InsertState(string state, int countryId)
         {
-            _status = _stateDAL.insertState(state, countryId);
+            _status = _stateDAL.InsertState(state, countryId);
             return _status;
         }
 
-        public bool deleteState(int id)
+        public bool DeleteState(int id)
         {
-            _status = _stateDAL.deleteState(id);
+            _status = _stateDAL.DeleteState(id);
             return _status;
         }
     }

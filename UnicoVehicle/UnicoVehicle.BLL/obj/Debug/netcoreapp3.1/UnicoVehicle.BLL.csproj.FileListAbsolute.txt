@@ -4,8 +4,8 @@
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/bin/Debug/netcoreapp3.1/UnicoVehicle.DAL.dll
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/bin/Debug/netcoreapp3.1/UnicoVehicle.DTO.dll
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/bin/Debug/netcoreapp3.1/UnicoVehicle.Utilities.dll
-/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/bin/Debug/netcoreapp3.1/UnicoVehicle.DAL.pdb
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/bin/Debug/netcoreapp3.1/UnicoVehicle.DTO.pdb
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/bin/Debug/netcoreapp3.1/UnicoVehicle.DAL.pdb
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/bin/Debug/netcoreapp3.1/UnicoVehicle.Utilities.pdb
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/obj/Debug/netcoreapp3.1/UnicoVehicle.BLL.csprojAssemblyReference.cache
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.BLL/obj/Debug/netcoreapp3.1/UnicoVehicle.BLL.AssemblyInfoInputs.cache

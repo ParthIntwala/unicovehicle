@@ -6,7 +6,8 @@
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/bin/Debug/netcoreapp3.1/UnicoVehicle.Utilities.pdb
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/bin/Debug/netcoreapp3.1/UnicoVehicle.DTO.pdb
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.csprojAssemblyReference.cache
-/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.DALResources.resources
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.AccessoriesDALResources.resources
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.CountryDALResources.resources
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.csproj.GenerateResource.cache
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.AssemblyInfoInputs.cache
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.AssemblyInfo.cs
@@ -14,3 +15,4 @@
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.csproj.CopyComplete
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.dll
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.pdb
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.MasterDALResources.resources

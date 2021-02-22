@@ -94,5 +94,29 @@ namespace UnicoVehicle.DAL {
                 return ResourceManager.GetString("DeleteState", resourceCulture);
             }
         }
+        
+        internal static string GetDistrict {
+            get {
+                return ResourceManager.GetString("GetDistrict", resourceCulture);
+            }
+        }
+        
+        internal static string InsertDistrict {
+            get {
+                return ResourceManager.GetString("InsertDistrict", resourceCulture);
+            }
+        }
+        
+        internal static string GetDistrictbyId {
+            get {
+                return ResourceManager.GetString("GetDistrictbyId", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteDistrict {
+            get {
+                return ResourceManager.GetString("DeleteDistrict", resourceCulture);
+            }
+        }
     }
 }

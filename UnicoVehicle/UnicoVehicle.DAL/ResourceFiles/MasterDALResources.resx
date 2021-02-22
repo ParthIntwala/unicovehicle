@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="GetAccessoriesType" xml:space="preserve">
+    <value>Select AccessoriesTypeId, AccessoriesType from [UnicoVehicle].[master].[AccessoriesType] where DeletedDate is null </value>
+    </data>
+    <data name="GetAccessoriesTypebyId" xml:space="preserve">
+    <value>Select AccessoriesType from [UnicoVehicle].[master].[AccessoriesType] where DeletedDate is null and AccessoriesTypeId = @accessoriesTypeId</value>
+    </data>
+    <data name="InsertAccessoriesType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[AccessoriesType] (AccessoriesType, CreatedDate) values (@accessoriesType, @createdDate)</value>
+    </data>
+    <data name="DeleteAccessoriesType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[AccessoriesType] set DeletedDate = @deletedDate where AccessoriesTypeId = @accessoriesTypeId</value>
+    </data>
+    <data name="UpdateAccessoriesType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[AccessoriesType] set ModifiedDate = @modifiedDate, AccessoriesType = @accessoriesType where AccessoriesTypeId = @accessoriesTypeId</value>
+    </data>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+</root>

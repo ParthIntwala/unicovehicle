@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using UnicoVehicle.BLL;
 using UnicoVehicle.DTO;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace UnicoVehicle.Controllers
 {
     [ApiController]
@@ -25,28 +23,28 @@ namespace UnicoVehicle.Controllers
         [HttpGet]
         public List<State> GetStates()
         {
-            List<State> _allStates = _stateBll.get();
+            List<State> _allStates = _stateBll.Get();
             return _allStates;
         }
 
         [HttpGet("{Id}")]
-        public State GetCountriesbyId(int id)
+        public State GetStatesbyId(int id)
         {
-            State _country = _stateBll.getStatebyId(id);
-            return _country;
+            State _state = _stateBll.GetStatebyId(id);
+            return _state;
         }
 
         [HttpPost]
-        public bool insertCountry([FromBody] State state)
+        public bool InsertState([FromBody] State state)
         {
-            _status = _stateBll.insertState(state.StateName, state.CountryName.CountryId);
+            _status = _stateBll.InsertState(state.StateName, state.CountryName.CountryId);
             return _status;
         }
 
         [HttpDelete("{Id}")]
-        public bool deleteCountry(int id)
+        public bool DeleteState(int id)
         {
-            _status = _stateBll.deleteState(id);
+            _status = _stateBll.DeleteState(id);
             return _status;
         }
     }

@@ -20,9 +20,9 @@ namespace UnicoVehicle.DAL
             _utils = utils;
         }
 
-        public List<State> getState()
+        public List<State> GetState()
         {
-            _stateCommand = _utils.CommandGenerator(DALResources.GetState);
+            _stateCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.GetState);
             _stateReader = _stateCommand.ExecuteReader();
 
             State _state;
@@ -49,9 +49,9 @@ namespace UnicoVehicle.DAL
             return _states;
         }
 
-        public State getStatebyId(int id)
+        public State GetStatebyId(int id)
         {
-            _stateCommand = _utils.CommandGenerator(DALResources.GetStatebyId);
+            _stateCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.GetStatebyId);
             _stateCommand.Parameters.AddWithValue("@stateId", id);
             _stateReader = _stateCommand.ExecuteReader();
             State _state = new State();
@@ -76,9 +76,9 @@ namespace UnicoVehicle.DAL
 
         }
 
-        public bool insertState(string state, int countryId)
+        public bool InsertState(string state, int countryId)
         {
-            _stateCommand = _utils.CommandGenerator(DALResources.InsertState);
+            _stateCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.InsertState);
             _stateCommand.Parameters.AddWithValue("@state", state);
             _stateCommand.Parameters.AddWithValue("@countryId", countryId);
             _stateCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
@@ -96,9 +96,9 @@ namespace UnicoVehicle.DAL
             }
         }
 
-        public bool deleteState(int id)
+        public bool DeleteState(int id)
         {
-            _stateCommand = _utils.CommandGenerator(DALResources.DeleteState);
+            _stateCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.DeleteState);
             _stateCommand.Parameters.AddWithValue("@stateId", id);
             _stateCommand.Parameters.AddWithValue("@deletedDate", DateTime.Now);
 

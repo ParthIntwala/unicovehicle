@@ -398,7 +398,8 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "UnicoVehicle.BLL/1.0.0": {
         "dependencies": {
-          "UnicoVehicle.DAL": "1.0.0"
+          "UnicoVehicle.DAL": "1.0.0",
+          "UnicoVehicle.DTO": "1.0.0"
         },
         "runtime": {
           "UnicoVehicle.BLL.dll": {}

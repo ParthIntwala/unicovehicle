@@ -10,17 +10,38 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="util\" />
-    <Folder Include="Interfaces\" />
+    <Folder Include="ResourceFiles\" />
+    <Folder Include="CountryDALClass\" />
+    <Folder Include="CountryDALClass\Interfaces\" />
+    <Folder Include="MasterDALClass\" />
+    <Folder Include="MasterDALClass\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="DALResources.resx">
+    <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Country\DALResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>DALResources.Designer.cs</LastGenOutput>
+      <LastGenOutput>CountryResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\CountryDALResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>CountryDALResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\MasterDALResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MasterDALResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="DALResources.Designer.cs">
+    <Compile Remove="DALResources.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Country\DALResources.Designer.cs">
       <DependentUpon>DALResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFiles\CountryDALResources.Designer.cs">
+      <DependentUpon>CountryDALResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFiles\MasterDALResources.Designer.cs">
+      <DependentUpon>MasterDALResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

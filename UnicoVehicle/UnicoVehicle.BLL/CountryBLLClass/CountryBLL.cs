@@ -15,28 +15,28 @@ namespace UnicoVehicle.BLL
             _countryDAL = countryDAL;
         }
 
-        public List<Country> get()
+        public List<Country> Get()
         {
-            List<Country> _countries = _countryDAL.getCountry();
+            List<Country> _countries = _countryDAL.GetCountry();
 
             return _countries;
         }
 
-        public Country getCountrybyId(int id)
+        public Country GetCountrybyId(int id)
         {
-            Country _country = _countryDAL.getCountrybyId(id);
+            Country _country = _countryDAL.GetCountrybyId(id);
             return _country;
         }
 
-        public bool insertCountry(string country)
+        public bool InsertCountry(string country)
         {
-            _status = _countryDAL.insertCountry(country);
+            _status = _countryDAL.InsertCountry(country);
             return _status;
         }
 
-        public bool deleteCountry(int id)
+        public bool DeleteCountry(int id)
         {
-            _status = _countryDAL.deleteCountry(id);
+            _status = _countryDAL.DeleteCountry(id);
             return _status;
         }
     }

@@ -20,9 +20,9 @@ namespace UnicoVehicle.DAL
             _utils = utils;
         }
 
-        public List<Country> getCountry()
+        public List<Country> GetCountry()
         {
-            _countryCommand = _utils.CommandGenerator(DALResources.GetCountry);
+            _countryCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.GetCountry);
             _countryReader = _countryCommand.ExecuteReader();
 
             Country _country;
@@ -45,9 +45,9 @@ namespace UnicoVehicle.DAL
             return _countries;
         }
 
-        public Country getCountrybyId(int id)
+        public Country GetCountrybyId(int id)
         {
-            _countryCommand = _utils.CommandGenerator(DALResources.GetCountrybyId);
+            _countryCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.GetCountrybyId);
             _countryCommand.Parameters.AddWithValue("@countryId", id);
             _countryReader = _countryCommand.ExecuteReader();
             Country _country = new Country();
@@ -68,9 +68,9 @@ namespace UnicoVehicle.DAL
 
         }
 
-        public bool insertCountry(string country)
+        public bool InsertCountry(string country)
         {
-            _countryCommand = _utils.CommandGenerator(DALResources.InsertCountry);
+            _countryCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.InsertCountry);
             _countryCommand.Parameters.AddWithValue("@country", country);
             _countryCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
@@ -87,9 +87,9 @@ namespace UnicoVehicle.DAL
             }
         }
 
-        public bool deleteCountry(int id)
+        public bool DeleteCountry(int id)
         {
-            _countryCommand = _utils.CommandGenerator(DALResources.DeleteCountry);
+            _countryCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.DeleteCountry);
             _countryCommand.Parameters.AddWithValue("@countryId", id);
             _countryCommand.Parameters.AddWithValue("@deletedDate", DateTime.Now);
 

@@ -36,8 +36,12 @@ namespace UnicoVehicle
             services.AddTransient<IUtils, Utils>();
             services.AddTransient<ICountryDAL, CountryDAL>();
             services.AddTransient<IStateDAL, StateDAL>();
+            services.AddTransient<IDistrictDAL, DistrictDAL>();
+            services.AddTransient<IAccessoriesTypeDAL, AccessoriesTypeDAL>();
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();
+            services.AddTransient<IDistrictBLL, DistrictBLL>();
+            services.AddTransient<IAccessoriesTypeBLL, AccessoriesTypeBLL>();
 
             services.AddControllers();
         }
