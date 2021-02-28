@@ -6,10 +6,8 @@ using UnicoVehicle.DTO;
 
 namespace UnicoVehicle.DAL
 {
-    public class FuelTypeDAL
+    public class FuelTypeDAL : IFuelTypeDAL
     {
-        //Changes are left to be made in resource file for correct query string and asssigning them to proper variable
-
         private readonly Connection _connection;
         private readonly IUtils _utils;
         private SqlCommand _fuelTypeCommand;
@@ -22,9 +20,9 @@ namespace UnicoVehicle.DAL
             _utils = utils;
         }
 
-        public List<FuelType> GetAccessoryType()
+        public List<FuelType> GetFuelType()
         {
-            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetAccessoriesType);
+            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetFuelType);
             _fuelTypeReader = _fuelTypeCommand.ExecuteReader();
 
             FuelType _fuelType;
@@ -34,8 +32,8 @@ namespace UnicoVehicle.DAL
             {
                 _fuelType = new FuelType()
                 {
-                    FuelTypeId = int.Parse(_fuelTypeReader["AccessoriesTypeId"].ToString()),
-                    FuelTypeName = _fuelTypeReader["AccessoriesType"].ToString(),
+                    FuelTypeId = int.Parse(_fuelTypeReader["FuelTypeId"].ToString()),
+                    FuelTypeName = _fuelTypeReader["FuelType"].ToString(),
                 };
 
                 _fuelTypes.Add(_fuelType);
@@ -47,10 +45,10 @@ namespace UnicoVehicle.DAL
             return _fuelTypes;
         }
 
-        public FuelType GetAccessoriesTypebyId(int id)
+        public FuelType GetFuelTypebyId(int id)
         {
-            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetAccessoriesTypebyId);
-            _fuelTypeCommand.Parameters.AddWithValue("@accessoriesTypeId", id);
+            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetFuelTypebyId);
+            _fuelTypeCommand.Parameters.AddWithValue("@fuelTypeId", id);
             _fuelTypeReader = _fuelTypeCommand.ExecuteReader();
 
             FuelType _fuelType = new FuelType();
@@ -59,7 +57,7 @@ namespace UnicoVehicle.DAL
             {
                 _fuelType = new FuelType
                 {
-                    FuelTypeName = _fuelTypeReader["AccessoriesType"].ToString(),
+                    FuelTypeName = _fuelTypeReader["FuelType"].ToString(),
                     FuelTypeId = id,
                 };
             }
@@ -71,10 +69,10 @@ namespace UnicoVehicle.DAL
 
         }
 
-        public bool InsertAccessoriesType(string fuelType)
+        public bool InsertFuelType(string fuelType)
         {
-            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.InsertAccessoriesType);
-            _fuelTypeCommand.Parameters.AddWithValue("@accessoriesType", fuelType);
+            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.InsertFuelType);
+            _fuelTypeCommand.Parameters.AddWithValue("@fuelType", fuelType);
             _fuelTypeCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
             _success = _fuelTypeCommand.ExecuteNonQuery();
@@ -90,31 +88,11 @@ namespace UnicoVehicle.DAL
             }
         }
 
-        public bool DeleteAccessoriesType(int id)
+        public bool DeleteFuelType(int id)
         {
-            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.DeleteAccessoriesType);
-            _fuelTypeCommand.Parameters.AddWithValue("@accessoriesTypeId", id);
+            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.DeleteFuelType);
+            _fuelTypeCommand.Parameters.AddWithValue("@fuelTypeId", id);
             _fuelTypeCommand.Parameters.AddWithValue("@deletedDate", DateTime.Now);
-
-            _success = _fuelTypeCommand.ExecuteNonQuery();
-            _connection.CloseConnection();
-
-            if (_success > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool UpdateAccessoriesType(string fuelType, int fuelTypeId)
-        {
-            _fuelTypeCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.UpdateAccessoriesType);
-            _fuelTypeCommand.Parameters.AddWithValue("@accessoriesType", fuelType);
-            _fuelTypeCommand.Parameters.AddWithValue("accessoriesTypeId", fuelTypeId);
-            _fuelTypeCommand.Parameters.AddWithValue("@modifiedDate", DateTime.Now);
 
             _success = _fuelTypeCommand.ExecuteNonQuery();
             _connection.CloseConnection();

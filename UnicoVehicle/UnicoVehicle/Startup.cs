@@ -38,10 +38,14 @@ namespace UnicoVehicle
             services.AddTransient<IStateDAL, StateDAL>();
             services.AddTransient<IDistrictDAL, DistrictDAL>();
             services.AddTransient<IAccessoriesTypeDAL, AccessoriesTypeDAL>();
+            services.AddTransient<IFuelTypeDAL, FuelTypeDAL>();
+            services.AddTransient<IVehicleTypeDAL, VehicleTypeDAL>();
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();
             services.AddTransient<IDistrictBLL, DistrictBLL>();
             services.AddTransient<IAccessoriesTypeBLL, AccessoriesTypeBLL>();
+            services.AddTransient<IFuelTypeBLL, FuelTypeBLL>();
+            services.AddTransient<IVehicleTypeBLL, VehicleTypeBLL>();
 
             services.AddControllers();
         }

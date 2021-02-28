@@ -23,13 +23,13 @@ namespace UnicoVehicle.BLL
 
         public AccessoriesType GetAccessoriesTypebyId(int id)
         {
-            AccessoriesType _country = _accessoriesTypeDAL.GetAccessoriesTypebyId(id);
-            return _country;
+            AccessoriesType _accessoriesType = _accessoriesTypeDAL.GetAccessoriesTypebyId(id);
+            return _accessoriesType;
         }
 
-        public bool InsertAccessoriesType(string country)
+        public bool InsertAccessoriesType(string accessoriesType)
         {
-            _status = _accessoriesTypeDAL.InsertAccessoriesType(country);
+            _status = _accessoriesTypeDAL.InsertAccessoriesType(accessoriesType);
             return _status;
         }
 

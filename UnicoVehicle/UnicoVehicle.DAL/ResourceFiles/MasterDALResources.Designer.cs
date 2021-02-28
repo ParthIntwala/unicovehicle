@@ -76,5 +76,53 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("UpdateAccessoriesType", resourceCulture);
             }
         }
+        
+        internal static string GetFuelType {
+            get {
+                return ResourceManager.GetString("GetFuelType", resourceCulture);
+            }
+        }
+        
+        internal static string GetFuelTypebyId {
+            get {
+                return ResourceManager.GetString("GetFuelTypebyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertFuelType {
+            get {
+                return ResourceManager.GetString("InsertFuelType", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteFuelType {
+            get {
+                return ResourceManager.GetString("DeleteFuelType", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehicleType {
+            get {
+                return ResourceManager.GetString("GetVehicleType", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehicleTypebyId {
+            get {
+                return ResourceManager.GetString("GetVehicleTypebyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertVehicleType {
+            get {
+                return ResourceManager.GetString("InsertVehicleType", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteVehicleType {
+            get {
+                return ResourceManager.GetString("DeleteVehicleType", resourceCulture);
+            }
+        }
     }
 }

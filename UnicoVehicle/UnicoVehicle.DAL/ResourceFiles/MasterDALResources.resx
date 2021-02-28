@@ -24,6 +24,42 @@
     <data name="UpdateAccessoriesType" xml:space="preserve">
     <value>Update [UnicoVehicle].[master].[AccessoriesType] set ModifiedDate = @modifiedDate, AccessoriesType = @accessoriesType where AccessoriesTypeId = @accessoriesTypeId</value>
     </data>
+    <data name="GetFuelType" xml:space="preserve">
+    <value>Select FuelTypeId, FuelType from [UnicoVehicle].[master].[FuelType] where DeletedDate is null </value>
+    </data>
+    <data name="GetFuelTypebyId" xml:space="preserve">
+    <value>Select FuelType from [UnicoVehicle].[master].[FuelType] where DeletedDate is null and FuelTypeId = @fuelTypeId</value>
+    </data>
+    <data name="InsertFuelType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[FuelType] (FuelType, CreatedDate) values (@fuelType, @createdDate)</value>
+    </data>
+    <data name="DeleteFuelType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[FuelType] set DeletedDate = @deletedDate where FuelTypeId = @fuelTypeId</value>
+    </data>
+    <data name="GetVehicleType" xml:space="preserve">
+    <value>Select VehicleTypeId, VehicleType from [UnicoVehicle].[master].[VehicleType] where DeletedDate is null </value>
+    </data>
+    <data name="GetVehicleTypebyId" xml:space="preserve">
+    <value>Select VehicleType from [UnicoVehicle].[master].[VehicleType] where DeletedDate is null and VehicleTypeId = @vehicleTypeId</value>
+    </data>
+    <data name="InsertVehicleType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[VehicleType] (VehicleType, CreatedDate) values (@vehicleType, @createdDate)</value>
+    </data>
+    <data name="DeleteVehicleType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[VehicleType] set DeletedDate = @deletedDate where VehicleTypeId = @vehicleTypeId</value>
+    </data>
+    <data name="GetVehicleType" xml:space="preserve">
+    <value>Select VehicleTypeId, VehicleType from [UnicoVehicle].[master].[VehicleType] where DeletedDate is null </value>
+    </data>
+    <data name="GetVehicleTypebyId" xml:space="preserve">
+    <value>Select VehicleType from [UnicoVehicle].[master].[VehicleType] where DeletedDate is null and VehicleTypeId = @vehicleTypeId</value>
+    </data>
+    <data name="InsertVehicleType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[VehicleType] (VehicleType, CreatedDate) values (@vehicleType, @createdDate)</value>
+    </data>
+    <data name="DeleteVehicleType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[VehicleType] set DeletedDate = @deletedDate where VehicleTypeId = @vehicleTypeId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
