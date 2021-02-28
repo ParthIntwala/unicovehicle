@@ -72,6 +72,21 @@
     <data name="DeleteTransmissionType" xml:space="preserve">
     <value>Update [UnicoVehicle].[master].[TransmissionType] set DeletedDate = @deletedDate where TransmissionTypeId = @transmissionTypeId</value>
     </data>
+    <data name="GetStatus" xml:space="preserve">
+    <value>Select StatusId, Status from [UnicoVehicle].[master].[Status] where DeletedDate is null </value>
+    </data>
+    <data name="GetStatusbyId" xml:space="preserve">
+    <value>Select Status from [UnicoVehicle].[master].[Status] where DeletedDate is null and StatusId = @statusId</value>
+    </data>
+    <data name="InsertStatus" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[Status] (Status, CreatedDate) values (@status, @createdDate)</value>
+    </data>
+    <data name="DeleteStatus" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[Status] set DeletedDate = @deletedDate where StatusId = @statusId</value>
+    </data>
+    <data name="UpdateStatus" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[STatus] set ModifiedDate = @modifiedDate, Status = @status where StatusId = @statusId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

@@ -172,5 +172,35 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("DeleteTransmissionType", resourceCulture);
             }
         }
+        
+        internal static string GetStatus {
+            get {
+                return ResourceManager.GetString("GetStatus", resourceCulture);
+            }
+        }
+        
+        internal static string GetStatusbyId {
+            get {
+                return ResourceManager.GetString("GetStatusbyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertStatus {
+            get {
+                return ResourceManager.GetString("InsertStatus", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteStatus {
+            get {
+                return ResourceManager.GetString("DeleteStatus", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateStatus {
+            get {
+                return ResourceManager.GetString("UpdateStatus", resourceCulture);
+            }
+        }
     }
 }

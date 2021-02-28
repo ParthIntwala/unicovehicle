@@ -42,6 +42,7 @@ namespace UnicoVehicle
             services.AddTransient<IVehicleTypeDAL, VehicleTypeDAL>();
             services.AddTransient<IUserTypeDAL, UserTypeDAL>();
             services.AddTransient<ITransmissionTypeDAL, TransmissionTypeDAL>();
+            services.AddTransient<IStatusDAL, StatusDAL>();
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();
             services.AddTransient<IDistrictBLL, DistrictBLL>();
@@ -50,6 +51,7 @@ namespace UnicoVehicle
             services.AddTransient<IVehicleTypeBLL, VehicleTypeBLL>();
             services.AddTransient<IUserTypeBLL, UserTypeBLL>();
             services.AddTransient<ITransmissionTypeBLL, TransmissionTypeBLL>();
+            services.AddTransient<IStatusBLL, StatusBLL>();
             //services.AddTransient<>();
             services.AddControllers();
         }
