@@ -1,30 +1,22 @@
 ﻿<Properties StartupConfiguration="{113FDCED-19CE-4C54-A260-12C37E137339}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle.DAL/ResourceFiles/SampleResourceFile.resx">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle.DAL/StatusDAL.cs">
     <Files>
-      <File FileName="UnicoVehicle.DAL/UserType.cs" Line="60" Column="31" />
-      <File FileName="UnicoVehicle.DAL/ResourceFiles/MasterDALResources.resx" Line="5" Column="17" />
-      <File FileName="UnicoVehicle.DAL/ResourceFiles/SampleResourceFile.resx" Line="1" Column="1" />
+      <File FileName="UnicoVehicle.DAL/StatusDAL.cs" Line="11" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UnicoVehicle" expanded="True">
-            <Node name="UnicoVehicle" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
+            <Node name="UnicoVehicle" expanded="True" />
             <Node name="UnicoVehicle.BLL" expanded="True">
               <Node name="MasterBLLClass" expanded="True">
                 <Node name="Interfaces" expanded="True" />
               </Node>
             </Node>
             <Node name="UnicoVehicle.DAL" expanded="True">
-              <Node name="MasterDALClass" expanded="True">
-                <Node name="Interfaces" expanded="True" />
-              </Node>
-              <Node name="ResourceFiles" expanded="True">
-                <Node name="MasterDALResources.resx" expanded="True" />
-                <Node name="SampleResourceFile.resx" selected="True" />
-              </Node>
+              <Node name="MasterDALClass" expanded="True" />
+              <Node name="ResourceFiles" expanded="True" />
+              <Node name="StatusDAL.cs" selected="True" />
             </Node>
             <Node name="UnicoVehicle.Utilities" expanded="True" />
           </Node>

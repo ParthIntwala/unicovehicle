@@ -35,14 +35,14 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPost]
-        public bool insertCountry([FromBody]Country country)
+        public bool InsertCountry([FromBody]Country country)
         {
             _status = _countryBll.InsertCountry(country.CountryName);
             return _status;
         }
 
         [HttpDelete("{Id}")]
-        public bool deleteCountry(int id)
+        public bool DeleteCountry(int id)
         {
             _status = _countryBll.DeleteCountry(id);
             return _status;

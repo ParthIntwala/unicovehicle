@@ -35,14 +35,14 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPost]
-        public bool insertVehicleType([FromBody] VehicleType vehicleType)
+        public bool InsertVehicleType([FromBody] VehicleType vehicleType)
         {
             _status = _vehicleTypeBll.InsertVehicleType(vehicleType.VehicleTypeName);
             return _status;
         }
 
         [HttpDelete("{Id}")]
-        public bool deleteVehicleType(int id)
+        public bool DeleteVehicleType(int id)
         {
             _status = _vehicleTypeBll.DeleteVehicleType(id);
             return _status;

@@ -5,10 +5,10 @@ namespace UnicoVehicle.BLL
 {
     public interface IAccessoriesTypeBLL
     {
-        bool DeleteAccessoriesType(int id);
-        List<AccessoriesType> Get();
-        AccessoriesType GetAccessoriesTypebyId(int id);
-        bool InsertAccessoriesType(string country);
-        bool UpdateAccessoriesType(string accessoriesType, int accessoriesTypeId);
+        public bool DeleteAccessoriesType(int id);
+        public List<AccessoriesType> Get();
+        public AccessoriesType GetAccessoriesTypebyId(int id);
+        public bool InsertAccessoriesType(string country);
+        public bool UpdateAccessoriesType(string accessoriesType, int accessoriesTypeId);
     }
 }

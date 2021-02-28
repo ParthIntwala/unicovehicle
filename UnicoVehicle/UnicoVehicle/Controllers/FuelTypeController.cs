@@ -35,14 +35,14 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPost]
-        public bool insertFuelType([FromBody] FuelType fuelType)
+        public bool InsertFuelType([FromBody] FuelType fuelType)
         {
             _status = _fuelTypeBll.InsertFuelType(fuelType.FuelTypeName);
             return _status;
         }
 
         [HttpDelete("{Id}")]
-        public bool deleteFuelType(int id)
+        public bool DeleteFuelType(int id)
         {
             _status = _fuelTypeBll.DeleteFuelType(id);
             return _status;

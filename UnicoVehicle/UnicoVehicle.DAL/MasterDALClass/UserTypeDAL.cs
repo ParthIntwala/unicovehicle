@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 namespace UnicoVehicle.DAL
 {
-    public class UserTypeDAL
+    public class UserTypeDAL : IUserTypeDAL
     {
         private readonly Connection _connection;
         private readonly IUtils _utils;
@@ -21,7 +21,7 @@ namespace UnicoVehicle.DAL
 
         public List<UserType> GetUserType()
         {
-            _userCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetVehicleType);
+            _userCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetUserType);
             _userReader = _userCommand.ExecuteReader();
 
             UserType _userType;
@@ -31,8 +31,8 @@ namespace UnicoVehicle.DAL
             {
                 _userType = new UserType()
                 {
-                    UserTypeId = int.Parse(_userReader["VehicleTypeId"].ToString()),
-                    UsersType = _userReader["VehicleType"].ToString(),
+                    UserTypeId = int.Parse(_userReader["UserTypeId"].ToString()),
+                    UsersType = _userReader["UserType"].ToString(),
                 };
 
                 _userTypes.Add(_userType);
@@ -46,8 +46,8 @@ namespace UnicoVehicle.DAL
 
         public UserType GetUserTypebyId(int id)
         {
-            _userCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetVehicleTypebyId);
-            _userCommand.Parameters.AddWithValue("@vehicleTypeId", id);
+            _userCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetUserTypebyId);
+            _userCommand.Parameters.AddWithValue("@userTypeId", id);
             _userReader = _userCommand.ExecuteReader();
 
             UserType _userType = new UserType();
@@ -56,7 +56,7 @@ namespace UnicoVehicle.DAL
             {
                 _userType = new UserType
                 {
-                    UsersType = _userReader["VehicleType"].ToString(),
+                    UsersType = _userReader["userType"].ToString(),
                     UserTypeId = id,
                 };
             }
@@ -68,10 +68,10 @@ namespace UnicoVehicle.DAL
 
         }
 
-        public bool InsertUserType(string vehicleType)
+        public bool InsertUserType(string userType)
         {
-            _userCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.InsertVehicleType);
-            _userCommand.Parameters.AddWithValue("@vehicleType", vehicleType);
+            _userCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.InsertUserType);
+            _userCommand.Parameters.AddWithValue("@userType", userType);
             _userCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
             _success = _userCommand.ExecuteNonQuery();
@@ -89,8 +89,8 @@ namespace UnicoVehicle.DAL
 
         public bool DeleteUserType(int id)
         {
-            _userCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.DeleteVehicleType);
-            _userCommand.Parameters.AddWithValue("@vehicleTypeId", id);
+            _userCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.DeleteUserType);
+            _userCommand.Parameters.AddWithValue("@userTypeId", id);
             _userCommand.Parameters.AddWithValue("@deletedDate", DateTime.Now);
 
             _success = _userCommand.ExecuteNonQuery();

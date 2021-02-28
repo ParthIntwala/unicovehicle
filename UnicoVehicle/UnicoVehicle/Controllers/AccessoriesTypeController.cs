@@ -35,21 +35,21 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPost]
-        public bool insertAccessoriesType([FromBody] AccessoriesType accessoriesType)
+        public bool InsertAccessoriesType([FromBody] AccessoriesType accessoriesType)
         {
             _status = _accessoriesBll.InsertAccessoriesType(accessoriesType.Accessories);
             return _status;
         }
 
         [HttpDelete("{Id}")]
-        public bool deleteAccessoriesType(int id)
+        public bool DeleteAccessoriesType(int id)
         {
             _status = _accessoriesBll.DeleteAccessoriesType(id);
             return _status;
         }
 
         [HttpPut("{Id}")]
-        public bool updateAccessoriesType(int id, [FromBody] AccessoriesType accessoriesType)
+        public bool UpdateAccessoriesType(int id, [FromBody] AccessoriesType accessoriesType)
         {
             _status = _accessoriesBll.UpdateAccessoriesType(accessoriesType.Accessories, id);
             return _status;

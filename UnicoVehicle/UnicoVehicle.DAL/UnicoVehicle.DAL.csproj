@@ -29,10 +29,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MasterDALResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="ResourceFiles\SampleResourceFile.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>SampleResourceFile.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="DALResources.Designer.cs" />
@@ -46,9 +42,6 @@
     </Compile>
     <Compile Update="ResourceFiles\MasterDALResources.Designer.cs">
       <DependentUpon>MasterDALResources.resx</DependentUpon>
-    </Compile>
-    <Compile Update="ResourceFiles\SampleResourceFile.Designer.cs">
-      <DependentUpon>SampleResourceFile.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>
