@@ -209,9 +209,9 @@ namespace UnicoVehicle.DAL.ResourceFiles {
             }
         }
         
-        internal static string GetCylinderArragnementbyId {
+        internal static string GetCylinderArrangementbyId {
             get {
-                return ResourceManager.GetString("GetCylinderArragnementbyId", resourceCulture);
+                return ResourceManager.GetString("GetCylinderArrangementbyId", resourceCulture);
             }
         }
         

@@ -32,8 +32,11 @@ namespace UnicoVehicle
 
             Configuration.Bind("ConnectionStrings", connection);
             services.AddSingleton(connection);
+            //connection
             services.AddScoped<Connection>();
+            //Command Generator
             services.AddTransient<IUtils, Utils>();
+            //DAL Classes
             services.AddTransient<ICountryDAL, CountryDAL>();
             services.AddTransient<IStateDAL, StateDAL>();
             services.AddTransient<IDistrictDAL, DistrictDAL>();
@@ -43,6 +46,10 @@ namespace UnicoVehicle
             services.AddTransient<IUserTypeDAL, UserTypeDAL>();
             services.AddTransient<ITransmissionTypeDAL, TransmissionTypeDAL>();
             services.AddTransient<IStatusDAL, StatusDAL>();
+            services.AddTransient<IInsuranceTypeDAL, InsuranceTypeDAL>();
+            services.AddTransient<ICylinderArrangementDAL, CylinderArrangementDAL>();
+            services.AddTransient<ICompanyDAL, CompanyDAL>();
+            //BLL Classes
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();
             services.AddTransient<IDistrictBLL, DistrictBLL>();
@@ -52,6 +59,9 @@ namespace UnicoVehicle
             services.AddTransient<IUserTypeBLL, UserTypeBLL>();
             services.AddTransient<ITransmissionTypeBLL, TransmissionTypeBLL>();
             services.AddTransient<IStatusBLL, StatusBLL>();
+            services.AddTransient<IInsuranceTypeBLL, InsuranceTypeBLL>();
+            services.AddTransient<ICylinderArrangementBLL, CylinderArrangementBLL>();
+            services.AddTransient<ICompanyBLL, CompanyBLL>();
             //services.AddTransient<>();
             services.AddControllers();
         }

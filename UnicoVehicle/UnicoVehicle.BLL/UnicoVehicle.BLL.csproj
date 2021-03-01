@@ -13,5 +13,7 @@
     <Folder Include="CountryBLLClass\Interfaces\" />
     <Folder Include="MasterBLLClass\" />
     <Folder Include="MasterBLLClass\Interfaces\" />
+    <Folder Include="CompanyBLLClass\" />
+    <Folder Include="CompanyBLLClass\Interfaces\" />
   </ItemGroup>
 </Project>

@@ -90,8 +90,8 @@
     <data name="GetCylinderArrangement" xml:space="preserve">
     <value>Select CylinderArrangementId, CylinderArrangement from [UnicoVehicle].[master].[CylinderArrangement] where DeletedDate is null </value>
     </data>
-    <data name="GetCylinderArragnementbyId" xml:space="preserve">
-    <value>Select CtlinderArrangement from [UnicoVehicle].[master].[CylinderArrangement] where DeletedDate is null and CylinderArrangementId = @cylinderArrangementId</value>
+    <data name="GetCylinderArrangementbyId" xml:space="preserve">
+    <value>Select CylinderArrangement from [UnicoVehicle].[master].[CylinderArrangement] where DeletedDate is null and CylinderArrangementId = @cylinderArrangementId</value>
     </data>
     <data name="InsertCylinderArrangement" xml:space="preserve">
     <value>Insert into [UnicoVehicle].[master].[CylinderArrangement] (CylinderArrangement, CreatedDate) values (@cylinderArrangement, @createdDate)</value>
@@ -103,7 +103,7 @@
     <value>Select InsuranceTypeId, InsuranceType from [UnicoVehicle].[master].[InsuranceType] where DeletedDate is null </value>
     </data>
     <data name="GetInsuranceTypebyId" xml:space="preserve">
-    <value>Select Status from [UnicoVehicle].[master].[InsuranceType] where DeletedDate is null and InsuranceTypeId = @insuranceTypeId</value>
+    <value>Select InsuranceType from [UnicoVehicle].[master].[InsuranceType] where DeletedDate is null and InsuranceTypeId = @insuranceTypeId</value>
     </data>
     <data name="InsertInsuranceType" xml:space="preserve">
     <value>Insert into [UnicoVehicle].[master].[InsuranceType] (InsuranceType, CreatedDate) values (@insuranceType, @createdDate)</value>

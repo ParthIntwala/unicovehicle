@@ -15,3 +15,4 @@
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.dll
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.pdb
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.MasterDALResources.resources
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.CompanyDALResources.resources

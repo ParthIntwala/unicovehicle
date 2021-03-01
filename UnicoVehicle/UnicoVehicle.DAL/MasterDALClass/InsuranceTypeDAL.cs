@@ -71,7 +71,7 @@ namespace UnicoVehicle.DAL
 
         public bool InsertInsuranceType(string insuranceType)
         {
-            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.InsertStatus);
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.InsertInsuranceType);
             _insuranceCommand.Parameters.AddWithValue("@insuranceType", insuranceType);
             _insuranceCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
@@ -90,7 +90,7 @@ namespace UnicoVehicle.DAL
 
         public bool DeleteInsuranceType(int id)
         {
-            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.DeleteStatus);
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.DeleteInsuranceType);
             _insuranceCommand.Parameters.AddWithValue("@insuranceTypeId", id);
             _insuranceCommand.Parameters.AddWithValue("@deletedDate", DateTime.Now);
 
@@ -109,7 +109,7 @@ namespace UnicoVehicle.DAL
 
         public bool UpdateInsuranceType(string insuranceType, int insuranceTypeId)
         {
-            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.UpdateStatus);
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.UpdateInsuranceType);
             _insuranceCommand.Parameters.AddWithValue("@insuranceType", insuranceType);
             _insuranceCommand.Parameters.AddWithValue("@insuranceTypeId", insuranceTypeId);
             _insuranceCommand.Parameters.AddWithValue("@modifiedDate", DateTime.Now);
