@@ -33,7 +33,7 @@ namespace UnicoVehicle.BLL
         {
             Company _company = _companyDAL.GetCompanybyId(id);
 
-            if(_company.CompanyHead != 0)
+            if(_company.CompanyId != 0)
                 _company.District = _districtBLL.GetDistrictbyId(_company.District.DistrictId);
 
             return _company;

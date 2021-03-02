@@ -106,5 +106,35 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("UpdateCompanyCountry", resourceCulture);
             }
         }
+        
+        internal static string GetShowroom {
+            get {
+                return ResourceManager.GetString("GetShowroom", resourceCulture);
+            }
+        }
+        
+        internal static string GetShowroombyId {
+            get {
+                return ResourceManager.GetString("GetShowroombyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertShowroom {
+            get {
+                return ResourceManager.GetString("InsertShowroom", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteShowroom {
+            get {
+                return ResourceManager.GetString("DeleteShowroom", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateShowroom {
+            get {
+                return ResourceManager.GetString("UpdateShowroom", resourceCulture);
+            }
+        }
     }
 }

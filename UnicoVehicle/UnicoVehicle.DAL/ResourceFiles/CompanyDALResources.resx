@@ -39,6 +39,21 @@
     <data name="UpdateCompanyCountry" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[CompanyCountry] set DistrictId = @districtId, CountryHead = @countryHead, isOperational = @isOperational, ModifiedDate = @modifiedDate where CompanyCountryId = @companyCountryId</value>
     </data>
+    <data name="GetShowroom" xml:space="preserve">
+    <value>Select ShowroomId, CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational from [UnicoVehicle].[company].[Showroom] where DeletedDate is null </value>
+    </data>
+    <data name="GetShowroombyId" xml:space="preserve">
+    <value>Select CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational from [UnicoVehicle].[company].[Showroom] where DeletedDate is null and ShowroomId = @showroomId</value>
+    </data>
+    <data name="InsertShowroom" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[company].[Showroom] (CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational, CreatedDate) values (@companyId, @districtId, @showroomName, @AddressLine1, @pincode, @branchManager, @hasSales, @hasService, @isOperational, @createdDate)</value>
+    </data>
+    <data name="DeleteShowroom" xml:space="preserve">
+    <value>Update [UnicoVehicle].[company].[Showroom] set DeletedDate = @deletedDate where ShowroomId = @showroomId</value>
+    </data>
+    <data name="UpdateShowroom" xml:space="preserve">
+    <value>Update [UnicoVehicle].[company].[Showroom] set DistrictId = @districtId, ShowroomName = @showroomName, AddressLine1 = @addressLine1, Pincode = @pincode, BranchManager = @branchManager, hasSales = @hasSales, hasService = @hasService, isOperational = @isOperational, ModifiedDate = @modifiedDate where ShowroomId = @showroomId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
