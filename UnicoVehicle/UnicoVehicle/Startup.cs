@@ -49,6 +49,7 @@ namespace UnicoVehicle
             services.AddTransient<IInsuranceTypeDAL, InsuranceTypeDAL>();
             services.AddTransient<ICylinderArrangementDAL, CylinderArrangementDAL>();
             services.AddTransient<ICompanyDAL, CompanyDAL>();
+            services.AddTransient<ICompanyCountryDAL, CompanyCountryDAL>();
             //BLL Classes
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();
@@ -62,6 +63,7 @@ namespace UnicoVehicle
             services.AddTransient<IInsuranceTypeBLL, InsuranceTypeBLL>();
             services.AddTransient<ICylinderArrangementBLL, CylinderArrangementBLL>();
             services.AddTransient<ICompanyBLL, CompanyBLL>();
+            services.AddTransient<ICompanyCountryBLL, CompanyCountryBLL>();
             //services.AddTransient<>();
             services.AddControllers();
         }

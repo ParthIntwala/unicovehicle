@@ -24,6 +24,21 @@
     <data name="UpdateCompany" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[Company] set DistrictId = @districtId, CompanyName = @companyName, CompanyHead = @companyHead, ModifiedDate = @modifiedDate where CompanyId = @companyId</value>
     </data>
+    <data name="GetCompanyCountry" xml:space="preserve">
+    <value>Select CompanyCountryId, DistrictId, CompanyId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null </value>
+    </data>
+    <data name="GetCompanyCountrybyId" xml:space="preserve">
+    <value>Select DistrictId, CompanyId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null and CompanyCountryId = @companyCountryId</value>
+    </data>
+    <data name="InsertCompanyCountry" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[company].[CompanyCountry] (CompanyId, DistrictId, Countryhead, isOperational, CreatedDate) values (@companyId, @districtId, @countryHead, @isOperational, @createdDate)</value>
+    </data>
+    <data name="DeleteCompanyCountry" xml:space="preserve">
+    <value>Update [UnicoVehicle].[company].[CompanyCountry] set DeletedDate = @deletedDate where CompanyCountryId = @companyCountryId</value>
+    </data>
+    <data name="UpdateCompanyCountry" xml:space="preserve">
+    <value>Update [UnicoVehicle].[company].[CompanyCountry] set DistrictId = @districtId, CountryHead = @countryHead, isOperational = @isOperational, ModifiedDate = @modifiedDate where CompanyCountryId = @companyCountryId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

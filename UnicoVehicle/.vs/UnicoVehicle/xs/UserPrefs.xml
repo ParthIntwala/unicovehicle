@@ -4,16 +4,10 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UnicoVehicle" expanded="True">
-            <Node name="UnicoVehicle" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
-            <Node name="UnicoVehicle.BLL" expanded="True">
-              <Node name="CompanyBLLClass" expanded="True" />
-            </Node>
+            <Node name="UnicoVehicle" expanded="True" />
+            <Node name="UnicoVehicle.BLL" expanded="True" />
             <Node name="UnicoVehicle.DAL" expanded="True">
-              <Node name="CompanyDALClass" expanded="True">
-                <Node name="CompanyDAL.cs" selected="True" />
-              </Node>
+              <Node name="CompanyDALClass" expanded="True" />
               <Node name="ResourceFiles" expanded="True" />
             </Node>
             <Node name="UnicoVehicle.DTO" expanded="True" />

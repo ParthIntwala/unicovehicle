@@ -34,9 +34,11 @@ namespace UnicoVehicle.BLL
         {
             State _state = _stateDAL.GetStatebyId(id);
 
-            Country country = _countryDAL.GetCountrybyId(_state.CountryName.CountryId);
-            _state.CountryName = country;
-
+            if(_state.StateId != 0)
+            {
+                _state.CountryName = _countryDAL.GetCountrybyId(_state.CountryName.CountryId);
+            }
+                
             return _state;
         }
 

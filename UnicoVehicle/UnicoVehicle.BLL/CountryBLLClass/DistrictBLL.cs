@@ -34,8 +34,10 @@ namespace UnicoVehicle.BLL
         {
             District _district = _districtDAL.GetDistrictbyId(id);
 
-            State state = _stateBLL.GetStatebyId(_district.StateName.StateId);
-            _district.StateName = state;
+            if(_district.DistrictId != 0)
+            {
+                _district.StateName = _stateBLL.GetStatebyId(_district.StateName.StateId);
+            }
 
             return _district;
         }

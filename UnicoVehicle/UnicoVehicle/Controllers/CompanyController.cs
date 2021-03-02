@@ -21,28 +21,28 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet]
-        public List<Company> GetStates()
+        public List<Company> GetCompanys()
         {
             List<Company> _allCompanies = _companyBll.Get();
             return _allCompanies;
         }
 
         [HttpGet("{Id}")]
-        public Company GetStatesbyId(int id)
+        public Company GetCompanybyId(int id)
         {
             Company _company = _companyBll.GetCompanybyId(id);
             return _company;
         }
 
         [HttpPost]
-        public bool InsertState([FromBody] Company company)
+        public bool InsertCompany([FromBody] Company company)
         {
             _status = _companyBll.InsertCompany(company);
             return _status;
         }
 
         [HttpDelete("{Id}")]
-        public bool DeleteState(int id)
+        public bool DeleteCompany(int id)
         {
             _status = _companyBll.DeleteCompany(id);
             return _status;
