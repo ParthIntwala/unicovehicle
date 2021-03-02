@@ -38,8 +38,7 @@ namespace UnicoVehicle.DAL
                         DistrictId = int.Parse(_companyReader["DistrictId"].ToString()),
                     },
                     CompanyName = _companyReader["CompanyName"].ToString(),
-                    CountryHead = _companyReader["CountryHead"].ToString(),
-                    isOperational = Convert.ToBoolean(_companyReader["isOperational"].ToString()),
+                    CompanyHead = _companyReader["CompanyHead"].ToString(),
                 };
 
                 _companies.Add(_company);
@@ -69,8 +68,7 @@ namespace UnicoVehicle.DAL
                         DistrictId = int.Parse(_companyReader["DistrictId"].ToString()),
                     },
                     CompanyName = _companyReader["CompanyName"].ToString(),
-                    CountryHead = _companyReader["CountryHead"].ToString(),
-                    isOperational = Convert.ToBoolean(_companyReader["isOperational"].ToString()),
+                    CompanyHead = _companyReader["CompanyHead"].ToString(),
                 };
             }
 
@@ -86,8 +84,7 @@ namespace UnicoVehicle.DAL
             _companyCommand = _utils.CommandGenerator(ResourceFiles.CompanyDALResources.InsertCompany);
             _companyCommand.Parameters.AddWithValue("@districtId", company.District.DistrictId);
             _companyCommand.Parameters.AddWithValue("@companyName", company.CompanyName);
-            _companyCommand.Parameters.AddWithValue("@countryHead", company.CountryHead);
-            _companyCommand.Parameters.AddWithValue("@isOperational", company.isOperational);
+            _companyCommand.Parameters.AddWithValue("@companyHead", company.CompanyHead);
             _companyCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
             _success = _companyCommand.ExecuteNonQuery();
@@ -127,8 +124,7 @@ namespace UnicoVehicle.DAL
             _companyCommand = _utils.CommandGenerator(ResourceFiles.CompanyDALResources.UpdateCompany);
             _companyCommand.Parameters.AddWithValue("@districtId", company.District.DistrictId);
             _companyCommand.Parameters.AddWithValue("@companyName", company.CompanyName);
-            _companyCommand.Parameters.AddWithValue("@countryHead", company.CountryHead);
-            _companyCommand.Parameters.AddWithValue("@isOperational", company.isOperational);
+            _companyCommand.Parameters.AddWithValue("@companyHead", company.CompanyHead);
             _companyCommand.Parameters.AddWithValue("@companyId", id);
             _companyCommand.Parameters.AddWithValue("@modifiedDate", DateTime.Now);
 

@@ -10,19 +10,19 @@
         <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="GetCompany" xml:space="preserve">
-    <value>Select CompanyId, DistrictId, CompanyName, CountryHead, isOperational from [UnicoVehicle].[company].[Company] where DeletedDate is null </value>
+    <value>Select CompanyId, DistrictId, CompanyName, CompanyHead from [UnicoVehicle].[company].[Company] where DeletedDate is null </value>
     </data>
     <data name="GetCompanybyId" xml:space="preserve">
-    <value>Select DistrictId, CompanyName, CountryHead, isOperational from [UnicoVehicle].[company].[Company] where DeletedDate is null and CompanyId = @companyId</value>
+    <value>Select DistrictId, CompanyName, CompanyHead from [UnicoVehicle].[company].[Company] where DeletedDate is null and CompanyId = @companyId</value>
     </data>
     <data name="InsertCompany" xml:space="preserve">
-    <value>Insert into [UnicoVehicle].[company].[Company] (DistrictId, CompanyName, CountryHead, isOperational, CreatedDate) values (@districtId, @companyName, @countryHead, @isOperational, @createdDate)</value>
+    <value>Insert into [UnicoVehicle].[company].[Company] (DistrictId, CompanyName, CompanyHead, CreatedDate) values (@districtId, @companyName, @companyHead, @createdDate)</value>
     </data>
     <data name="DeleteCompany" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[Company] set DeletedDate = @deletedDate where CompanyId = @companyId</value>
     </data>
     <data name="UpdateCompany" xml:space="preserve">
-    <value>Update [UnicoVehicle].[company].[Company] set DistrictId = @districtId, CompanyName = @companyName, CountryHead = @countryHead, isOperational = @isOperational, ModifiedDate = @modifiedDate where CompanyId = @companyId</value>
+    <value>Update [UnicoVehicle].[company].[Company] set DistrictId = @districtId, CompanyName = @companyName, CompanyHead = @companyHead, ModifiedDate = @modifiedDate where CompanyId = @companyId</value>
     </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
