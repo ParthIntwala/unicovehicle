@@ -1,20 +1,12 @@
 ﻿<Properties StartupConfiguration="{113FDCED-19CE-4C54-A260-12C37E137339}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle.DTO/Showroom.cs">
-    <Files>
-      <File FileName="UnicoVehicle.DTO/Showroom.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UnicoVehicle" expanded="True">
             <Node name="UnicoVehicle" expanded="True" />
             <Node name="UnicoVehicle.BLL" expanded="True" />
-            <Node name="UnicoVehicle.DAL" expanded="True">
-              <Node name="CompanyDALClass" expanded="True" />
-            </Node>
-            <Node name="UnicoVehicle.DTO" expanded="True">
-              <Node name="Showroom.cs" selected="True" />
-            </Node>
+            <Node name="UnicoVehicle.DAL" expanded="True" />
           </Node>
         </State>
       </Pad>
