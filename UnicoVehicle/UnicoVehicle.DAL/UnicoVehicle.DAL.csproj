@@ -41,6 +41,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UserDALResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\InsuranceDALResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>InsuranceDALResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="DALResources.Designer.cs" />
@@ -60,6 +64,9 @@
     </Compile>
     <Compile Update="ResourceFiles\UserDALResources.Designer.cs">
       <DependentUpon>UserDALResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFiles\InsuranceDALResources.Designer.cs">
+      <DependentUpon>InsuranceDALResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

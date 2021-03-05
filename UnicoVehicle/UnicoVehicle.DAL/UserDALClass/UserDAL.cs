@@ -90,6 +90,7 @@ namespace UnicoVehicle.DAL
             _userCommand.Parameters.AddWithValue("@lastName", user.LastName);
             _userCommand.Parameters.AddWithValue("@emailId", user.EmailId);
             _userCommand.Parameters.AddWithValue("@password", user.Password);
+            _userCommand.Parameters.AddWithValue("@userTypeId", user.UserType.UserTypeId);
             _userCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
             _success = _userCommand.ExecuteNonQuery();

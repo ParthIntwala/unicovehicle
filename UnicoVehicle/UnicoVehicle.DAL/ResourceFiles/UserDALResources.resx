@@ -24,6 +24,21 @@
     <data name="UpdateUser" xml:space="preserve">
     <value>Update [UnicoVehicle].[user].[User] set FirstName = @firstName, LastName = @lastName, EmailId = @emailId, Password = @password, ModifiedDate = @modifiedDate where UserId = @userId</value>
     </data>
+    <data name="GetCustomer" xml:space="preserve">
+    <value>Select CustomerId, UserId, DistrictId, Address, Photograph, DrivingLicenseNumber, StandardIDNumber, IncomeTaxIDNumber, LastITReturn, BankPassbookPhoto from [UnicoVehicle].[user].[Customer] where DeletedDate is null </value>
+    </data>
+    <data name="GetCustomerbyId" xml:space="preserve">
+    <value>Select UserId, DistrictId, Address, Photograph, DrivingLicenseNumber, StandardIDNumber, IncomeTaxIDNumber, LastITReturn, BankPassbookPhoto from [UnicoVehicle].[user].[Customer] where DeletedDate is null and CustomerId = @customerId</value>
+    </data>
+    <data name="InsertCustomer" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[user].[Customer] (UserId, DistrictId, Address, Photograph, DrivingLicenseNumber, StandardIDNumber, IncomeTaxIDNumber, LastITReturn, BankPassbookPhoto, CreatedDate) values (@userId, @districtId, @address, @photograph, @drivingLicenseNumber, @standardIDNumber, @incomeTaxIDNumber, @lastITReturn, @bankPassbookPhoto, @createdDate)</value>
+    </data>
+    <data name="DeleteCustomer" xml:space="preserve">
+    <value>Update [UnicoVehicle].[user].[Customer] set DeletedDate = @deletedDate where CustomerId = @customerId</value>
+    </data>
+    <data name="UpdateCustomer" xml:space="preserve">
+    <value>Update [UnicoVehicle].[user].[Customer] set DistrictId = @districtId, Address = @address, Photograph = @photograph, DrivingLicenseNumber = @drivingLicenseNumber, LastITReturn = @lastITReturn, BankPassbookPhoto = @bankPassbookPhoto, ModifiedDate = @modifiedDate where CustomerId = @customerId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
