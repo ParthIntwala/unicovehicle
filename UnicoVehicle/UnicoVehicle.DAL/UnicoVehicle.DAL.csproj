@@ -19,6 +19,8 @@
     <Folder Include="CompanyDALClass\Interfaces\" />
     <Folder Include="UserDALClass\" />
     <Folder Include="UserDALClass\Interfaces\" />
+    <Folder Include="InsuranceDALClass\" />
+    <Folder Include="InsuranceDALClass\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Country\DALResources.resx">

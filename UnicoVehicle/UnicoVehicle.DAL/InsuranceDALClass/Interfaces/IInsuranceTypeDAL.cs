@@ -8,7 +8,7 @@ namespace UnicoVehicle.DAL
         public bool DeleteInsuranceType(int id);
         public List<InsuranceType> GetInsuranceType();
         public InsuranceType GetInsuranceTypebyId(int id);
-        public bool InsertInsuranceType(string insuranceType);
-        public bool UpdateInsuranceType(string insuranceType, int insuranceTypeId);
+        public bool InsertInsuranceType(InsuranceType insuranceType);
+        public bool UpdateInsuranceType(InsuranceType insuranceType, int insuranceTypeId);
     }
 }

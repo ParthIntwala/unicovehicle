@@ -22,7 +22,7 @@ namespace UnicoVehicle.DAL
 
         public List<InsuranceType> GetInsuranceType()
         {
-            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetInsuranceType);
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.InsuranceDALResources.GetInsuranceType);
             _insuranceReader = _insuranceCommand.ExecuteReader();
 
             InsuranceType _insuranceType;
@@ -34,6 +34,10 @@ namespace UnicoVehicle.DAL
                 {
                     InsuranceTypeId = int.Parse(_insuranceReader["InsuranceTypeId"].ToString()),
                     InsuranceTypeName = _insuranceReader["InsuranceType"].ToString(),
+                    InsuranceCompany = new InsuranceCompany
+                    {
+                        InsuranceCompanyId = int.Parse(_insuranceReader["InsuranceCompanyId"].ToString()),
+                    }
                 };
 
                 _insuranceTypes.Add(_insuranceType);
@@ -47,7 +51,7 @@ namespace UnicoVehicle.DAL
 
         public InsuranceType GetInsuranceTypebyId(int id)
         {
-            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.GetInsuranceTypebyId);
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.InsuranceDALResources.GetInsuranceTypebyId);
             _insuranceCommand.Parameters.AddWithValue("@insuranceTypeId", id);
             _insuranceReader = _insuranceCommand.ExecuteReader();
 
@@ -59,6 +63,10 @@ namespace UnicoVehicle.DAL
                 {
                     InsuranceTypeName = _insuranceReader["InsuranceType"].ToString(),
                     InsuranceTypeId = id,
+                    InsuranceCompany = new InsuranceCompany
+                    {
+                        InsuranceCompanyId = int.Parse(_insuranceReader["InsuranceCompanyId"].ToString()),
+                    }
                 };
             }
 
@@ -69,10 +77,11 @@ namespace UnicoVehicle.DAL
 
         }
 
-        public bool InsertInsuranceType(string insuranceType)
+        public bool InsertInsuranceType(InsuranceType insuranceType)
         {
-            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.InsertInsuranceType);
-            _insuranceCommand.Parameters.AddWithValue("@insuranceType", insuranceType);
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.InsuranceDALResources.InsertInsuranceType);
+            _insuranceCommand.Parameters.AddWithValue("@insuranceType", insuranceType.InsuranceTypeName);
+            _insuranceCommand.Parameters.AddWithValue("@insuranceCompanyId", insuranceType.InsuranceCompany.InsuranceCompanyId);
             _insuranceCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
             _success = _insuranceCommand.ExecuteNonQuery();
@@ -90,7 +99,7 @@ namespace UnicoVehicle.DAL
 
         public bool DeleteInsuranceType(int id)
         {
-            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.DeleteInsuranceType);
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.InsuranceDALResources.DeleteInsuranceType);
             _insuranceCommand.Parameters.AddWithValue("@insuranceTypeId", id);
             _insuranceCommand.Parameters.AddWithValue("@deletedDate", DateTime.Now);
 
@@ -107,11 +116,12 @@ namespace UnicoVehicle.DAL
             }
         }
 
-        public bool UpdateInsuranceType(string insuranceType, int insuranceTypeId)
+        public bool UpdateInsuranceType(InsuranceType insuranceType, int insuranceTypeId)
         {
-            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.MasterDALResources.UpdateInsuranceType);
-            _insuranceCommand.Parameters.AddWithValue("@insuranceType", insuranceType);
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.InsuranceDALResources.UpdateInsuranceType);
+            _insuranceCommand.Parameters.AddWithValue("@insuranceType", insuranceType.InsuranceTypeName);
             _insuranceCommand.Parameters.AddWithValue("@insuranceTypeId", insuranceTypeId);
+            _insuranceCommand.Parameters.AddWithValue("@insuranceCompanyId", insuranceType.InsuranceCompany.InsuranceCompanyId);
             _insuranceCommand.Parameters.AddWithValue("@modifiedDate", DateTime.Now);
 
             _success = _insuranceCommand.ExecuteNonQuery();

@@ -99,21 +99,6 @@
     <data name="DeleteCylinderArrangement" xml:space="preserve">
     <value>Update [UnicoVehicle].[master].[CylinderArrangement] set DeletedDate = @deletedDate where CylinderArrangementId = @cylinderArrangementId</value>
     </data>
-    <data name="GetInsuranceType" xml:space="preserve">
-    <value>Select InsuranceTypeId, InsuranceType from [UnicoVehicle].[master].[InsuranceType] where DeletedDate is null </value>
-    </data>
-    <data name="GetInsuranceTypebyId" xml:space="preserve">
-    <value>Select InsuranceType from [UnicoVehicle].[master].[InsuranceType] where DeletedDate is null and InsuranceTypeId = @insuranceTypeId</value>
-    </data>
-    <data name="InsertInsuranceType" xml:space="preserve">
-    <value>Insert into [UnicoVehicle].[master].[InsuranceType] (InsuranceType, CreatedDate) values (@insuranceType, @createdDate)</value>
-    </data>
-    <data name="DeleteInsuranceType" xml:space="preserve">
-    <value>Update [UnicoVehicle].[master].[InsuranceType] set DeletedDate = @deletedDate where InsuranceTypeId = @insuranceTypeId</value>
-    </data>
-    <data name="UpdateInsuranceType" xml:space="preserve">
-    <value>Update [UnicoVehicle].[master].[InsuranceType] set ModifiedDate = @modifiedDate, InsuranceType = @insuranceType where InsuranceTypeId = @insuranceTypeId</value>
-    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

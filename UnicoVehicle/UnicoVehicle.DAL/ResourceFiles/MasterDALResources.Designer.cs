@@ -226,35 +226,5 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("DeleteCylinderArrangement", resourceCulture);
             }
         }
-        
-        internal static string GetInsuranceType {
-            get {
-                return ResourceManager.GetString("GetInsuranceType", resourceCulture);
-            }
-        }
-        
-        internal static string GetInsuranceTypebyId {
-            get {
-                return ResourceManager.GetString("GetInsuranceTypebyId", resourceCulture);
-            }
-        }
-        
-        internal static string InsertInsuranceType {
-            get {
-                return ResourceManager.GetString("InsertInsuranceType", resourceCulture);
-            }
-        }
-        
-        internal static string DeleteInsuranceType {
-            get {
-                return ResourceManager.GetString("DeleteInsuranceType", resourceCulture);
-            }
-        }
-        
-        internal static string UpdateInsuranceType {
-            get {
-                return ResourceManager.GetString("UpdateInsuranceType", resourceCulture);
-            }
-        }
     }
 }

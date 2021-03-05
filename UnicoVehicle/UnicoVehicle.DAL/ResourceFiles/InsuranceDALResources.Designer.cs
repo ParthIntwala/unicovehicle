@@ -46,5 +46,65 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 resourceCulture = value;
             }
         }
+        
+        internal static string GetInsuranceCompany {
+            get {
+                return ResourceManager.GetString("GetInsuranceCompany", resourceCulture);
+            }
+        }
+        
+        internal static string GetInsuranceCompanybyId {
+            get {
+                return ResourceManager.GetString("GetInsuranceCompanybyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertInsuranceCompany {
+            get {
+                return ResourceManager.GetString("InsertInsuranceCompany", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteInsuranceCompany {
+            get {
+                return ResourceManager.GetString("DeleteInsuranceCompany", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateInsuranceCompany {
+            get {
+                return ResourceManager.GetString("UpdateInsuranceCompany", resourceCulture);
+            }
+        }
+        
+        internal static string GetInsuranceType {
+            get {
+                return ResourceManager.GetString("GetInsuranceType", resourceCulture);
+            }
+        }
+        
+        internal static string GetInsuranceTypebyId {
+            get {
+                return ResourceManager.GetString("GetInsuranceTypebyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertInsuranceType {
+            get {
+                return ResourceManager.GetString("InsertInsuranceType", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteInsuranceType {
+            get {
+                return ResourceManager.GetString("DeleteInsuranceType", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateInsuranceType {
+            get {
+                return ResourceManager.GetString("UpdateInsuranceType", resourceCulture);
+            }
+        }
     }
 }

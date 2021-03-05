@@ -7,6 +7,6 @@ namespace UnicoVehicle.DTO
         public District District { get; set; }
         public string InsuranceCompanyName { get; set; }
         public string Address { get; set; }
-        public string CompanyHead { get; set; }
+        public string CountryHead { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace UnicoVehicle.Controllers
         [HttpPost]
         public bool InsertInsuranceType([FromBody] InsuranceType insuranceType)
         {
-            _status = _insuranceTypeBll.InsertInsuranceType(insuranceType.InsuranceTypeName);
+            _status = _insuranceTypeBll.InsertInsuranceType(insuranceType);
             return _status;
         }
 
@@ -51,7 +51,7 @@ namespace UnicoVehicle.Controllers
         [HttpPut("{Id}")]
         public bool UpdateInsuranceType(int id, [FromBody] InsuranceType insuranceType)
         {
-            _status = _insuranceTypeBll.UpdateInsuranceType(insuranceType.InsuranceTypeName, id);
+            _status = _insuranceTypeBll.UpdateInsuranceType(insuranceType, id);
             return _status;
         }
     }
