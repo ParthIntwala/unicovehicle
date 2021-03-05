@@ -35,7 +35,7 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPost]
-        public bool InsertCountry([FromBody]Country country)
+        public bool InsertCountry([FromBody] Country country)
         {
             _status = _countryBll.InsertCountry(country.CountryName);
             return _status;

@@ -49,7 +49,7 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPut("{Id}")]
-        public bool DeleteShowroom(Showroom showroom, int id)
+        public bool UpdateShowroom([FromBody] Showroom showroom, int id)
         {
             _status = _showroomBll.UpdateShowroom(showroom, id);
             return _status;

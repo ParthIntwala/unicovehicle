@@ -21,35 +21,35 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet]
-        public List<Status> GetAccessoriesTypes()
+        public List<Status> GetStatusTypes()
         {
             List<Status> _status = _statusBll.Get();
             return _status;
         }
 
         [HttpGet("{Id}")]
-        public Status GetAccessoriesTypebyId(int id)
+        public Status GetStatusTypebyId(int id)
         {
             Status _status = _statusBll.GetStatusbyId(id);
             return _status;
         }
 
         [HttpPost]
-        public bool InsertAccessoriesType([FromBody] Status status)
+        public bool InsertStatusType([FromBody] Status status)
         {
             _status = _statusBll.InsertStatus(status.TransactionStatus);
             return _status;
         }
 
         [HttpDelete("{Id}")]
-        public bool DeleteAccessoriesType(int id)
+        public bool DeleteStatusType(int id)
         {
             _status = _statusBll.DeleteStatus(id);
             return _status;
         }
 
         [HttpPut("{Id}")]
-        public bool UpdateAccessoriesType(int id, [FromBody] Status status)
+        public bool UpdateStatusType(int id, [FromBody] Status status)
         {
             _status = _statusBll.UpdateStatus(status.TransactionStatus, id);
             return _status;

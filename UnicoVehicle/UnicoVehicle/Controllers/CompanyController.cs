@@ -49,7 +49,7 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPut("{Id}")]
-        public bool DeleteCompany(Company company, int id)
+        public bool DeleteCompany([FromBody] Company company, int id)
         {
             _status = _companyBll.UpdateCompany(company, id);
             return _status;

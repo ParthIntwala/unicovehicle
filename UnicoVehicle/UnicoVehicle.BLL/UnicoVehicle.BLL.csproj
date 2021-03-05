@@ -15,5 +15,7 @@
     <Folder Include="MasterBLLClass\Interfaces\" />
     <Folder Include="CompanyBLLClass\" />
     <Folder Include="CompanyBLLClass\Interfaces\" />
+    <Folder Include="UserBLLClass\" />
+    <Folder Include="UserBLLClass\Interfaces\" />
   </ItemGroup>
 </Project>

@@ -35,7 +35,7 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPost]
-        public bool Insert_alltransmissionType([FromBody] TransmissionType transmissionType)
+        public bool InsertTransmissionType([FromBody] TransmissionType transmissionType)
         {
             _status = _transmissionTypeBll.InsertTransmissionType(transmissionType.GearTransmission);
             return _status;

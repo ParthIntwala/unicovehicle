@@ -21,28 +21,28 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet]
-        public List<UserType> GetVehicleTypes()
+        public List<UserType> GetUserTypes()
         {
             List<UserType> _allUserTypes = _userTypeBll.Get();
             return _allUserTypes;
         }
 
         [HttpGet("{Id}")]
-        public UserType GetVehicleTypebyId(int id)
+        public UserType GetUserTypebyId(int id)
         {
             UserType _userType = _userTypeBll.GetUserTypebyId(id);
             return _userType;
         }
 
         [HttpPost]
-        public bool InsertVehicleType([FromBody] UserType userType)
+        public bool InsertUserType([FromBody] UserType userType)
         {
             _status = _userTypeBll.InsertUserType(userType.UsersType);
             return _status;
         }
 
         [HttpDelete("{Id}")]
-        public bool DeleteVehicleType(int id)
+        public bool DeleteUserType(int id)
         {
             _status = _userTypeBll.DeleteUserType(id);
             return _status;
