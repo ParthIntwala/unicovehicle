@@ -9,5 +9,6 @@ namespace UnicoVehicle.DAL
         public CompanyCountry GetCompanyCountrybyId(int id);
         public bool InsertCompanyCountry(CompanyCountry company);
         public bool UpdateCompanyCountry(CompanyCountry company, int id);
+        public List<CompanyCountry> GetCompanybyCountry(int id);
     }
 }

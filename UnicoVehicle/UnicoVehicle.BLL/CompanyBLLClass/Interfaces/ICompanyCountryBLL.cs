@@ -9,5 +9,6 @@ namespace UnicoVehicle.BLL
         public CompanyCountry GetCompanyCountrybyId(int id);
         public bool InsertCompanyCountry(CompanyCountry company);
         public bool UpdateCompanyCountry(CompanyCountry company, int companyCountryId);
+        public List<CompanyCountry> GetCompanybyCountry(int id);
     }
 }

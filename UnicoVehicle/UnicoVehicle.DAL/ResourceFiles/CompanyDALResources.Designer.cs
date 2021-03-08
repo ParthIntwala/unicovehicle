@@ -77,9 +77,9 @@ namespace UnicoVehicle.DAL.ResourceFiles {
             }
         }
         
-        internal static string GetCompanyCountry {
+        internal static string GetCompanybyCountry {
             get {
-                return ResourceManager.GetString("GetCompanyCountry", resourceCulture);
+                return ResourceManager.GetString("GetCompanybyCountry", resourceCulture);
             }
         }
         

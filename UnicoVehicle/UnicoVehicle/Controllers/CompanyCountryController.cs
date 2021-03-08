@@ -27,6 +27,13 @@ namespace UnicoVehicle.Controllers
             return _company;
         }
 
+        [HttpGet]
+        public List<CompanyCountry> GetCompanybyCountry(int countryId)
+        {
+            List<CompanyCountry> _company = _companyCountryBll.GetCompanybyCountry(countryId);
+            return _company;
+        }
+
         [HttpPost]
         public bool InsertCompanyCountry([FromBody] CompanyCountry company)
         {

@@ -50,7 +50,6 @@ namespace UnicoVehicle.DAL
             _connection.CloseConnection();
 
             return _company;
-
         }
 
         public bool InsertCompanyCountry(CompanyCountry company)
@@ -114,6 +113,42 @@ namespace UnicoVehicle.DAL
             {
                 return false;
             }
+        }
+
+        public List<CompanyCountry> GetCompanybyCountry(int id)
+        {
+            _companyCountryCommand = _utils.CommandGenerator(ResourceFiles.CompanyDALResources.GetCompanybyCountry);
+            _companyCountryCommand.Parameters.AddWithValue("@countryId", id);
+            _companyCountryReader = _companyCountryCommand.ExecuteReader();
+
+            List<CompanyCountry> _companies = new List<CompanyCountry>();
+            CompanyCountry _company;
+
+            while (_companyCountryReader.Read())
+            {
+                _company = new CompanyCountry()
+                {
+                    CompanyCountryId = id,
+                    Company = new DTO.Miscellaneous.Company
+                    {
+                        CompanyId = int.Parse(_companyCountryReader["CompanyId"].ToString()),
+                    },
+                    District = new DTO.Miscellaneous.District
+                    {
+                        DistrictId = int.Parse(_companyCountryReader["DistrictId"].ToString()),
+                    },
+                    CountryHead = _companyCountryReader["CountryHead"].ToString(),
+                    isOperational = bool.Parse(_companyCountryReader["isOperational"].ToString()),
+                };
+
+                _companies.Add(_company);
+            }
+
+            _companyCountryReader.Close();
+            _connection.CloseConnection();
+
+            return _companies;
+
         }
     }
 }

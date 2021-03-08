@@ -30,6 +30,19 @@ namespace UnicoVehicle.BLL
             return _company;
         }
 
+        public List<CompanyCountry> GetCompanybyCountry(int id)
+        {
+            List<CompanyCountry> _companies = _companyCountryDAL.GetCompanybyCountry(id);
+
+            foreach (CompanyCountry _company in _companies)
+            {
+                _company.District = _miscellaneousCalls.GetDistrictbyId(_company.District.DistrictId);
+                _company.Company = _miscellaneousCalls.GetCompanybyId(_company.Company.CompanyId);
+            }
+
+            return _companies;
+        }
+
         public bool InsertCompanyCountry(CompanyCountry company)
         {
             _status = _companyCountryDAL.InsertCompanyCountry(company);

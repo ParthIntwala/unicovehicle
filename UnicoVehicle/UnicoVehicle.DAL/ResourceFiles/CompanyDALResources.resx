@@ -24,8 +24,8 @@
     <data name="UpdateCompany" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[Company] set DistrictId = @districtId, CompanyName = @companyName, CompanyHead = @companyHead, ModifiedDate = @modifiedDate where CompanyId = @companyId</value>
     </data>
-    <data name="GetCompanyCountry" xml:space="preserve">
-    <value>Select CompanyCountryId, DistrictId, CompanyId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null </value>
+    <data name="GetCompanybyCountry" xml:space="preserve">
+    <value>Select CompanyCountryId, DistrictId, CompanyId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null and CompanyId = @companyId</value>
     </data>
     <data name="GetCompanyCountrybyId" xml:space="preserve">
     <value>Select DistrictId, CompanyId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null and CompanyCountryId = @companyCountryId</value>
