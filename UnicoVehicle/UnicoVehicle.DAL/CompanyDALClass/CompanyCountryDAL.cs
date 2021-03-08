@@ -20,40 +20,6 @@ namespace UnicoVehicle.DAL
             _connection = connection;
         }
 
-        public List<CompanyCountry> GetCompanyCountry()
-        {
-            _companyCountryCommand = _utils.CommandGenerator(ResourceFiles.CompanyDALResources.GetCompanyCountry);
-            _companyCountryReader = _companyCountryCommand.ExecuteReader();
-
-            CompanyCountry _company;
-            List<CompanyCountry> _companies = new List<CompanyCountry>();
-
-            while (_companyCountryReader.Read())
-            {
-                _company = new CompanyCountry()
-                {
-                    CompanyCountryId = int.Parse(_companyCountryReader["CompanyCountryId"].ToString()),
-                    Company = new Company
-                    {
-                        CompanyId = int.Parse(_companyCountryReader["CompanyId"].ToString()),
-                    },
-                    District = new District
-                    {
-                        DistrictId = int.Parse(_companyCountryReader["DistrictId"].ToString()),
-                    },
-                    CountryHead = _companyCountryReader["CountryHead"].ToString(),
-                    isOperational = bool.Parse(_companyCountryReader["isOperational"].ToString()),
-                };
-
-                _companies.Add(_company);
-            }
-
-            _companyCountryReader.Close();
-            _connection.CloseConnection();
-
-            return _companies;
-        }
-
         public CompanyCountry GetCompanyCountrybyId(int id)
         {
             _companyCountryCommand = _utils.CommandGenerator(ResourceFiles.CompanyDALResources.GetCompanyCountrybyId);
@@ -67,11 +33,11 @@ namespace UnicoVehicle.DAL
                 _company = new CompanyCountry()
                 {
                     CompanyCountryId = id,
-                    Company = new Company
+                    Company = new DTO.Miscellaneous.Company
                     {
                         CompanyId = int.Parse(_companyCountryReader["CompanyId"].ToString()),
                     },
-                    District = new District
+                    District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_companyCountryReader["DistrictId"].ToString()),
                     },

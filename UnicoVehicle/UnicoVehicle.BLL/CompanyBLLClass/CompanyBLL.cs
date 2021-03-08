@@ -8,13 +8,13 @@ namespace UnicoVehicle.BLL
     public class CompanyBLL : ICompanyBLL
     {
         private readonly ICompanyDAL _companyDAL;
-        private readonly IDistrictBLL _districtBLL;
+        private readonly IMiscellaneousCalls _miscellaneousCalls;
         bool _status;
 
-        public CompanyBLL(ICompanyDAL companyDAL, IDistrictBLL districtBLL)
+        public CompanyBLL(ICompanyDAL companyDAL, IMiscellaneousCalls miscellaneousCalls)
         {
             _companyDAL = companyDAL;
-            _districtBLL = districtBLL;
+            _miscellaneousCalls = miscellaneousCalls;
         }
 
         public List<Company> Get()
@@ -23,7 +23,7 @@ namespace UnicoVehicle.BLL
 
             foreach (Company company in _company)
             {
-                company.District = _districtBLL.GetDistrictbyId(company.District.DistrictId);
+                company.District = _miscellaneousCalls.GetDistrictbyId(company.District.DistrictId);
             }
 
             return _company;
@@ -34,7 +34,7 @@ namespace UnicoVehicle.BLL
             Company _company = _companyDAL.GetCompanybyId(id);
 
             if(_company.CompanyId != 0)
-                _company.District = _districtBLL.GetDistrictbyId(_company.District.DistrictId);
+                _company.District = _miscellaneousCalls.GetDistrictbyId(_company.District.DistrictId);
 
             return _company;
         }

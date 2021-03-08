@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="GetShowroomReview" xml:space="preserve">
+    <value>Select ShowroomReviewId, UserId, ShowroomId, ShowroomReview from [UnicoVehicle].[review].[ShowroomReview] where DeletedDate is null </value>
+    </data>
+    <data name="GetShowroomReviewbyId" xml:space="preserve">
+    <value>Select UserId, ShowroomId, ShowroomReview from [UnicoVehicle].[review].[ShowroomReview] where DeletedDate is null and ShowroomReviewId = @showroomReviewId</value>
+    </data>
+    <data name="InsertShowroomReview" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[review].[ShowroomReview] (UserId, ShowroomId, ShowroomReview, CreatedDate) values (@userId, @showroomId, @showroomReview, @createdDate)</value>
+    </data>
+    <data name="DeleteShowroomReview" xml:space="preserve">
+    <value>Update [UnicoVehicle].[review].[ShowroomReview] set DeletedDate = @deletedDate where ShowroomReviewId = @showroomReviewId</value>
+    </data>
+    <data name="UpdateShowroomReview" xml:space="preserve">
+    <value>Update [UnicoVehicle].[review].[ShowroomReview] set ShowroomReview = @showroomReview, ModifiedDate = @modifiedDate where ShowroomReviewId = @showroomReviewId</value>
+    </data>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+</root>

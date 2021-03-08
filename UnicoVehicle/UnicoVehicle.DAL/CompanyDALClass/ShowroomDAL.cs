@@ -32,11 +32,91 @@ namespace UnicoVehicle.DAL
             {
                 _showroom = new Showroom()
                 {
-                    Company = new Company
+                    Company = new DTO.Miscellaneous.Company
                     {
                         CompanyId = int.Parse(_showroomReader["CompanyId"].ToString()),
                     },
-                    District = new District
+                    District = new DTO.Miscellaneous.District
+                    {
+                        DistrictId = int.Parse(_showroomReader["DistrictId"].ToString()),
+                    },
+                    Manager = _showroomReader["BranchManager"].ToString(),
+                    Address = _showroomReader["AddressLine1"].ToString(),
+                    PINCODE = int.Parse(_showroomReader["Pincode"].ToString()),
+                    ShowroomId = int.Parse(_showroomReader["ShowroomId"].ToString()),
+                    ShowroomName = _showroomReader["ShowroomName"].ToString(),
+                    hasSales = bool.Parse(_showroomReader["hasSales"].ToString()),
+                    hasService = bool.Parse(_showroomReader["hasService"].ToString()),
+                    isOperational = bool.Parse(_showroomReader["isOperational"].ToString()),
+                };
+
+                _showrooms.Add(_showroom);
+            }
+
+            _showroomReader.Close();
+            _connection.CloseConnection();
+
+            return _showrooms;
+        }
+
+        public List<Showroom> GetShowroombyCompany(int companyId)
+        {
+            _showroomCommand = _utils.CommandGenerator(ResourceFiles.CompanyDALResources.GetShowroombyCompany);
+            _showroomCommand.Parameters.AddWithValue("@companyId", companyId);
+            _showroomReader = _showroomCommand.ExecuteReader();
+
+            Showroom _showroom;
+            List<Showroom> _showrooms = new List<Showroom>();
+
+            while (_showroomReader.Read())
+            {
+                _showroom = new Showroom()
+                {
+                    Company = new DTO.Miscellaneous.Company
+                    {
+                        CompanyId = int.Parse(_showroomReader["CompanyId"].ToString()),
+                    },
+                    District = new DTO.Miscellaneous.District
+                    {
+                        DistrictId = int.Parse(_showroomReader["DistrictId"].ToString()),
+                    },
+                    Manager = _showroomReader["BranchManager"].ToString(),
+                    Address = _showroomReader["AddressLine1"].ToString(),
+                    PINCODE = int.Parse(_showroomReader["Pincode"].ToString()),
+                    ShowroomId = int.Parse(_showroomReader["ShowroomId"].ToString()),
+                    ShowroomName = _showroomReader["ShowroomName"].ToString(),
+                    hasSales = bool.Parse(_showroomReader["hasSales"].ToString()),
+                    hasService = bool.Parse(_showroomReader["hasService"].ToString()),
+                    isOperational = bool.Parse(_showroomReader["isOperational"].ToString()),
+                };
+
+                _showrooms.Add(_showroom);
+            }
+
+            _showroomReader.Close();
+            _connection.CloseConnection();
+
+            return _showrooms;
+        }
+
+        public List<Showroom> GetShowroombyDistrict(int districtId)
+        {
+            _showroomCommand = _utils.CommandGenerator(ResourceFiles.CompanyDALResources.GetShowroombyDistrict);
+            _showroomCommand.Parameters.AddWithValue("@districtId", districtId);
+            _showroomReader = _showroomCommand.ExecuteReader();
+
+            Showroom _showroom;
+            List<Showroom> _showrooms = new List<Showroom>();
+
+            while (_showroomReader.Read())
+            {
+                _showroom = new Showroom()
+                {
+                    Company = new DTO.Miscellaneous.Company
+                    {
+                        CompanyId = int.Parse(_showroomReader["CompanyId"].ToString()),
+                    },
+                    District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_showroomReader["DistrictId"].ToString()),
                     },
@@ -71,11 +151,11 @@ namespace UnicoVehicle.DAL
             {
                 _showroom = new Showroom()
                 {
-                    Company = new Company
+                    Company = new DTO.Miscellaneous.Company
                     {
                         CompanyId = int.Parse(_showroomReader["CompanyId"].ToString()),
                     },
-                    District = new District
+                    District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_showroomReader["DistrictId"].ToString()),
                     },

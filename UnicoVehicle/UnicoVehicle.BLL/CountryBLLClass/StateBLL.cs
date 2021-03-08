@@ -17,9 +17,9 @@ namespace UnicoVehicle.BLL
             _countryDAL = countryDAL;
         }
 
-        public List<State> Get()
+        public List<State> Get(int id)
         {
-            List<State> _states = _stateDAL.GetState();
+            List<State> _states = _stateDAL.GetState(id);
 
             foreach(State state in _states)
             {

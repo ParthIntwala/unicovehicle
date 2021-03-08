@@ -9,23 +9,17 @@
     <resheader name="reader">
         <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="GetUser" xml:space="preserve">
-    <value>Select UserId, UserTypeId, FirstName, LastName, EmailId, Password from [UnicoVehicle].[user].[User] where DeletedDate is null </value>
-    </data>
     <data name="GetUserbyId" xml:space="preserve">
-    <value>Select UserTypeId, FirstName, LastName, EmailId, Password from [UnicoVehicle].[user].[User] where DeletedDate is null and UserId = @userId</value>
-    </data>
-    <data name="InsertUser" xml:space="preserve">
-    <value>Insert into [UnicoVehicle].[user].[User] (UserTypeId, FirstName, LastName, EmailId, Password, CreatedDate) values (@userTypeId, @firstName, @lastName, @emailId, @password, @createdDate)</value>
+    <value>Select UserTypeId, FirstName, LastName from [UnicoVehicle].[user].[User] where DeletedDate is null and UserId = @userId</value>
     </data>
     <data name="DeleteUser" xml:space="preserve">
     <value>Update [UnicoVehicle].[user].[User] set DeletedDate = @deletedDate where UserId = @userId</value>
     </data>
     <data name="UpdateUser" xml:space="preserve">
-    <value>Update [UnicoVehicle].[user].[User] set FirstName = @firstName, LastName = @lastName, EmailId = @emailId, Password = @password, ModifiedDate = @modifiedDate where UserId = @userId</value>
+    <value>Update [UnicoVehicle].[user].[User] set FirstName = @firstName, LastName = @lastName, ModifiedDate = @modifiedDate where UserId = @userId</value>
     </data>
     <data name="GetCustomer" xml:space="preserve">
-    <value>Select CustomerId, UserId, DistrictId, Address, Photograph, DrivingLicenseNumber, StandardIDNumber, IncomeTaxIDNumber, LastITReturn, BankPassbookPhoto from [UnicoVehicle].[user].[Customer] where DeletedDate is null </value>
+    <value>Select CustomerId, UserId from [UnicoVehicle].[user].[Customer] where DeletedDate is null </value>
     </data>
     <data name="GetCustomerbyId" xml:space="preserve">
     <value>Select UserId, DistrictId, Address, Photograph, DrivingLicenseNumber, StandardIDNumber, IncomeTaxIDNumber, LastITReturn, BankPassbookPhoto from [UnicoVehicle].[user].[Customer] where DeletedDate is null and CustomerId = @customerId</value>

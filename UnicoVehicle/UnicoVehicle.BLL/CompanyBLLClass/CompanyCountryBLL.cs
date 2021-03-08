@@ -8,28 +8,13 @@ namespace UnicoVehicle.BLL
     public class CompanyCountryBLL : ICompanyCountryBLL
     {
         private readonly ICompanyCountryDAL _companyCountryDAL;
-        private readonly ICompanyBLL _companyBLL;
-        private readonly IDistrictBLL _districtBLL;
+        private readonly IMiscellaneousCalls _miscellaneousCalls;
         bool _status;
 
-        public CompanyCountryBLL(ICompanyBLL companyBLL, IDistrictBLL districtBLL, ICompanyCountryDAL companyCountryDAL)
+        public CompanyCountryBLL(IMiscellaneousCalls miscellaneousCalls, ICompanyCountryDAL companyCountryDAL)
         {
-            _companyBLL = companyBLL;
-            _districtBLL = districtBLL;
+            _miscellaneousCalls = miscellaneousCalls;
             _companyCountryDAL = companyCountryDAL;
-        }
-
-        public List<CompanyCountry> Get()
-        {
-            List<CompanyCountry> _company = _companyCountryDAL.GetCompanyCountry();
-
-            foreach (CompanyCountry company in _company)
-            {
-                company.District = _districtBLL.GetDistrictbyId(company.District.DistrictId);
-                company.Company = _companyBLL.GetCompanybyId(company.Company.CompanyId);
-            }
-
-            return _company;
         }
 
         public CompanyCountry GetCompanyCountrybyId(int id)
@@ -38,8 +23,8 @@ namespace UnicoVehicle.BLL
 
             if(_company.CompanyCountryId != 0)
             {
-                _company.District = _districtBLL.GetDistrictbyId(_company.District.DistrictId);
-                _company.Company = _companyBLL.GetCompanybyId(_company.Company.CompanyId);
+                _company.District = _miscellaneousCalls.GetDistrictbyId(_company.District.DistrictId);
+                _company.Company = _miscellaneousCalls.GetCompanybyId(_company.Company.CompanyId);
             }
 
             return _company;

@@ -21,9 +21,9 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet]
-        public List<State> GetStates()
+        public List<State> GetStates(int id)
         {
-            List<State> _allStates = _stateBll.Get();
+            List<State> _allStates = _stateBll.Get(id);
             return _allStates;
         }
 

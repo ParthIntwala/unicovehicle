@@ -1,7 +1,7 @@
 ﻿using System;
 using UnicoVehicle.DAL;
 using System.Collections.Generic;
-using UnicoVehicle.DTO;
+using UnicoVehicle.DTO.Miscellaneous;
 
 namespace UnicoVehicle.BLL
 {
@@ -17,18 +17,6 @@ namespace UnicoVehicle.BLL
             _userTypeBLL = userTypeBLL;
         }
 
-        public List<User> Get()
-        {
-            List<User> _user = _userDAL.GetUser();
-
-            foreach (User user in _user)
-            {
-                user.UserType = _userTypeBLL.GetUserTypebyId(user.UserType.UserTypeId);
-            }
-
-            return _user;
-        }
-
         public User GetUserbyId(int id)
         {
             User _user = _userDAL.GetUserbyId(id);
@@ -39,12 +27,6 @@ namespace UnicoVehicle.BLL
             }
 
             return _user;
-        }
-
-        public bool InsertUser(User user)
-        {
-            _status = _userDAL.InsertUser(user);
-            return _status;
         }
 
         public bool DeleteUser(int id)

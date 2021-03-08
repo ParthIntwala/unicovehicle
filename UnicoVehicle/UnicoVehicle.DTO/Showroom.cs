@@ -4,8 +4,8 @@ namespace UnicoVehicle.DTO
     public class Showroom
     {
         public int ShowroomId { get; set; }
-        public Company Company { get; set; }
-        public District District { get; set; }
+        public Miscellaneous.Company Company { get; set; }
+        public Miscellaneous.District District { get; set; }
         public string ShowroomName { get; set; }
         public string Address { get; set; }
         public int PINCODE { get; set; }

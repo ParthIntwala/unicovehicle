@@ -20,9 +20,10 @@ namespace UnicoVehicle.DAL
             _utils = utils;
         }
 
-        public List<State> GetState()
+        public List<State> GetState(int id)
         {
             _stateCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.GetState);
+            _stateCommand.Parameters.AddWithValue("@countryId", id);
             _stateReader = _stateCommand.ExecuteReader();
 
             State _state;

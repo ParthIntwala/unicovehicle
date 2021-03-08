@@ -36,7 +36,7 @@ namespace UnicoVehicle.DAL
                     InsuranceCompanyName = _insuranceReader["InsuranceCompany"].ToString(),
                     Address = _insuranceReader["AddressLine1"].ToString(),
                     CountryHead = _insuranceReader["CountryHead"].ToString(),
-                    District = new District
+                    District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_insuranceReader["DistrictId"].ToString()),
                     }
@@ -67,7 +67,7 @@ namespace UnicoVehicle.DAL
                     InsuranceCompanyName = _insuranceReader["InsuranceCompany"].ToString(),
                     Address = _insuranceReader["AddressLine1"].ToString(),
                     CountryHead = _insuranceReader["CountryHead"].ToString(),
-                    District = new District
+                    District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_insuranceReader["DistrictId"].ToString()),
                     }

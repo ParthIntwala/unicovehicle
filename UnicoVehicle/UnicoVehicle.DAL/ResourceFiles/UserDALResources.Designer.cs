@@ -47,21 +47,9 @@ namespace UnicoVehicle.DAL.ResourceFiles {
             }
         }
         
-        internal static string GetUser {
-            get {
-                return ResourceManager.GetString("GetUser", resourceCulture);
-            }
-        }
-        
         internal static string GetUserbyId {
             get {
                 return ResourceManager.GetString("GetUserbyId", resourceCulture);
-            }
-        }
-        
-        internal static string InsertUser {
-            get {
-                return ResourceManager.GetString("InsertUser", resourceCulture);
             }
         }
         

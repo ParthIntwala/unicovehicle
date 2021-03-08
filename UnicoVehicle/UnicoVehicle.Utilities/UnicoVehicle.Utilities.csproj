@@ -7,4 +7,7 @@
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnicoVehicle.DTO\UnicoVehicle.DTO.csproj" />
+  </ItemGroup>
 </Project>

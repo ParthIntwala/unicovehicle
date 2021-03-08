@@ -9,24 +9,23 @@ namespace UnicoVehicle.BLL
     {
         private readonly ICustomerDAL _customerDAL;
         private readonly IUserBLL _userBLL;
-        private readonly IDistrictBLL _districtBLL;
+        private readonly IMiscellaneousCalls _miscellaneousCalls;
         bool _status;
 
-        public CustomerBLL(ICustomerDAL customerDAL, IDistrictBLL districtBLL, IUserBLL userBLL)
+        public CustomerBLL(ICustomerDAL customerDAL, IMiscellaneousCalls miscellaneousCalls, IUserBLL userBLL)
         {
             _customerDAL = customerDAL;
-            _districtBLL = districtBLL;
+            _miscellaneousCalls = miscellaneousCalls;
             _userBLL = userBLL;
         }
 
-        public List<Customer> Get()
+        public List<DTO.Miscellaneous.Customer> Get()
         {
-            List<Customer> _customer = _customerDAL.GetCustomer();
+            List<DTO.Miscellaneous.Customer> _customer = _customerDAL.GetCustomer();
 
-            foreach (Customer customer in _customer)
+            foreach (DTO.Miscellaneous.Customer customer in _customer)
             {
                 customer.User = _userBLL.GetUserbyId(customer.User.UserId);
-                customer.District = _districtBLL.GetDistrictbyId(customer.District.DistrictId);
             }
 
             return _customer;
@@ -39,7 +38,7 @@ namespace UnicoVehicle.BLL
             if (_customer.CustomerId != 0)
             {
                 _customer.User = _userBLL.GetUserbyId(_customer.User.UserId);
-                _customer.District = _districtBLL.GetDistrictbyId(_customer.District.DistrictId);
+                _customer.District = _miscellaneousCalls.GetDistrictbyId(_customer.District.DistrictId);
             }
 
             return _customer;

@@ -20,33 +20,22 @@ namespace UnicoVehicle.DAL
             _connection = connection;
         }
 
-        public List<Customer> GetCustomer()
+        public List<DTO.Miscellaneous.Customer> GetCustomer()
         {
             _customerCommand = _utils.CommandGenerator(ResourceFiles.UserDALResources.GetCustomer);
             _customerReader = _customerCommand.ExecuteReader();
 
-            Customer _customer;
-            List<Customer> _customers = new List<Customer>();
+            DTO.Miscellaneous.Customer _customer;
+            List<DTO.Miscellaneous.Customer> _customers = new List<DTO.Miscellaneous.Customer>();
 
             while (_customerReader.Read())
             {
-                _customer = new Customer()
+                _customer = new DTO.Miscellaneous.Customer()
                 {
-                    User = new User
+                    User = new DTO.Miscellaneous.User
                     {
                         UserId = int.Parse(_customerReader["UserId"].ToString()),
                     },
-                    District = new District
-                    {
-                        DistrictId = int.Parse(_customerReader["DistrictId"].ToString()),
-                    },
-                    Address = _customerReader["Address"].ToString(),
-                    BankPassbookPhoto = _customerReader["BankPassbookPhoto"].ToString(),
-                    DrivingLicenseNumber = _customerReader["DrivingLicenseNumber"].ToString(),
-                    Photograph = _customerReader["Photograph"].ToString(),
-                    IncomeTaxIDNumber = _customerReader["IncomeTaxIDNumber"].ToString(),
-                    LastITReturn = _customerReader["LastITReturn"].ToString(),
-                    StandardIDNumber = _customerReader["StandardIDNumber"].ToString(),
                     CustomerId = int.Parse(_customerReader["CustomerId"].ToString()),
                 };
 
@@ -71,11 +60,11 @@ namespace UnicoVehicle.DAL
             {
                 _customer = new Customer()
                 {
-                    User = new User
+                    User = new DTO.Miscellaneous.User
                     {
                         UserId = int.Parse(_customerReader["UserId"].ToString()),
                     },
-                    District = new District
+                    District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_customerReader["DistrictId"].ToString()),
                     },

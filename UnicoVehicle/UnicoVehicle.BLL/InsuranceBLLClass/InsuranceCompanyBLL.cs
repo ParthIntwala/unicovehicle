@@ -8,13 +8,13 @@ namespace UnicoVehicle.BLL
     public class InsuranceCompanyBLL : IInsuranceCompanyBLL
     {
         private readonly IInsuranceCompanyDAL _insuranceCompanyDAL;
-        private readonly IDistrictBLL _districtBLLL;
+        private readonly IMiscellaneousCalls _miscellaneousCalls;
         bool _status;
 
-        public InsuranceCompanyBLL(IInsuranceCompanyDAL insuranceCompanyDAL, IDistrictBLL districtBLLL)
+        public InsuranceCompanyBLL(IInsuranceCompanyDAL insuranceCompanyDAL, IMiscellaneousCalls miscellaneousCalls)
         {
             _insuranceCompanyDAL = insuranceCompanyDAL;
-            _districtBLLL = districtBLLL;
+            _miscellaneousCalls = miscellaneousCalls;
         }
 
         public List<InsuranceCompany> Get()
@@ -23,7 +23,7 @@ namespace UnicoVehicle.BLL
 
             foreach (InsuranceCompany insuranceCompany in _insuranceCompany)
             {
-                insuranceCompany.District = _districtBLLL.GetDistrictbyId(insuranceCompany.District.DistrictId);
+                insuranceCompany.District = _miscellaneousCalls.GetDistrictbyId(insuranceCompany.District.DistrictId);
             }
 
             return _insuranceCompany;
@@ -35,7 +35,7 @@ namespace UnicoVehicle.BLL
 
             if (_insuranceCompany.InsuranceCompanyId != 0)
             {
-                _insuranceCompany.District = _districtBLLL.GetDistrictbyId(_insuranceCompany.District.DistrictId);
+                _insuranceCompany.District = _miscellaneousCalls.GetDistrictbyId(_insuranceCompany.District.DistrictId);
             }
 
             return _insuranceCompany;

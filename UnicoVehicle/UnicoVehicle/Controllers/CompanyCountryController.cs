@@ -20,13 +20,6 @@ namespace UnicoVehicle.Controllers
             _companyCountryBll = companyCountryBll;
         }
 
-        [HttpGet]
-        public List<CompanyCountry> GetCompanyCountry()
-        {
-            List<CompanyCountry> _allCompanies = _companyCountryBll.Get();
-            return _allCompanies;
-        }
-
         [HttpGet("{Id}")]
         public CompanyCountry GetCompanyCountrybyId(int id)
         {

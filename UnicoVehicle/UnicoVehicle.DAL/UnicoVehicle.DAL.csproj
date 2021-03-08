@@ -21,6 +21,8 @@
     <Folder Include="UserDALClass\Interfaces\" />
     <Folder Include="InsuranceDALClass\" />
     <Folder Include="InsuranceDALClass\Interfaces\" />
+    <Folder Include="ReviewDALClass\" />
+    <Folder Include="ReviewDALClass\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Country\DALResources.resx">
@@ -47,6 +49,18 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>InsuranceDALResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\ReviewDALResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ReviewDALResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\VehicleDALResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VehicleDALResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\MescellaneousResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MescellaneousResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="DALResources.Designer.cs" />
@@ -69,6 +83,15 @@
     </Compile>
     <Compile Update="ResourceFiles\InsuranceDALResources.Designer.cs">
       <DependentUpon>InsuranceDALResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFiles\ReviewDALResources.Designer.cs">
+      <DependentUpon>ReviewDALResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFiles\VehicleDALResources.Designer.cs">
+      <DependentUpon>VehicleDALResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFiles\MescellaneousResources.Designer.cs">
+      <DependentUpon>MescellaneousResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

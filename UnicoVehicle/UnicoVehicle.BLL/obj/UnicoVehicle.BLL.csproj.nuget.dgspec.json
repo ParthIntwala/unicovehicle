@@ -195,7 +195,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/UnicoVehicle.DTO.csproj": {
+                "projectPath": "/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DTO/UnicoVehicle.DTO.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

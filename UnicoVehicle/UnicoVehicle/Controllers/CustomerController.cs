@@ -21,9 +21,9 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet]
-        public List<Customer> GetUser()
+        public List<DTO.Miscellaneous.Customer> GetUser()
         {
-            List<Customer> _customers = _customerBll.Get();
+            List<DTO.Miscellaneous.Customer> _customers = _customerBll.Get();
             return _customers;
         }
 

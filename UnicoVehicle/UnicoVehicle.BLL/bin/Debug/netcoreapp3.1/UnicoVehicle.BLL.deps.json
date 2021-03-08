@@ -106,7 +106,8 @@
       },
       "UnicoVehicle.Utilities/1.0.0": {
         "dependencies": {
-          "System.Data.SqlClient": "4.8.2"
+          "System.Data.SqlClient": "4.8.2",
+          "UnicoVehicle.DTO": "1.0.0"
         },
         "runtime": {
           "UnicoVehicle.Utilities.dll": {}

@@ -18,3 +18,6 @@
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.CompanyDALResources.resources
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.UserDALResources.resources
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.InsuranceDALResources.resources
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.ReviewDALResources.resources
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.MescellaneousResources.resources
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle.DAL/obj/Debug/netcoreapp3.1/UnicoVehicle.DAL.ResourceFiles.VehicleDALResources.resources

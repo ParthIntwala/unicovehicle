@@ -21,9 +21,9 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet]
-        public List<District> GetStates()
+        public List<District> GetStates(int id)
         {
-            List<District> _allDistricts = _districtBLL.Get();
+            List<District> _allDistricts = _districtBLL.Get(id);
             return _allDistricts;
         }
 
@@ -37,7 +37,7 @@ namespace UnicoVehicle.Controllers
         [HttpPost]
         public bool InsertDistrict([FromBody] District district)
         {
-            _status = _districtBLL.InsertDistrict(district.DistrictName, district.StateName.StateId);
+            _status = _districtBLL.InsertDistrict(district.DistrictName, district.State.StateId);
             return _status;
         }
 

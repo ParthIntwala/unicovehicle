@@ -19,5 +19,7 @@
     <Folder Include="UserBLLClass\Interfaces\" />
     <Folder Include="InsuranceBLLClass\" />
     <Folder Include="InsuranceBLLClass\Interfaces\" />
+    <Folder Include="ReviewBLLClass\" />
+    <Folder Include="ReviewBLLClass\Interfaces\" />
   </ItemGroup>
 </Project>

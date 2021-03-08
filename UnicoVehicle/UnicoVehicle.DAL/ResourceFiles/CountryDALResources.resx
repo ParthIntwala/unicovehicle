@@ -22,7 +22,7 @@
     <value>Update [UnicoVehicle].[country].[Country] set DeletedDate = @deletedDate where CountryId = @countryId</value>
     </data>
     <data name="GetState" xml:space="preserve">
-    <value>select StateId, State, CountryId from [UnicoVehicle].[country].[State] where DeletedDate is null</value>
+    <value>select StateId, State, CountryId from [UnicoVehicle].[country].[State] where DeletedDate is null and CountryId = @countryId</value>
     </data>
     <data name="InsertState" xml:space="preserve">
     <value>insert into [UnicoVehicle].[country].[State] (State, CountryId, CreatedDate) values (@state, @countryId, @createdDate)</value>
@@ -34,7 +34,7 @@
     <value>Update [UnicoVehicle].[country].[State] set DeletedDate = @deletedDate where StateId = @stateId</value>
     </data>
     <data name="GetDistrict" xml:space="preserve">
-    <value>select DistrictId, District, StateId from [UnicoVehicle].[country].[District] where DeletedDate is null</value>
+    <value>select DistrictId, District, StateId from [UnicoVehicle].[country].[District] where DeletedDate is null and StateId = @stateId</value>
     </data>
     <data name="InsertDistrict" xml:space="preserve">
     <value>insert into [UnicoVehicle].[country].[District] (District, StateId, CreatedDate) values (@district, @stateId, @createdDate)</value>

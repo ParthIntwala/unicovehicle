@@ -54,6 +54,12 @@
     <data name="UpdateShowroom" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[Showroom] set DistrictId = @districtId, ShowroomName = @showroomName, AddressLine1 = @addressLine1, Pincode = @pincode, BranchManager = @branchManager, hasSales = @hasSales, hasService = @hasService, isOperational = @isOperational, ModifiedDate = @modifiedDate where ShowroomId = @showroomId</value>
     </data>
+    <data name="GetShowroombyDistrict" xml:space="preserve">
+    <value>Select ShowroomId, CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational from [UnicoVehicle].[company].[Showroom] where DeletedDate is null and DistrictId = @districtId</value>
+    </data>
+    <data name="GetShowroombyCompany" xml:space="preserve">
+    <value>Select ShowroomId, CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational from [UnicoVehicle].[company].[Showroom] where DeletedDate is null and CompanyId = @companyId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="GetAccessories" xml:space="preserve">
+    <value>Select AccessoriesId, AccessoryTypeId, Accessory, Price from [UnicoVehicle].[vehicle].[Accessories] where DeletedDate is null </value>
+    </data>
+    <data name="GetAccessorybyId" xml:space="preserve">
+    <value>Select AccessoryTypeId, Accessory, Price from [UnicoVehicle].[vehicle].[Accessories] where DeletedDate is null and AccessoriesId = @accessoriesId</value>
+    </data>
+    <data name="InsertAccessory" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[vehicle].[Accessories] (AccessoryTypeId, Accessory, Price, CreatedDate) values (@accessoryTypeId, @accessory, @price, @createdDate)</value>
+    </data>
+    <data name="DeleteAccessory" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[Accessories] set DeletedDate = @deletedDate where AccessoriesId = @accessoriesId</value>
+    </data>
+    <data name="UpdateAccessory" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[Accessories] set Accessory = @accessory, Price = @price, ModifiedDate = @modifiedDate where AccessoriesId = @accessoriesId</value>
+    </data>
+    <data name="GetVehicleName" xml:space="preserve">
+    <value>Select VehicleNameId, CompanyId, VehicleName, from [UnicoVehicle].[vehicle].[VehicleName] where DeletedDate is null </value>
+    </data>
+    <data name="GetVehicleNamebyId" xml:space="preserve">
+    <value>Select CompanyId, VehicleName from [UnicoVehicle].[vehicle].[VehicleName] where DeletedDate is null and VehicleNameId = @vehicleNameId</value>
+    </data>
+    <data name="InsertVehicleName" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[vehicle].[VehicleName] (CompanyId, VehicleName, CreatedDate) values (@companyId, @vehicleName, @createdDate)</value>
+    </data>
+    <data name="DeleteAccessory" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[VehicleName] set DeletedDate = @deletedDate where VehicleNameId = @vehicleNameId</value>
+    </data>
+    <data name="UpdateAccessory" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[VehicleName] set VehicleName = @vehicleName, ModifiedDate = @modifiedDate where VehicleNameId = @vehicleNameId</value>
+    </data>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+</root>

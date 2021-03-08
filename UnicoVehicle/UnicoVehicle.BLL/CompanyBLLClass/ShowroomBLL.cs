@@ -8,14 +8,12 @@ namespace UnicoVehicle.BLL
     public class ShowroomBLL : IShowroomBLL
     {
         private readonly IShowroomDAL _showroomDAL;
-        private readonly ICompanyBLL _companyBLL;
-        private readonly IDistrictBLL _districtBLL;
+        private readonly IMiscellaneousCalls _miscellaneousCalls;
         bool _status;
 
-        public ShowroomBLL(ICompanyBLL companyBLL, IDistrictBLL districtBLL, IShowroomDAL showroomDAL)
+        public ShowroomBLL(IMiscellaneousCalls miscellaneousCalls, IShowroomDAL showroomDAL)
         {
-            _companyBLL = companyBLL;
-            _districtBLL = districtBLL;
+            _miscellaneousCalls = miscellaneousCalls;
             _showroomDAL = showroomDAL;
         }
 
@@ -25,8 +23,34 @@ namespace UnicoVehicle.BLL
 
             foreach (Showroom showroom in _showroom)
             {
-                showroom.District = _districtBLL.GetDistrictbyId(showroom.District.DistrictId);
-                showroom.Company = _companyBLL.GetCompanybyId(showroom.Company.CompanyId);
+                showroom.District = _miscellaneousCalls.GetDistrictbyId(showroom.District.DistrictId);
+                showroom.Company = _miscellaneousCalls.GetCompanybyId(showroom.Company.CompanyId);
+            }
+
+            return _showroom;
+        }
+
+        public List<Showroom> GetCompany(int companyId)
+        {
+            List<Showroom> _showroom = _showroomDAL.GetShowroombyCompany(companyId);
+
+            foreach (Showroom showroom in _showroom)
+            {
+                showroom.District = _miscellaneousCalls.GetDistrictbyId(showroom.District.DistrictId);
+                showroom.Company = _miscellaneousCalls.GetCompanybyId(showroom.Company.CompanyId);
+            }
+
+            return _showroom;
+        }
+
+        public List<Showroom> GetDistrict(int districtId)
+        {
+            List<Showroom> _showroom = _showroomDAL.GetShowroombyDistrict(districtId);
+
+            foreach (Showroom showroom in _showroom)
+            {
+                showroom.District = _miscellaneousCalls.GetDistrictbyId(showroom.District.DistrictId);
+                showroom.Company = _miscellaneousCalls.GetCompanybyId(showroom.Company.CompanyId);
             }
 
             return _showroom;
@@ -38,8 +62,8 @@ namespace UnicoVehicle.BLL
 
             if (_showroom.ShowroomId != 0)
             {
-                _showroom.District = _districtBLL.GetDistrictbyId(_showroom.District.DistrictId);
-                _showroom.Company = _companyBLL.GetCompanybyId(_showroom.Company.CompanyId);
+                _showroom.District = _miscellaneousCalls.GetDistrictbyId(_showroom.District.DistrictId);
+                _showroom.Company = _miscellaneousCalls.GetCompanybyId(_showroom.Company.CompanyId);
             }
 
             return _showroom;

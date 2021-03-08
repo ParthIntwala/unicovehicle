@@ -5,6 +5,6 @@ namespace UnicoVehicle.DTO
     {
         public int DistrictId { get; set; }
         public string DistrictName { get; set; }
-        public State StateName { get; set; }
+        public Miscellaneous.State State { get; set; }
     }
 }

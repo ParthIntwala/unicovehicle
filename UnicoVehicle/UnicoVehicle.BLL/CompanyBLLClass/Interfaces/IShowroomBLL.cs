@@ -10,5 +10,7 @@ namespace UnicoVehicle.BLL
         public Showroom GetShowroombyId(int id);
         public bool InsertShowroom(Showroom showroom);
         public bool UpdateShowroom(Showroom showroom, int showroomId);
+        public List<Showroom> GetDistrict(int districtId);
+        public List<Showroom> GetCompany(int companyId);
     }
 }

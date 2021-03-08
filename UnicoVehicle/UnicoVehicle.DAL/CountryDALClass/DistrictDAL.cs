@@ -20,9 +20,10 @@ namespace UnicoVehicle.DAL
             _utils = utils;
         }
 
-        public List<District> GetDistrict()
+        public List<District> GetDistrict(int id)
         {
             _districtCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.GetDistrict);
+            _districtCommand.Parameters.AddWithValue("@stateId", id);
             _districtReader = _districtCommand.ExecuteReader();
 
             District _district;
@@ -34,9 +35,7 @@ namespace UnicoVehicle.DAL
                 {
                     DistrictId = int.Parse(_districtReader["DistrictId"].ToString()),
                     DistrictName = _districtReader["District"].ToString(),
-
-
-                    StateName = new State()
+                    State = new DTO.Miscellaneous.State()
                     {
                         StateId = int.Parse(_districtReader["StateId"].ToString()),
                     },
@@ -64,9 +63,7 @@ namespace UnicoVehicle.DAL
                 {
                     DistrictId = int.Parse(_districtReader["DistrictId"].ToString()),
                     DistrictName = _districtReader["District"].ToString(),
-
-
-                    StateName = new State()
+                    State = new DTO.Miscellaneous.State()
                     {
                         StateId = int.Parse(_districtReader["StateId"].ToString()),
                     },

@@ -5,6 +5,6 @@ namespace UnicoVehicle.DTO
     {
         public int InsuranceTypeId { get; set; }
         public string InsuranceTypeName { get; set; }
-        public InsuranceCompany InsuranceCompany { get; set; }
+        public Miscellaneous.InsuranceCompany InsuranceCompany { get; set; }
     }
 }

@@ -173,7 +173,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "System.Data.SqlClient": "4.8.2"
+          "System.Data.SqlClient": "4.8.2",
+          "UnicoVehicle.DTO": "1.0.0"
         },
         "compile": {
           "bin/placeholder/UnicoVehicle.Utilities.dll": {}

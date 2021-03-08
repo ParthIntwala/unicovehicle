@@ -34,7 +34,7 @@ namespace UnicoVehicle.DAL
                 {
                     InsuranceTypeId = int.Parse(_insuranceReader["InsuranceTypeId"].ToString()),
                     InsuranceTypeName = _insuranceReader["InsuranceType"].ToString(),
-                    InsuranceCompany = new InsuranceCompany
+                    InsuranceCompany = new DTO.Miscellaneous.InsuranceCompany
                     {
                         InsuranceCompanyId = int.Parse(_insuranceReader["InsuranceCompanyId"].ToString()),
                     }
@@ -63,7 +63,7 @@ namespace UnicoVehicle.DAL
                 {
                     InsuranceTypeName = _insuranceReader["InsuranceType"].ToString(),
                     InsuranceTypeId = id,
-                    InsuranceCompany = new InsuranceCompany
+                    InsuranceCompany = new DTO.Miscellaneous.InsuranceCompany
                     {
                         InsuranceCompanyId = int.Parse(_insuranceReader["InsuranceCompanyId"].ToString()),
                     }

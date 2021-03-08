@@ -8,13 +8,13 @@ namespace UnicoVehicle.BLL
     public class InsuranceTypeBLL : IInsuranceTypeBLL
     {
         private readonly IInsuranceTypeDAL _insuranceTypeDAL;
-        private readonly IInsuranceCompanyBLL _insuranceCompanyBLL;
+        private readonly IMiscellaneousCalls _miscellaneousCalls;
         bool _status;
 
-        public InsuranceTypeBLL(IInsuranceTypeDAL insuranceTypeDAL, IInsuranceCompanyBLL insuranceCompanyBLL)
+        public InsuranceTypeBLL(IInsuranceTypeDAL insuranceTypeDAL, IMiscellaneousCalls miscellaneousCalls)
         {
             _insuranceTypeDAL = insuranceTypeDAL;
-            _insuranceCompanyBLL = insuranceCompanyBLL;
+            _miscellaneousCalls = miscellaneousCalls;
         }
 
         public List<InsuranceType> Get()
@@ -23,7 +23,7 @@ namespace UnicoVehicle.BLL
 
             foreach(InsuranceType insuranceType in _insuranceType)
             {
-                insuranceType.InsuranceCompany = _insuranceCompanyBLL.GetInsuranceCompanybyId(insuranceType.InsuranceCompany.InsuranceCompanyId);
+                insuranceType.InsuranceCompany = _miscellaneousCalls.GetInsuranceCompanybyId(insuranceType.InsuranceCompany.InsuranceCompanyId);
             }
 
             return _insuranceType;
@@ -35,7 +35,7 @@ namespace UnicoVehicle.BLL
 
             if(_insuranceType.InsuranceTypeId != 0)
             {
-                _insuranceType.InsuranceCompany = _insuranceCompanyBLL.GetInsuranceCompanybyId(_insuranceType.InsuranceCompany.InsuranceCompanyId);
+                _insuranceType.InsuranceCompany = _miscellaneousCalls.GetInsuranceCompanybyId(_insuranceType.InsuranceCompany.InsuranceCompanyId);
             }
 
             return _insuranceType;

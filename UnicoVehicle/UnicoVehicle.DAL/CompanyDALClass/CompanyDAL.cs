@@ -33,7 +33,7 @@ namespace UnicoVehicle.DAL
                 _company = new Company()
                 {
                     CompanyId = int.Parse(_companyReader["CompanyId"].ToString()),
-                    District = new District
+                    District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_companyReader["DistrictId"].ToString()),
                     },
@@ -63,7 +63,7 @@ namespace UnicoVehicle.DAL
                 _company = new Company()
                 {
                     CompanyId = id,
-                    District = new District
+                    District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_companyReader["DistrictId"].ToString()),
                     },

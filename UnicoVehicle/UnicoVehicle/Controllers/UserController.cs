@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UnicoVehicle.BLL;
-using UnicoVehicle.DTO;
+using UnicoVehicle.DTO.Miscellaneous;
 
 namespace UnicoVehicle.Controllers
 {
@@ -20,25 +20,11 @@ namespace UnicoVehicle.Controllers
             _userBll = userBLL;
         }
 
-        [HttpGet]
-        public List<User> GetUser()
-        {
-            List<User> _users = _userBll.Get();
-            return _users;
-        }
-
         [HttpGet("{Id}")]
         public User GetUserbyId(int id)
         {
             User _user = _userBll.GetUserbyId(id);
             return _user;
-        }
-
-        [HttpPost]
-        public bool InsertUser([FromBody] User user)
-        {
-            _status = _userBll.InsertUser(user);
-            return _status;
         }
 
         [HttpDelete("{Id}")]
