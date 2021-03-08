@@ -7,6 +7,7 @@ namespace UnicoVehicle.BLL
     {
         public bool DeleteInsuranceType(int id);
         public List<InsuranceType> Get();
+        public List<InsuranceType> Get(int id);
         public InsuranceType GetInsuranceTypebyId(int id);
         public bool InsertInsuranceType(InsuranceType insuranceType);
         public bool UpdateInsuranceType(InsuranceType insuranceType, int insuranceTypeId);

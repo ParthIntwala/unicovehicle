@@ -58,5 +58,17 @@ namespace UnicoVehicle.BLL
             _status = _insuranceTypeDAL.UpdateInsuranceType(insuranceType, insuranceTypeId);
             return _status;
         }
+
+        public List<InsuranceType> Get(int id)
+        {
+            List<InsuranceType> _insuranceType = _insuranceTypeDAL.GetInsuranceType(id);
+
+            foreach (InsuranceType insuranceType in _insuranceType)
+            {
+                insuranceType.InsuranceCompany = _miscellaneousCalls.GetInsuranceCompanybyId(insuranceType.InsuranceCompany.InsuranceCompanyId);
+            }
+
+            return _insuranceType;
+        }
     }
 }

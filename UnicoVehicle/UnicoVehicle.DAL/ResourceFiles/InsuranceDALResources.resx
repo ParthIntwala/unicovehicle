@@ -39,6 +39,9 @@
     <data name="UpdateInsuranceType" xml:space="preserve">
     <value>Update [UnicoVehicle].[insurance].[InsuranceType] set ModifiedDate = @modifiedDate, InsuranceType = @insuranceType, InsuranceCompanyId = @insuranceCompanyId where InsuranceTypeId = @insuranceTypeId</value>
     </data>
+    <data name="GetInsuranceTypebyCompany" xml:space="preserve">
+    <value>Select InsuranceType, InsuranceTypeId from [UnicoVehicle].[insurance].[InsuranceType] where DeletedDate is null and InsuranceCompanyId = @insuranceCompanyId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

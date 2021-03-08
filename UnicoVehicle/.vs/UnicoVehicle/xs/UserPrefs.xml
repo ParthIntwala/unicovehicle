@@ -1,29 +1,28 @@
 ﻿<Properties StartupConfiguration="{113FDCED-19CE-4C54-A260-12C37E137339}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle/Controllers/CompanyCountryController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle.DAL/ResourceFiles/VehicleDALResources.resx">
     <Files>
-      <File FileName="UnicoVehicle.DAL/CompanyDALClass/CompanyCountryDAL.cs" Line="9" Column="44" />
-      <File FileName="UnicoVehicle.DAL/ResourceFiles/CompanyDALResources.resx" Line="28" Column="186" />
-      <File FileName="UnicoVehicle.DAL/CompanyDALClass/Interfaces/ICompanyCountryDAL.cs" Line="12" Column="65" />
-      <File FileName="UnicoVehicle.BLL/CompanyBLLClass/CompanyCountryBLL.cs" Line="8" Column="49" />
-      <File FileName="UnicoVehicle.BLL/CompanyBLLClass/Interfaces/ICompanyCountryBLL.cs" Line="12" Column="65" />
-      <File FileName="UnicoVehicle/Controllers/CompanyCountryController.cs" Line="29" Column="1" />
+      <File FileName="UnicoVehicle.DAL/VehicleNameDAL.cs" Line="27" Column="1" />
+      <File FileName="UnicoVehicle.DAL/IVehicleNameDAL.cs" Line="12" Column="16" />
+      <File FileName="UnicoVehicle.BLL/VehicleNameBLL.cs" Line="8" Column="26" />
+      <File FileName="UnicoVehicle/Startup.cs" Line="79" Column="66" />
+      <File FileName="UnicoVehicle/Controllers/VehicleNameController.cs" Line="28" Column="10" />
+      <File FileName="UnicoVehicle.DAL/ResourceFiles/VehicleDALResources.resx" Line="28" Column="56" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UnicoVehicle" expanded="True">
             <Node name="UnicoVehicle" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="CompanyCountryController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
             </Node>
             <Node name="UnicoVehicle.BLL" expanded="True">
-              <Node name="CompanyBLLClass" expanded="True">
-                <Node name="Interfaces" expanded="True" />
-              </Node>
+              <Node name="UserBLLClass" expanded="True" />
             </Node>
             <Node name="UnicoVehicle.DAL" expanded="True">
-              <Node name="ResourceFiles" expanded="True" />
+              <Node name="ResourceFiles" expanded="True">
+                <Node name="VehicleDALResources.resx" selected="True" />
+              </Node>
+              <Node name="VehicleDALClass" expanded="True" />
             </Node>
             <Node name="UnicoVehicle.DTO" expanded="True" />
             <Node name="UnicoVehicle.Utilities" expanded="True" />

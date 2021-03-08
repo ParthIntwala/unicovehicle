@@ -136,5 +136,35 @@ namespace UnicoVehicle.DAL
                 return false;
             }
         }
+
+        public List<InsuranceType> GetInsuranceType(int Id)
+        {
+            _insuranceCommand = _utils.CommandGenerator(ResourceFiles.InsuranceDALResources.GetInsuranceTypebyCompany);
+            _insuranceCommand.Parameters.AddWithValue("@insuranceCompanyId", Id);
+            _insuranceReader = _insuranceCommand.ExecuteReader();
+
+            InsuranceType _insuranceType;
+            List<InsuranceType> _insuranceTypes = new List<InsuranceType>();
+
+            while (_insuranceReader.Read())
+            {
+                _insuranceType = new InsuranceType()
+                {
+                    InsuranceTypeId = int.Parse(_insuranceReader["InsuranceTypeId"].ToString()),
+                    InsuranceTypeName = _insuranceReader["InsuranceType"].ToString(),
+                    InsuranceCompany = new DTO.Miscellaneous.InsuranceCompany
+                    {
+                        InsuranceCompanyId = Id,
+                    }
+                };
+
+                _insuranceTypes.Add(_insuranceType);
+            }
+
+            _insuranceReader.Close();
+            _connection.CloseConnection();
+
+            return _insuranceTypes;
+        }
     }
 }

@@ -106,5 +106,11 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("UpdateInsuranceType", resourceCulture);
             }
         }
+        
+        internal static string GetInsuranceTypebyCompany {
+            get {
+                return ResourceManager.GetString("GetInsuranceTypebyCompany", resourceCulture);
+            }
+        }
     }
 }

@@ -94,5 +94,17 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("InsertVehicleName", resourceCulture);
             }
         }
+        
+        internal static string DeleteVehicleName {
+            get {
+                return ResourceManager.GetString("DeleteVehicleName", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateVehicleName {
+            get {
+                return ResourceManager.GetString("UpdateVehicleName", resourceCulture);
+            }
+        }
     }
 }

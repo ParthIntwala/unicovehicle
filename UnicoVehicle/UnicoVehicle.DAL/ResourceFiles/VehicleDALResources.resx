@@ -25,7 +25,7 @@
     <value>Update [UnicoVehicle].[vehicle].[Accessories] set Accessory = @accessory, Price = @price, ModifiedDate = @modifiedDate where AccessoriesId = @accessoriesId</value>
     </data>
     <data name="GetVehicleName" xml:space="preserve">
-    <value>Select VehicleNameId, CompanyId, VehicleName, from [UnicoVehicle].[vehicle].[VehicleName] where DeletedDate is null </value>
+    <value>Select VehicleNameId, CompanyId, VehicleName from [UnicoVehicle].[vehicle].[VehicleName] where DeletedDate is null and CompanyId = @companyId</value>
     </data>
     <data name="GetVehicleNamebyId" xml:space="preserve">
     <value>Select CompanyId, VehicleName from [UnicoVehicle].[vehicle].[VehicleName] where DeletedDate is null and VehicleNameId = @vehicleNameId</value>
@@ -33,10 +33,10 @@
     <data name="InsertVehicleName" xml:space="preserve">
     <value>Insert into [UnicoVehicle].[vehicle].[VehicleName] (CompanyId, VehicleName, CreatedDate) values (@companyId, @vehicleName, @createdDate)</value>
     </data>
-    <data name="DeleteAccessory" xml:space="preserve">
+    <data name="DeleteVehicleName" xml:space="preserve">
     <value>Update [UnicoVehicle].[vehicle].[VehicleName] set DeletedDate = @deletedDate where VehicleNameId = @vehicleNameId</value>
     </data>
-    <data name="UpdateAccessory" xml:space="preserve">
+    <data name="UpdateVehicleName" xml:space="preserve">
     <value>Update [UnicoVehicle].[vehicle].[VehicleName] set VehicleName = @vehicleName, ModifiedDate = @modifiedDate where VehicleNameId = @vehicleNameId</value>
     </data>
     <resheader name="writer">

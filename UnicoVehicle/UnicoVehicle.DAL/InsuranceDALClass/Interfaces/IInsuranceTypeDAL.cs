@@ -10,5 +10,6 @@ namespace UnicoVehicle.DAL
         public InsuranceType GetInsuranceTypebyId(int id);
         public bool InsertInsuranceType(InsuranceType insuranceType);
         public bool UpdateInsuranceType(InsuranceType insuranceType, int insuranceTypeId);
+        public List<InsuranceType> GetInsuranceType(int Id);
     }
 }
