@@ -9,7 +9,7 @@ namespace UnicoVehicle.DTO
         public FuelType FuelType { get; set; }
         public VehicleType VehicleType { get; set; }
         public CylinderArrangement CylinderArrangement { get; set; }
-        public string VehicleName { get; set; }
+        public VehicleName VehicleName { get; set; }
         public int Doors { get; set; }
         public int Passenger { get; set; }
         public int Cylinder { get; set; }

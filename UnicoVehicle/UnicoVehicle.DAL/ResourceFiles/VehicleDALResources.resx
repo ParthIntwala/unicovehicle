@@ -39,6 +39,50 @@
     <data name="UpdateVehicleName" xml:space="preserve">
     <value>Update [UnicoVehicle].[vehicle].[VehicleName] set VehicleName = @vehicleName, ModifiedDate = @modifiedDate where VehicleNameId = @vehicleNameId</value>
     </data>
+    <data name="GetVehiclebyTransmission" xml:space="preserve">
+    <value>Select VehicleId, VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, CylinderArrangementId,
+            NumberofDoors, NumberofPassenger, NumberofCylinder, EngineSize, HorsePower, Torque, Mileage, Height, Width, Length,
+            GroundClearance, Wheelbase, FuelTankSize, KerbWeight, GrossWeight from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate 
+            is null and TransmissionTypeId = @transmissionTypeId</value>
+    </data>
+    <data name="GetVehiclebyId" xml:space="preserve">
+    <value>Select VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, CylinderArrangementId,
+            NumberofDoors, NumberofPassenger, NumberofCylinder, EngineSize, HorsePower, Torque, Mileage, Height, Width, Length,
+            GroundClearance, Wheelbase, FuelTankSize, KerbWeight, GrossWeight from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate 
+            is null and VehicleId = @vehicleId</value>
+    </data>
+    <data name="InsertVehicle" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[vehicle].[Vehicle] (VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, 
+            CylinderArrangementId, NumberofDoors, NumberofPassenger, NumberofCylinder, EngineSize, HorsePower, Torque, Mileage, Height, 
+            Width, Length, GroundClearance, Wheelbase, FuelTankSize, KerbWeight, GrossWeight, CreatedDate) values (@vehicleNameId, 
+            @vehicleVariantId, @transmissionTypeId, @fuelTypeId, @vehicleTypeId, @cylinderArrangementId, @numberofDoors, 
+            @numberofPassanger, @numberofCylinder, @engineSize, @horsePower, @torque, @mileage, @height, @width, @length, 
+            @groundClearance, @wheelBase, @fuelTankSize, @kerbWeight, @grossWeight, @createdDate)</value>
+    </data>
+    <data name="DeleteVehicle" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[Vehicle] set DeletedDate = @deletedDate where VehicleId = @vehicleId</value>
+    </data>
+    <data name="UpdateVehicle" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[Vehicle] set VehicleNameId = @vehicleNameId, VehicleVariantId = @vehicleVariantId, 
+            TransmissionTypeId = @transmissionTypeId, FuelTypeId = @fuelTypeId, VehicleTypeId = @vehicleTYpeId, 
+            CylinderArrangementId = @cylinderArrangementId, NumberofDoors = @numberofDoors, NumberofPassenger = @numberofPassanger, 
+            NumberofCylinder = @numberofCylinder, EngineSize = @engineSize, HorsePower = @horsePower, Torque = @torque, Mileage = @mileage, 
+            Height = @height, Width = @width, Length = @length, GroundClearance = @groundClearance, Wheelbase = @wheelBase, 
+            FuelTankSize = @fuelTankSize, KerbWeight = @kerbWeight, GrossWeight = @grossWeight, ModifiedDate = @modifiedDate where 
+            VehicleId = @vehicleId</value>
+    </data>
+    <data name="GetVehicleVariantbyCompany" xml:space="preserve">
+    <value>Select VehicleVariantId, CompanyId, VehicleVariant from [UnicoVehicle].[vehicle].[VehicleVariant] where DeletedDate is null and CompanyId = @companyId</value>
+    </data>
+    <data name="GetVehicleVariantbyId" xml:space="preserve">
+    <value>Select CompanyId, VehicleVariant from [UnicoVehicle].[vehicle].[VehicleVariant] where DeletedDate is null and VehicleVariantId = @vehicleVariantId</value>
+    </data>
+    <data name="InsertVehicleVariant" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[vehicle].[VehicleVariant] (CompanyId, VehicleVariant, CreatedDate) values (@companyId, @vehicleVariant, @createdDate)</value>
+    </data>
+    <data name="DeleteVehicleVariant" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[VehicleVariant] set DeletedDate = @deletedDate where VehicleVariantId = @vehicleVariantId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

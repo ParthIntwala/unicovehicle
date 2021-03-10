@@ -25,7 +25,5 @@ namespace UnicoVehicle.Controllers
             List<Showroom> _showroom = _showroomBll.GetCompany(Id);
             return _showroom;
         }
-
-
     }
 }
