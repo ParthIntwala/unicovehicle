@@ -8,13 +8,13 @@ namespace UnicoVehicle.BLL
     public class VehicleNameBLL : IVehicleNameBLL
     {
         private readonly IVehicleNameDAL _vehicleNameDAL;
-        private readonly IMiscellaneousCalls _miscellaneousCalls;
+        private readonly IMiscellaneousCallsDAL _miscellaneousCallsDAL;
         bool _status;
 
-        public VehicleNameBLL(IVehicleNameDAL vehicleNameDAL, IMiscellaneousCalls miscellaneousCalls)
+        public VehicleNameBLL(IVehicleNameDAL vehicleNameDAL, IMiscellaneousCallsDAL miscellaneousCallsDAL)
         {
             _vehicleNameDAL = vehicleNameDAL;
-            _miscellaneousCalls = miscellaneousCalls;
+            _miscellaneousCallsDAL = miscellaneousCallsDAL;
         }
 
         public List<VehicleName> Get(int id)
@@ -23,7 +23,7 @@ namespace UnicoVehicle.BLL
 
             foreach (VehicleName vehicle in _vehicleName)
             {
-                vehicle.Company = _miscellaneousCalls.GetCompanybyId(vehicle.Company.CompanyId);
+                vehicle.Company = _miscellaneousCallsDAL.GetCompanybyId(vehicle.Company.CompanyId);
             }
 
             return _vehicleName;
@@ -35,7 +35,7 @@ namespace UnicoVehicle.BLL
 
             if (_vehicle.VehicleNameId != 0)
             {
-                _vehicle.Company = _miscellaneousCalls.GetCompanybyId(_vehicle.Company.CompanyId);
+                _vehicle.Company = _miscellaneousCallsDAL.GetCompanybyId(_vehicle.Company.CompanyId);
             }
 
             return _vehicle;

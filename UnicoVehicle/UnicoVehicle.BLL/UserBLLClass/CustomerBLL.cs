@@ -9,13 +9,13 @@ namespace UnicoVehicle.BLL
     {
         private readonly ICustomerDAL _customerDAL;
         private readonly IUserBLL _userBLL;
-        private readonly IMiscellaneousCalls _miscellaneousCalls;
+        private readonly IMiscellaneousCallsDAL _miscellaneousCallsDAL;
         bool _status;
 
-        public CustomerBLL(ICustomerDAL customerDAL, IMiscellaneousCalls miscellaneousCalls, IUserBLL userBLL)
+        public CustomerBLL(ICustomerDAL customerDAL, IMiscellaneousCallsDAL miscellaneousCallsDAL, IUserBLL userBLL)
         {
             _customerDAL = customerDAL;
-            _miscellaneousCalls = miscellaneousCalls;
+            _miscellaneousCallsDAL = miscellaneousCallsDAL;
             _userBLL = userBLL;
         }
 
@@ -38,7 +38,7 @@ namespace UnicoVehicle.BLL
             if (_customer.CustomerId != 0)
             {
                 _customer.User = _userBLL.GetUserbyId(_customer.User.UserId);
-                _customer.District = _miscellaneousCalls.GetDistrictbyId(_customer.District.DistrictId);
+                _customer.District = _miscellaneousCallsDAL.GetDistrictbyId(_customer.District.DistrictId);
             }
 
             return _customer;

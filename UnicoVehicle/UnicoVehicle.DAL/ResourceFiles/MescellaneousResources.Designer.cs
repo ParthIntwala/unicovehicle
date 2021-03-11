@@ -76,5 +76,11 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("GetShowroombyId", resourceCulture);
             }
         }
+        
+        internal static string GetVehiclebyId {
+            get {
+                return ResourceManager.GetString("GetVehiclebyId", resourceCulture);
+            }
+        }
     }
 }

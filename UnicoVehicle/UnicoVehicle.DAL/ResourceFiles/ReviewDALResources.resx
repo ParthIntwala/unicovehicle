@@ -24,6 +24,21 @@
     <data name="UpdateShowroomReview" xml:space="preserve">
     <value>Update [UnicoVehicle].[review].[ShowroomReview] set ShowroomReview = @showroomReview, ModifiedDate = @modifiedDate where ShowroomReviewId = @showroomReviewId</value>
     </data>
+    <data name="GetVehicleReview" xml:space="preserve">
+    <value>Select VehicleReviewId, UserId, VehicleId, VehicleReview from [UnicoVehicle].[review].[VehicleReview] where DeletedDate is null </value>
+    </data>
+    <data name="GetVehicleReviewbyId" xml:space="preserve">
+    <value>Select UserId, VehicleId, VehicleReview from [UnicoVehicle].[review].[VehicleReview] where DeletedDate is null and VehicleReviewId = @vehicleReviewId</value>
+    </data>
+    <data name="InsertVehicleReview" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[review].[VehicleReview] (UserId, VehicleId, VehicleReview, CreatedDate) values (@userId, @vehicleId, @vehicleReview, @createdDate)</value>
+    </data>
+    <data name="DeleteVehicleReview" xml:space="preserve">
+    <value>Update [UnicoVehicle].[review].[VehicleReview] set DeletedDate = @deletedDate where VehicleReviewId = @vehicleReviewId</value>
+    </data>
+    <data name="UpdateVehicleReview" xml:space="preserve">
+    <value>Update [UnicoVehicle].[review].[VehicleReview] set VehicleReview = @vehicleReview, ModifiedDate = @modifiedDate where VehicleReviewId = @vehicleReviewId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

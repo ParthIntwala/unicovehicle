@@ -5,7 +5,7 @@ using UnicoVehicle.Utilities;
 
 namespace UnicoVehicle.DAL
 {
-    public class MiscellaneousCalls : IMiscellaneousCalls
+    public class MiscellaneousCallsDAL : IMiscellaneousCallsDAL
     {
         private readonly Connection _connection;
         private readonly IUtils _utils;
@@ -13,7 +13,7 @@ namespace UnicoVehicle.DAL
         private SqlDataReader _reader;
         int _success;
 
-        public MiscellaneousCalls(Connection connection, IUtils utils)
+        public MiscellaneousCallsDAL(Connection connection, IUtils utils)
         {
             _utils = utils;
             _connection = connection;
@@ -140,6 +140,36 @@ namespace UnicoVehicle.DAL
             _connection.CloseConnection();
 
             return _showroom;
+        }
+
+        public Vehicle GetVehiclebyId(int id)
+        {
+            _command = _utils.CommandGenerator(ResourceFiles.MescellaneousResources.GetVehiclebyId);
+            _command.Parameters.AddWithValue("@vehicleId", id);
+            _reader = _command.ExecuteReader();
+
+            Vehicle _vehicle = new Vehicle();
+
+            while (_reader.Read())
+            {
+                _vehicle = new Vehicle()
+                {
+                    VehicleId = id,
+                    VehicleName = new DTO.VehicleName
+                    {
+                        VehicleNameId = int.Parse(_reader["VehicleNameId"].ToString()),
+                    },
+                    VehicleVariant = new DTO.VehicleVariant
+                    {
+                        VehicleVariantId = int.Parse(_reader["VehicleVariantId"].ToString()),
+                    }
+                };
+            }
+
+            _reader.Close();
+            _connection.CloseConnection();
+
+            return _vehicle;
         }
     }
 }

@@ -5,7 +5,7 @@ namespace UnicoVehicle.DTO
     {
         public int VehicleReviewId { get; set; }
         public Miscellaneous.User User { get; set; }
-        public Vehicle Vehicle { get; set; }
+        public Miscellaneous.Vehicle Vehicle { get; set; }
         public string Review { get; set; }
     }
 }

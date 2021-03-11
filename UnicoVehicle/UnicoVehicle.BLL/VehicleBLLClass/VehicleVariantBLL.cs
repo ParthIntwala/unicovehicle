@@ -8,13 +8,13 @@ namespace UnicoVehicle.BLL
     public class VehicleVariantBLL : IVehicleVariantBLL
     {
         private readonly IVehicleVariantDAL _vehicleVariantDAL;
-        private readonly IMiscellaneousCalls _miscellaneousCalls;
+        private readonly IMiscellaneousCallsDAL _miscellaneousCallsDAL;
         bool _status;
 
-        public VehicleVariantBLL(IVehicleVariantDAL vehicleVariantDAL, IMiscellaneousCalls miscellaneousCalls)
+        public VehicleVariantBLL(IVehicleVariantDAL vehicleVariantDAL, IMiscellaneousCallsDAL miscellaneousCallsDAL)
         {
             _vehicleVariantDAL = vehicleVariantDAL;
-            _miscellaneousCalls = miscellaneousCalls;
+            _miscellaneousCallsDAL = miscellaneousCallsDAL;
         }
 
         public List<VehicleVariant> Get(int id)
@@ -23,7 +23,7 @@ namespace UnicoVehicle.BLL
 
             foreach (VehicleVariant vehicleVariant in _vehicleVariant)
             {
-                vehicleVariant.Company = _miscellaneousCalls.GetCompanybyId(vehicleVariant.Company.CompanyId);
+                vehicleVariant.Company = _miscellaneousCallsDAL.GetCompanybyId(vehicleVariant.Company.CompanyId);
             }
 
             return _vehicleVariant;
@@ -35,7 +35,7 @@ namespace UnicoVehicle.BLL
 
             if (_vehicleVariant.VehicleVariantId != 0)
             {
-                _vehicleVariant.Company = _miscellaneousCalls.GetCompanybyId(_vehicleVariant.Company.CompanyId);
+                _vehicleVariant.Company = _miscellaneousCallsDAL.GetCompanybyId(_vehicleVariant.Company.CompanyId);
             }
 
             return _vehicleVariant;

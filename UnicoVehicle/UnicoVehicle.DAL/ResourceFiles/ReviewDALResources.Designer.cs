@@ -76,5 +76,35 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("UpdateShowroomReview", resourceCulture);
             }
         }
+        
+        internal static string GetVehicleReview {
+            get {
+                return ResourceManager.GetString("GetVehicleReview", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehicleReviewbyId {
+            get {
+                return ResourceManager.GetString("GetVehicleReviewbyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertVehicleReview {
+            get {
+                return ResourceManager.GetString("InsertVehicleReview", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteVehicleReview {
+            get {
+                return ResourceManager.GetString("DeleteVehicleReview", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateVehicleReview {
+            get {
+                return ResourceManager.GetString("UpdateVehicleReview", resourceCulture);
+            }
+        }
     }
 }

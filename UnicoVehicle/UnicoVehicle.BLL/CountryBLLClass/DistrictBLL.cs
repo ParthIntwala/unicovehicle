@@ -8,13 +8,13 @@ namespace UnicoVehicle.BLL
     public class DistrictBLL : IDistrictBLL
     {
         private readonly IDistrictDAL _districtDAL;
-        private readonly IMiscellaneousCalls _miscellaneousCalls;
+        private readonly IMiscellaneousCallsDAL _miscellaneousCallsDAL;
         bool _status;
 
-        public DistrictBLL(IDistrictDAL districtDAL, IMiscellaneousCalls miscellaneousCalls)
+        public DistrictBLL(IDistrictDAL districtDAL, IMiscellaneousCallsDAL miscellaneousCallsDAL)
         {
             _districtDAL = districtDAL;
-            _miscellaneousCalls = miscellaneousCalls;
+            _miscellaneousCallsDAL = miscellaneousCallsDAL;
         }
 
         public List<District> Get(int id)
@@ -23,7 +23,7 @@ namespace UnicoVehicle.BLL
 
             foreach (District district in _districts)
             {
-                district.State = _miscellaneousCalls.GetStatebyId(district.State.StateId);
+                district.State = _miscellaneousCallsDAL.GetStatebyId(district.State.StateId);
             }
 
             return _districts;
@@ -35,7 +35,7 @@ namespace UnicoVehicle.BLL
 
             if(_district.DistrictId != 0)
             {
-                _district.State = _miscellaneousCalls.GetStatebyId(_district.State.StateId);
+                _district.State = _miscellaneousCallsDAL.GetStatebyId(_district.State.StateId);
             }
 
             return _district;

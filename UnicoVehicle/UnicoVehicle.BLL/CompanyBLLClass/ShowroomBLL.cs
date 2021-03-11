@@ -8,12 +8,12 @@ namespace UnicoVehicle.BLL
     public class ShowroomBLL : IShowroomBLL
     {
         private readonly IShowroomDAL _showroomDAL;
-        private readonly IMiscellaneousCalls _miscellaneousCalls;
+        private readonly IMiscellaneousCallsDAL _miscellaneousCallsDAL;
         bool _status;
 
-        public ShowroomBLL(IMiscellaneousCalls miscellaneousCalls, IShowroomDAL showroomDAL)
+        public ShowroomBLL(IMiscellaneousCallsDAL miscellaneousCallsDAL, IShowroomDAL showroomDAL)
         {
-            _miscellaneousCalls = miscellaneousCalls;
+            _miscellaneousCallsDAL = miscellaneousCallsDAL;
             _showroomDAL = showroomDAL;
         }
 
@@ -23,8 +23,8 @@ namespace UnicoVehicle.BLL
 
             foreach (Showroom showroom in _showroom)
             {
-                showroom.District = _miscellaneousCalls.GetDistrictbyId(showroom.District.DistrictId);
-                showroom.Company = _miscellaneousCalls.GetCompanybyId(showroom.Company.CompanyId);
+                showroom.District = _miscellaneousCallsDAL.GetDistrictbyId(showroom.District.DistrictId);
+                showroom.Company = _miscellaneousCallsDAL.GetCompanybyId(showroom.Company.CompanyId);
             }
 
             return _showroom;
@@ -36,8 +36,8 @@ namespace UnicoVehicle.BLL
 
             foreach (Showroom showroom in _showroom)
             {
-                showroom.District = _miscellaneousCalls.GetDistrictbyId(showroom.District.DistrictId);
-                showroom.Company = _miscellaneousCalls.GetCompanybyId(showroom.Company.CompanyId);
+                showroom.District = _miscellaneousCallsDAL.GetDistrictbyId(showroom.District.DistrictId);
+                showroom.Company = _miscellaneousCallsDAL.GetCompanybyId(showroom.Company.CompanyId);
             }
 
             return _showroom;
@@ -49,8 +49,8 @@ namespace UnicoVehicle.BLL
 
             foreach (Showroom showroom in _showroom)
             {
-                showroom.District = _miscellaneousCalls.GetDistrictbyId(showroom.District.DistrictId);
-                showroom.Company = _miscellaneousCalls.GetCompanybyId(showroom.Company.CompanyId);
+                showroom.District = _miscellaneousCallsDAL.GetDistrictbyId(showroom.District.DistrictId);
+                showroom.Company = _miscellaneousCallsDAL.GetCompanybyId(showroom.Company.CompanyId);
             }
 
             return _showroom;
@@ -62,8 +62,8 @@ namespace UnicoVehicle.BLL
 
             if (_showroom.ShowroomId != 0)
             {
-                _showroom.District = _miscellaneousCalls.GetDistrictbyId(_showroom.District.DistrictId);
-                _showroom.Company = _miscellaneousCalls.GetCompanybyId(_showroom.Company.CompanyId);
+                _showroom.District = _miscellaneousCallsDAL.GetDistrictbyId(_showroom.District.DistrictId);
+                _showroom.Company = _miscellaneousCallsDAL.GetCompanybyId(_showroom.Company.CompanyId);
             }
 
             return _showroom;

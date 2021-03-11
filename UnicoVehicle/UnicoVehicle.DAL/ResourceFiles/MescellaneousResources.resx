@@ -24,6 +24,9 @@
     <data name="GetShowroombyId" xml:space="preserve">
     <value>Select CompanyId, DistrictId, ShowroomName from [UnicoVehicle].[company].[Showroom] where DeletedDate is null and ShowroomId = @showroomId</value>
     </data>
+    <data name="GetVehiclebyId" xml:space="preserve">
+    <value>Select VehicleId, VehicleNameId, VehicleVariantId from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate is null and VehicleId = @vehicleId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
