@@ -29,9 +29,60 @@ namespace UnicoVehicle.BLL
             _cylinderArrangementBLL = cylinderArrangementBLL;
         }
 
-        public List<Vehicle> GetVehiclebyTransmission(int id)
+        public List<Vehicle> GetVehiclebyTransmission(int id, int nameId)
         {
-            List<Vehicle> _vehicles = _vehicleDAL.GetVehiclebyTransmissionType(id);
+            List<Vehicle> _vehicles = _vehicleDAL.GetVehiclebyTransmissionType(id, nameId);
+
+            foreach (Vehicle _vehicle in _vehicles)
+            {
+                _vehicle.VehicleName = _vehicleNameBLL.GetVehicleNamebyId(_vehicle.VehicleName.VehicleNameId);
+                _vehicle.VehicleType = _vehicleTypeBLL.GetVehicleTypebyId(_vehicle.VehicleType.VehicleTypeId);
+                _vehicle.VehicleVariant = _vehicleVariantBLL.GetVehicleVariantbyId(_vehicle.VehicleVariant.VehicleVariantId);
+                _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
+                _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
+                _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+            }
+
+            return _vehicles;
+        }
+
+        public List<Vehicle> GetVehiclebyVehicleType(int id, int nameId)
+        {
+            List<Vehicle> _vehicles = _vehicleDAL.GetVehiclebyVehicleType(id, nameId);
+
+            foreach (Vehicle _vehicle in _vehicles)
+            {
+                _vehicle.VehicleName = _vehicleNameBLL.GetVehicleNamebyId(_vehicle.VehicleName.VehicleNameId);
+                _vehicle.VehicleType = _vehicleTypeBLL.GetVehicleTypebyId(_vehicle.VehicleType.VehicleTypeId);
+                _vehicle.VehicleVariant = _vehicleVariantBLL.GetVehicleVariantbyId(_vehicle.VehicleVariant.VehicleVariantId);
+                _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
+                _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
+                _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+            }
+
+            return _vehicles;
+        }
+
+        public List<Vehicle> GetVehiclebyFuel(int id, int nameId)
+        {
+            List<Vehicle> _vehicles = _vehicleDAL.GetVehiclebyFuelType(id, nameId);
+
+            foreach (Vehicle _vehicle in _vehicles)
+            {
+                _vehicle.VehicleName = _vehicleNameBLL.GetVehicleNamebyId(_vehicle.VehicleName.VehicleNameId);
+                _vehicle.VehicleType = _vehicleTypeBLL.GetVehicleTypebyId(_vehicle.VehicleType.VehicleTypeId);
+                _vehicle.VehicleVariant = _vehicleVariantBLL.GetVehicleVariantbyId(_vehicle.VehicleVariant.VehicleVariantId);
+                _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
+                _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
+                _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+            }
+
+            return _vehicles;
+        }
+
+        public List<Vehicle> GetVehiclebyName(int id)
+        {
+            List<Vehicle> _vehicles = _vehicleDAL.GetVehiclesbyName(id);
 
             foreach (Vehicle _vehicle in _vehicles)
             {
@@ -49,6 +100,23 @@ namespace UnicoVehicle.BLL
         public Vehicle GetVehiclebyId(int id)
         {
             Vehicle _vehicle = _vehicleDAL.GetVehiclebyId(id);
+
+            if (_vehicle.VehicleId != 0)
+            {
+                _vehicle.VehicleName = _vehicleNameBLL.GetVehicleNamebyId(_vehicle.VehicleName.VehicleNameId);
+                _vehicle.VehicleType = _vehicleTypeBLL.GetVehicleTypebyId(_vehicle.VehicleType.VehicleTypeId);
+                _vehicle.VehicleVariant = _vehicleVariantBLL.GetVehicleVariantbyId(_vehicle.VehicleVariant.VehicleVariantId);
+                _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
+                _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
+                _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+            }
+
+            return _vehicle;
+        }
+
+        public Vehicle GetVehiclebyVariant(int id, int nameId)
+        {
+            Vehicle _vehicle = _vehicleDAL.GetVehiclebyVariant(id, nameId);
 
             if (_vehicle.VehicleId != 0)
             {

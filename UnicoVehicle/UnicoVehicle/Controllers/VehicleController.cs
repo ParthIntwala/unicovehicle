@@ -28,9 +28,9 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet]
-        public List<Vehicle> GetVehiclebyTransmission(int id)
+        public List<Vehicle> GetVehiclebyTransmission(int id, int nameId)
         {
-            List<Vehicle> vehicle = _vehicleBll.GetVehiclebyTransmission(id);
+            List<Vehicle> vehicle = _vehicleBll.GetVehiclebyTransmission(id, nameId);
             return vehicle;
         }
 

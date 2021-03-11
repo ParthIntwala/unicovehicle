@@ -20,10 +20,205 @@ namespace UnicoVehicle.DAL
             _connection = connection;
         }
 
-        public List<Vehicle> GetVehiclebyTransmissionType(int Id)
+        public List<Vehicle> GetVehiclebyTransmissionType(int Id, int nameId)
         {
             _vehicleCommand = _utils.CommandGenerator(ResourceFiles.VehicleDALResources.GetVehiclebyTransmission);
             _vehicleCommand.Parameters.AddWithValue("@transmissionTypeId", Id);
+            _vehicleCommand.Parameters.AddWithValue("@vehicleNameId", nameId);
+            _vehicleReader = _vehicleCommand.ExecuteReader();
+
+            Vehicle _vehicle;
+            List<Vehicle> _vehicles = new List<Vehicle>();
+
+            while (_vehicleReader.Read())
+            {
+                _vehicle = new Vehicle()
+                {
+                    VehicleId = int.Parse(_vehicleReader["VehicleId"].ToString()),
+                    VehicleName = new VehicleName
+                    {
+                        VehicleNameId = int.Parse(_vehicleReader["VehicleNameId"].ToString())
+                    },
+                    CylinderArrangement = new CylinderArrangement
+                    {
+                        CylinderArrangementId = int.Parse(_vehicleReader["CylinderArrangementId"].ToString())
+                    },
+                    TransmissionType = new TransmissionType
+                    {
+                        TransmissionTypeId = int.Parse(_vehicleReader["TransmissionTypeId"].ToString())
+                    },
+                    VehicleVariant = new VehicleVariant
+                    {
+                        VehicleVariantId = int.Parse(_vehicleReader["VehicleVariantId"].ToString())
+                    },
+                    VehicleType = new VehicleType
+                    {
+                        VehicleTypeId = int.Parse(_vehicleReader["VehicleTypeId"].ToString())
+                    },
+                    FuelType = new FuelType
+                    {
+                        FuelTypeId = int.Parse(_vehicleReader["FuelTypeId"].ToString())
+                    },
+                    Cylinder = int.Parse(_vehicleReader["NumberofCylinder"].ToString()),
+                    Doors = int.Parse(_vehicleReader["NumberofDoors"].ToString()),
+                    Passenger = int.Parse(_vehicleReader["NumberofPassenger"].ToString()),
+                    EngineSize = int.Parse(_vehicleReader["EngineSize"].ToString()),
+                    FuelTankSize = float.Parse(_vehicleReader["FuelTankSize"].ToString()),
+                    HorsePower = float.Parse(_vehicleReader["HorsePower"].ToString()),
+                    Torque = float.Parse(_vehicleReader["Torque"].ToString()),
+                    Mileage = float.Parse(_vehicleReader["Mileage"].ToString()),
+                    GrossWeight = float.Parse(_vehicleReader["GrossWeight"].ToString()),
+                    GroundClearance = float.Parse(_vehicleReader["GroundClearance"].ToString()),
+                    Height = float.Parse(_vehicleReader["Height"].ToString()),
+                    Length = float.Parse(_vehicleReader["Length"].ToString()),
+                    Width = float.Parse(_vehicleReader["Width"].ToString()),
+                    KerbWeight = float.Parse(_vehicleReader["KerbWeight"].ToString()),
+                    WheelBase = float.Parse(_vehicleReader["WheelBase"].ToString()),
+                };
+
+                _vehicles.Add(_vehicle);
+            }
+
+            _vehicleReader.Close();
+            _connection.CloseConnection();
+
+            return _vehicles;
+        }
+
+        public List<Vehicle> GetVehiclebyVehicleType(int Id, int nameId)
+        {
+            _vehicleCommand = _utils.CommandGenerator(ResourceFiles.VehicleDALResources.GetVehiclebyVehicleType);
+            _vehicleCommand.Parameters.AddWithValue("@vehicleTypeId", Id);
+            _vehicleCommand.Parameters.AddWithValue("@vehicleNameId", nameId);
+            _vehicleReader = _vehicleCommand.ExecuteReader();
+
+            Vehicle _vehicle;
+            List<Vehicle> _vehicles = new List<Vehicle>();
+
+            while (_vehicleReader.Read())
+            {
+                _vehicle = new Vehicle()
+                {
+                    VehicleId = int.Parse(_vehicleReader["VehicleId"].ToString()),
+                    VehicleName = new VehicleName
+                    {
+                        VehicleNameId = int.Parse(_vehicleReader["VehicleNameId"].ToString())
+                    },
+                    CylinderArrangement = new CylinderArrangement
+                    {
+                        CylinderArrangementId = int.Parse(_vehicleReader["CylinderArrangementId"].ToString())
+                    },
+                    TransmissionType = new TransmissionType
+                    {
+                        TransmissionTypeId = int.Parse(_vehicleReader["TransmissionTypeId"].ToString())
+                    },
+                    VehicleVariant = new VehicleVariant
+                    {
+                        VehicleVariantId = int.Parse(_vehicleReader["VehicleVariantId"].ToString())
+                    },
+                    VehicleType = new VehicleType
+                    {
+                        VehicleTypeId = int.Parse(_vehicleReader["VehicleTypeId"].ToString())
+                    },
+                    FuelType = new FuelType
+                    {
+                        FuelTypeId = int.Parse(_vehicleReader["FuelTypeId"].ToString())
+                    },
+                    Cylinder = int.Parse(_vehicleReader["NumberofCylinder"].ToString()),
+                    Doors = int.Parse(_vehicleReader["NumberofDoors"].ToString()),
+                    Passenger = int.Parse(_vehicleReader["NumberofPassenger"].ToString()),
+                    EngineSize = int.Parse(_vehicleReader["EngineSize"].ToString()),
+                    FuelTankSize = float.Parse(_vehicleReader["FuelTankSize"].ToString()),
+                    HorsePower = float.Parse(_vehicleReader["HorsePower"].ToString()),
+                    Torque = float.Parse(_vehicleReader["Torque"].ToString()),
+                    Mileage = float.Parse(_vehicleReader["Mileage"].ToString()),
+                    GrossWeight = float.Parse(_vehicleReader["GrossWeight"].ToString()),
+                    GroundClearance = float.Parse(_vehicleReader["GroundClearance"].ToString()),
+                    Height = float.Parse(_vehicleReader["Height"].ToString()),
+                    Length = float.Parse(_vehicleReader["Length"].ToString()),
+                    Width = float.Parse(_vehicleReader["Width"].ToString()),
+                    KerbWeight = float.Parse(_vehicleReader["KerbWeight"].ToString()),
+                    WheelBase = float.Parse(_vehicleReader["WheelBase"].ToString()),
+                };
+
+                _vehicles.Add(_vehicle);
+            }
+
+            _vehicleReader.Close();
+            _connection.CloseConnection();
+
+            return _vehicles;
+        }
+
+        public List<Vehicle> GetVehiclebyFuelType(int Id, int nameId)
+        {
+            _vehicleCommand = _utils.CommandGenerator(ResourceFiles.VehicleDALResources.GetVehiclebyFuel);
+            _vehicleCommand.Parameters.AddWithValue("@fuelTypeId", Id);
+            _vehicleCommand.Parameters.AddWithValue("@vehicleNameId", nameId);
+            _vehicleReader = _vehicleCommand.ExecuteReader();
+
+            Vehicle _vehicle;
+            List<Vehicle> _vehicles = new List<Vehicle>();
+
+            while (_vehicleReader.Read())
+            {
+                _vehicle = new Vehicle()
+                {
+                    VehicleId = int.Parse(_vehicleReader["VehicleId"].ToString()),
+                    VehicleName = new VehicleName
+                    {
+                        VehicleNameId = int.Parse(_vehicleReader["VehicleNameId"].ToString())
+                    },
+                    CylinderArrangement = new CylinderArrangement
+                    {
+                        CylinderArrangementId = int.Parse(_vehicleReader["CylinderArrangementId"].ToString())
+                    },
+                    TransmissionType = new TransmissionType
+                    {
+                        TransmissionTypeId = int.Parse(_vehicleReader["TransmissionTypeId"].ToString())
+                    },
+                    VehicleVariant = new VehicleVariant
+                    {
+                        VehicleVariantId = int.Parse(_vehicleReader["VehicleVariantId"].ToString())
+                    },
+                    VehicleType = new VehicleType
+                    {
+                        VehicleTypeId = int.Parse(_vehicleReader["VehicleTypeId"].ToString())
+                    },
+                    FuelType = new FuelType
+                    {
+                        FuelTypeId = int.Parse(_vehicleReader["FuelTypeId"].ToString())
+                    },
+                    Cylinder = int.Parse(_vehicleReader["NumberofCylinder"].ToString()),
+                    Doors = int.Parse(_vehicleReader["NumberofDoors"].ToString()),
+                    Passenger = int.Parse(_vehicleReader["NumberofPassenger"].ToString()),
+                    EngineSize = int.Parse(_vehicleReader["EngineSize"].ToString()),
+                    FuelTankSize = float.Parse(_vehicleReader["FuelTankSize"].ToString()),
+                    HorsePower = float.Parse(_vehicleReader["HorsePower"].ToString()),
+                    Torque = float.Parse(_vehicleReader["Torque"].ToString()),
+                    Mileage = float.Parse(_vehicleReader["Mileage"].ToString()),
+                    GrossWeight = float.Parse(_vehicleReader["GrossWeight"].ToString()),
+                    GroundClearance = float.Parse(_vehicleReader["GroundClearance"].ToString()),
+                    Height = float.Parse(_vehicleReader["Height"].ToString()),
+                    Length = float.Parse(_vehicleReader["Length"].ToString()),
+                    Width = float.Parse(_vehicleReader["Width"].ToString()),
+                    KerbWeight = float.Parse(_vehicleReader["KerbWeight"].ToString()),
+                    WheelBase = float.Parse(_vehicleReader["WheelBase"].ToString()),
+                };
+
+                _vehicles.Add(_vehicle);
+            }
+
+            _vehicleReader.Close();
+            _connection.CloseConnection();
+
+            return _vehicles;
+        }
+
+        public List<Vehicle> GetVehiclesbyName(int Id)
+        {
+            _vehicleCommand = _utils.CommandGenerator(ResourceFiles.VehicleDALResources.GetVehiclebyName);
+            _vehicleCommand.Parameters.AddWithValue("@vehicleNameId", Id);
             _vehicleReader = _vehicleCommand.ExecuteReader();
 
             Vehicle _vehicle;
@@ -89,6 +284,69 @@ namespace UnicoVehicle.DAL
 
             _vehicleCommand = _utils.CommandGenerator(ResourceFiles.VehicleDALResources.GetVehiclebyId);
             _vehicleCommand.Parameters.AddWithValue("@vehicleId", id);
+            _vehicleReader = _vehicleCommand.ExecuteReader();
+
+            Vehicle _vehicle = new Vehicle();
+
+            while (_vehicleReader.Read())
+            {
+                _vehicle = new Vehicle
+                {
+                    VehicleId = id,
+                    VehicleName = new VehicleName
+                    {
+                        VehicleNameId = int.Parse(_vehicleReader["VehicleNameId"].ToString())
+                    },
+                    CylinderArrangement = new CylinderArrangement
+                    {
+                        CylinderArrangementId = int.Parse(_vehicleReader["CylinderArrangementId"].ToString())
+                    },
+                    TransmissionType = new TransmissionType
+                    {
+                        TransmissionTypeId = int.Parse(_vehicleReader["TransmissionTypeId"].ToString())
+                    },
+                    VehicleVariant = new VehicleVariant
+                    {
+                        VehicleVariantId = int.Parse(_vehicleReader["VehicleVariantId"].ToString())
+                    },
+                    VehicleType = new VehicleType
+                    {
+                        VehicleTypeId = int.Parse(_vehicleReader["VehicleTypeId"].ToString())
+                    },
+                    FuelType = new FuelType
+                    {
+                        FuelTypeId = int.Parse(_vehicleReader["FuelTypeId"].ToString())
+                    },
+                    Cylinder = int.Parse(_vehicleReader["NumberofCylinder"].ToString()),
+                    Doors = int.Parse(_vehicleReader["NumberofDoors"].ToString()),
+                    Passenger = int.Parse(_vehicleReader["NumberofPassenger"].ToString()),
+                    EngineSize = int.Parse(_vehicleReader["EngineSize"].ToString()),
+                    FuelTankSize = float.Parse(_vehicleReader["FuelTankSize"].ToString()),
+                    HorsePower = float.Parse(_vehicleReader["HorsePower"].ToString()),
+                    Torque = float.Parse(_vehicleReader["Torque"].ToString()),
+                    Mileage = float.Parse(_vehicleReader["Mileage"].ToString()),
+                    GrossWeight = float.Parse(_vehicleReader["GrossWeight"].ToString()),
+                    GroundClearance = float.Parse(_vehicleReader["GroundClearance"].ToString()),
+                    Height = float.Parse(_vehicleReader["Height"].ToString()),
+                    Length = float.Parse(_vehicleReader["Length"].ToString()),
+                    Width = float.Parse(_vehicleReader["Width"].ToString()),
+                    KerbWeight = float.Parse(_vehicleReader["KerbWeight"].ToString()),
+                    WheelBase = float.Parse(_vehicleReader["WheelBase"].ToString()),
+                };
+            }
+
+            _vehicleReader.Close();
+            _connection.CloseConnection();
+
+            return _vehicle;
+        }
+
+        public Vehicle GetVehiclebyVariant(int id, int nameId)
+        {
+
+            _vehicleCommand = _utils.CommandGenerator(ResourceFiles.VehicleDALResources.GetVehiclebyVariant);
+            _vehicleCommand.Parameters.AddWithValue("@vehicleVariantId", id);
+            _vehicleCommand.Parameters.AddWithValue("@vehicleNameId", nameId);
             _vehicleReader = _vehicleCommand.ExecuteReader();
 
             Vehicle _vehicle = new Vehicle();

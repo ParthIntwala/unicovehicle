@@ -43,7 +43,31 @@
     <value>Select VehicleId, VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, CylinderArrangementId,
             NumberofDoors, NumberofPassenger, NumberofCylinder, EngineSize, HorsePower, Torque, Mileage, Height, Width, Length,
             GroundClearance, Wheelbase, FuelTankSize, KerbWeight, GrossWeight from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate 
-            is null and TransmissionTypeId = @transmissionTypeId</value>
+            is null and TransmissionTypeId = @transmissionTypeId and VehicleNameId = @vehicleNameId</value>
+    </data>
+    <data name="GetVehiclebyFuel" xml:space="preserve">
+    <value>Select VehicleId, VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, CylinderArrangementId,
+            NumberofDoors, NumberofPassenger, NumberofCylinder, EngineSize, HorsePower, Torque, Mileage, Height, Width, Length,
+            GroundClearance, Wheelbase, FuelTankSize, KerbWeight, GrossWeight from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate 
+            is null and FuelTypeId = @fuelTypeId and VehicleNameId = @vehicleNameId</value>
+    </data>
+    <data name="GetVehiclebyVehicleType" xml:space="preserve">
+    <value>Select VehicleId, VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, CylinderArrangementId,
+            NumberofDoors, NumberofPassenger, NumberofCylinder, EngineSize, HorsePower, Torque, Mileage, Height, Width, Length,
+            GroundClearance, Wheelbase, FuelTankSize, KerbWeight, GrossWeight from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate 
+            is null and VehicleTypeId = @vehicleTypeId and VehicleNameId = @vehicleNameId</value>
+    </data>
+    <data name="GetVehiclebyVariant" xml:space="preserve">
+    <value>Select VehicleId, VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, CylinderArrangementId,
+            NumberofDoors, NumberofPassenger, NumberofCylinder, EngineSize, HorsePower, Torque, Mileage, Height, Width, Length,
+            GroundClearance, Wheelbase, FuelTankSize, KerbWeight, GrossWeight from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate 
+            is null and VehicleVariantId = @vehicleVariantId and VehicleNameId = @vehicleNameId</value>
+    </data>
+    <data name="GetVehiclebyName" xml:space="preserve">
+    <value>Select VehicleId, VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, CylinderArrangementId,
+            NumberofDoors, NumberofPassenger, NumberofCylinder, EngineSize, HorsePower, Torque, Mileage, Height, Width, Length,
+            GroundClearance, Wheelbase, FuelTankSize, KerbWeight, GrossWeight from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate 
+            is null and VehicleNameId = @vehicleNameId</value>
     </data>
     <data name="GetVehiclebyId" xml:space="preserve">
     <value>Select VehicleNameId, VehicleVariantId, TransmissionTypeId, FuelTypeId, VehicleTypeId, CylinderArrangementId,

@@ -113,6 +113,30 @@ namespace UnicoVehicle.DAL.ResourceFiles {
             }
         }
         
+        internal static string GetVehiclebyFuel {
+            get {
+                return ResourceManager.GetString("GetVehiclebyFuel", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehiclebyVehicleType {
+            get {
+                return ResourceManager.GetString("GetVehiclebyVehicleType", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehiclebyVariant {
+            get {
+                return ResourceManager.GetString("GetVehiclebyVariant", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehiclebyName {
+            get {
+                return ResourceManager.GetString("GetVehiclebyName", resourceCulture);
+            }
+        }
+        
         internal static string GetVehiclebyId {
             get {
                 return ResourceManager.GetString("GetVehiclebyId", resourceCulture);
