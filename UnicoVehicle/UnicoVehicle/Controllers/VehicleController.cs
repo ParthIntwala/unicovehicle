@@ -41,10 +41,10 @@ namespace UnicoVehicle.Controllers
             return _status;
         }
 
-        [HttpDelete("{Id}")]
-        public bool DeleteVehicle(int id)
+        [HttpDelete]
+        public bool DeleteVehicle(int id, int featId)
         {
-            _status = _vehicleBll.DeleteVehicle(id);
+            _status = _vehicleBll.DeleteVehicle(id, featId);
             return _status;
         }
 

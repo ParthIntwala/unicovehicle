@@ -60,6 +60,7 @@ namespace UnicoVehicle
             services.AddTransient<IVehicleVariantDAL, VehicleVariantDAL>();
             services.AddTransient<IVehicleDAL, VehicleDAL>();
             services.AddTransient<IVehicleReviewDAL, VehicleReviewDAL>();
+            services.AddTransient<IVehicleFeatureDAL, VehicleFeatureDAL>();
             //BLL Classes
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();

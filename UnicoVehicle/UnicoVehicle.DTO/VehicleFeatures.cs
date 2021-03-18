@@ -4,7 +4,7 @@ namespace UnicoVehicle.DTO
     public class VehicleFeatures
     {
         public int VehicleFeaturesId { get; set; }
-        public Vehicle Vehicle { get; set; }
+        public int VehicleId { get; set; }
         public int AirbagCount { get; set; }
         public int USBPorts { get; set; }
         public bool HasPowerSteering { get; set; }

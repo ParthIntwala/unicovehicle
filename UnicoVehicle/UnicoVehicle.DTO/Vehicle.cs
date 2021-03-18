@@ -25,5 +25,6 @@ namespace UnicoVehicle.DTO
         public float FuelTankSize { get; set; }
         public float KerbWeight { get; set; }
         public float GrossWeight { get; set; }
+        public VehicleFeatures VehicleFeatures { get; set; }
     }
 }

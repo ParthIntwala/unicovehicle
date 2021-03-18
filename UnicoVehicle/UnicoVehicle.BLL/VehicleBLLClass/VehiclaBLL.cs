@@ -14,11 +14,12 @@ namespace UnicoVehicle.BLL
         private readonly ITransmissionTypeBLL _transmissionTypeBLL;
         private readonly IVehicleTypeBLL _vehicleTypeBLL;
         private readonly ICylinderArrangementBLL _cylinderArrangementBLL;
+        private readonly IVehicleFeatureDAL _vehicleFeaturesDAL;
         bool _status;
 
         public VehicleBLL(IVehicleNameBLL vehicleNameBLL, IVehicleDAL vehicleDAL, IVehicleVariantBLL vehicleVariantBLL,
             IFuelTypeBLL fuelTypeBLL, ITransmissionTypeBLL transmissionTypeBLL, IVehicleTypeBLL vehicleTypeBLL,
-            ICylinderArrangementBLL cylinderArrangementBLL)
+            ICylinderArrangementBLL cylinderArrangementBLL, IVehicleFeatureDAL vehicleFeatureDAL)
         {
             _vehicleNameBLL = vehicleNameBLL;
             _vehicleDAL = vehicleDAL;
@@ -27,6 +28,7 @@ namespace UnicoVehicle.BLL
             _fuelTypeBLL = fuelTypeBLL;
             _transmissionTypeBLL = transmissionTypeBLL;
             _cylinderArrangementBLL = cylinderArrangementBLL;
+            _vehicleFeaturesDAL = vehicleFeatureDAL;
         }
 
         public List<Vehicle> GetVehiclebyTransmission(int id, int nameId)
@@ -41,6 +43,7 @@ namespace UnicoVehicle.BLL
                 _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
                 _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
                 _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+                _vehicle.VehicleFeatures = _vehicleFeaturesDAL.GetVehicleFeaturebyId(_vehicle.VehicleId);
             }
 
             return _vehicles;
@@ -58,6 +61,7 @@ namespace UnicoVehicle.BLL
                 _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
                 _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
                 _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+                _vehicle.VehicleFeatures = _vehicleFeaturesDAL.GetVehicleFeaturebyId(_vehicle.VehicleId);
             }
 
             return _vehicles;
@@ -75,6 +79,7 @@ namespace UnicoVehicle.BLL
                 _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
                 _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
                 _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+                _vehicle.VehicleFeatures = _vehicleFeaturesDAL.GetVehicleFeaturebyId(_vehicle.VehicleId);
             }
 
             return _vehicles;
@@ -92,6 +97,7 @@ namespace UnicoVehicle.BLL
                 _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
                 _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
                 _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+                _vehicle.VehicleFeatures = _vehicleFeaturesDAL.GetVehicleFeaturebyId(_vehicle.VehicleId);
             }
 
             return _vehicles;
@@ -109,6 +115,7 @@ namespace UnicoVehicle.BLL
                 _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
                 _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
                 _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+                _vehicle.VehicleFeatures = _vehicleFeaturesDAL.GetVehicleFeaturebyId(_vehicle.VehicleId);
             }
 
             return _vehicle;
@@ -126,6 +133,7 @@ namespace UnicoVehicle.BLL
                 _vehicle.TransmissionType = _transmissionTypeBLL.GetTransmissionTypebyId(_vehicle.TransmissionType.TransmissionTypeId);
                 _vehicle.FuelType = _fuelTypeBLL.GetFuelTypebyId(_vehicle.FuelType.FuelTypeId);
                 _vehicle.CylinderArrangement = _cylinderArrangementBLL.GetCylinderArrangementbyId(_vehicle.CylinderArrangement.CylinderArrangementId);
+                _vehicle.VehicleFeatures = _vehicleFeaturesDAL.GetVehicleFeaturebyId(_vehicle.VehicleId);
             }
 
             return _vehicle;
@@ -137,9 +145,15 @@ namespace UnicoVehicle.BLL
             return _status;
         }
 
-        public bool DeleteVehicle(int id)
+        public bool DeleteVehicle(int id, int featId)
         {
             _status = _vehicleDAL.DeleteVehicle(id);
+
+            if(_status)
+            {
+                _status = _vehicleFeaturesDAL.DeleteVehicleFeature(featId);
+            }
+
             return _status;
         }
 
