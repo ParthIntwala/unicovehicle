@@ -27,6 +27,9 @@
     <data name="GetVehiclebyId" xml:space="preserve">
     <value>Select VehicleId, VehicleNameId, VehicleVariantId from [UnicoVehicle].[vehicle].[Vehicle] where DeletedDate is null and VehicleId = @vehicleId</value>
     </data>
+    <data name="GetUserbyId" xml:space="preserve">
+    <value>Select FirstName, LastName from [UnicoVehicle].[user].[User] where DeletedDate is null and UserId = @userId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

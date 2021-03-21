@@ -10,5 +10,6 @@ namespace UnicoVehicle.DAL
         public State GetStatebyId(int id);
         public Showroom GetShowroombyId(int id);
         public Vehicle GetVehiclebyId(int id);
+        public User GetUserbyId(int id);
     }
 }

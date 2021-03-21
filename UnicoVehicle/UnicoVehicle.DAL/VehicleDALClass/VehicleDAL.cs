@@ -501,5 +501,23 @@ namespace UnicoVehicle.DAL
                 return false;
             }
         }
+
+        public int GetLastVehicleId()
+        {
+            int id = -1;
+
+            _vehicleCommand = _utils.CommandGenerator(ResourceFiles.VehicleDALResources.GetVehicleId);
+            _vehicleReader = _vehicleCommand.ExecuteReader();
+
+            while(_vehicleReader.Read())
+            {
+                id = int.Parse(_vehicleReader["VehicleId"].ToString());
+            }
+
+            _vehicleReader.Close();
+            _connection.CloseConnection();
+
+            return id;
+        }
     }
 }

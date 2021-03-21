@@ -9,14 +9,14 @@ namespace UnicoVehicle.BLL
     public class ShowroomReviewBLL : IShowroomReviewBLL
     {
         private readonly IShowroomReviewDAL _showroomReviewDAL;
-        private readonly IUserBLL _userBLL;
+        private readonly IMiscellaneousCallsDAL _miscellaneousCallsDAL;
         private readonly IMiscellaneousCallsBLL _miscellaneousCallsBLL;
         bool _status;
 
-        public ShowroomReviewBLL(IShowroomReviewDAL showroomReviewDAL, IUserBLL userBLL, IMiscellaneousCallsBLL miscellaneousCallsBLL)
+        public ShowroomReviewBLL(IShowroomReviewDAL showroomReviewDAL, IMiscellaneousCallsDAL miscellaneousCallsDAL, IMiscellaneousCallsBLL miscellaneousCallsBLL)
         {
             _showroomReviewDAL = showroomReviewDAL;
-            _userBLL = userBLL;
+            _miscellaneousCallsDAL = miscellaneousCallsDAL;
             _miscellaneousCallsBLL = miscellaneousCallsBLL;
         }
 
@@ -26,7 +26,7 @@ namespace UnicoVehicle.BLL
 
             foreach (ShowroomReview showroomReview in _showroomReview)
             {
-                showroomReview.User = _userBLL.GetUserbyId(showroomReview.User.UserId);
+                showroomReview.User = _miscellaneousCallsDAL.GetUserbyId(showroomReview.User.UserId);
                 showroomReview.Showroom = _miscellaneousCallsBLL.GetShowroombyId(showroomReview.Showroom.ShowroomId);
             }
 
@@ -39,7 +39,7 @@ namespace UnicoVehicle.BLL
 
             if (_showroomReview.ShowroomReviewId != 0)
             {
-                _showroomReview.User = _userBLL.GetUserbyId(_showroomReview.User.UserId);
+                _showroomReview.User = _miscellaneousCallsDAL.GetUserbyId(_showroomReview.User.UserId);
                 _showroomReview.Showroom = _miscellaneousCallsBLL.GetShowroombyId(_showroomReview.Showroom.ShowroomId);
             }
 

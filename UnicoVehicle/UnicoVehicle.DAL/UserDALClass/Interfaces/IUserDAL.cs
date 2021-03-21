@@ -1,4 +1,4 @@
-﻿using UnicoVehicle.DTO.Miscellaneous;
+﻿using UnicoVehicle.DTO;
 
 namespace UnicoVehicle.DAL
 {

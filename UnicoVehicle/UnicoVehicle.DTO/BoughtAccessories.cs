@@ -1,10 +1,10 @@
-﻿using System;
+﻿using System.Collections.Generic;
 namespace UnicoVehicle.DTO
 {
     public class BoughtAccessories
     {
         public int BoughtAccessoriesId { get; set; }
-        public Order Order { get; set; }
-        public Accessories Accessories { get; set; }
+        public Miscellaneous.Order Order { get; set; }
+        public List<Accessories> Accessories { get; set; }
     }
 }

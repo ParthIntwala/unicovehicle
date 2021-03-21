@@ -14,5 +14,6 @@ namespace UnicoVehicle.DAL
         public Vehicle GetVehiclebyVariant(int id, int nameId);
         public bool DeleteVehicle(int id);
         public bool UpdateVehicle(Vehicle vehicle, int vehicleId);
+        public int GetLastVehicleId();
     }
 }

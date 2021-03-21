@@ -1,7 +1,7 @@
 ﻿using System;
 using UnicoVehicle.Utilities;
 using System.Data.SqlClient;
-using UnicoVehicle.DTO.Miscellaneous;
+using UnicoVehicle.DTO;
 
 namespace UnicoVehicle.DAL
 {
@@ -29,10 +29,10 @@ namespace UnicoVehicle.DAL
 
             while (_userReader.Read())
             {
-                _user = new DTO.Miscellaneous.User()
+                _user = new User()
                 {
                     UserId = id,
-                    UserType = new DTO.UserType
+                    UserType = new UserType
                     {
                         UserTypeId = int.Parse(_userReader["UserTypeId"].ToString()),
                     },

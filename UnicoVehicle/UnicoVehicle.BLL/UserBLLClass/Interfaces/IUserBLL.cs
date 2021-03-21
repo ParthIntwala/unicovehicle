@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using UnicoVehicle.DTO.Miscellaneous;
+using UnicoVehicle.DTO;
 
 namespace UnicoVehicle.BLL
 {

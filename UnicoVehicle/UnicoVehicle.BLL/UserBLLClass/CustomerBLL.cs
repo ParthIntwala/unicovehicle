@@ -25,7 +25,7 @@ namespace UnicoVehicle.BLL
 
             foreach (DTO.Miscellaneous.Customer customer in _customer)
             {
-                customer.User = _userBLL.GetUserbyId(customer.User.UserId);
+                customer.User = _miscellaneousCallsDAL.GetUserbyId(customer.User.UserId);
             }
 
             return _customer;
@@ -37,7 +37,7 @@ namespace UnicoVehicle.BLL
 
             if (_customer.CustomerId != 0)
             {
-                _customer.User = _userBLL.GetUserbyId(_customer.User.UserId);
+                _customer.User = _miscellaneousCallsDAL.GetUserbyId(_customer.User.UserId);
                 _customer.District = _miscellaneousCallsDAL.GetDistrictbyId(_customer.District.DistrictId);
             }
 

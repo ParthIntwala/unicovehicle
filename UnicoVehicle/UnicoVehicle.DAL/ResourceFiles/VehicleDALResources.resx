@@ -108,19 +108,16 @@
     <value>Update [UnicoVehicle].[vehicle].[VehicleVariant] set DeletedDate = @deletedDate where VehicleVariantId = @vehicleVariantId</value>
     </data>
     <data name="GetVehicleStockbyShowroom" xml:space="preserve">
-    <value>Select VehicleStockId, ShowroomId, VehicleId, Stock from [UnicoVehicle].[vehicle].[VehicleStock] where DeletedDate is null and ShowroomId = @showroomId</value>
+    <value>Select VehicleStockId, ShowroomId, VehicleId, VehicleStock from [UnicoVehicle].[vehicle].[VehicleStock] where DeletedDate is null and ShowroomId = @showroomId</value>
     </data>
     <data name="GetVehicleStockbyVehicle" xml:space="preserve">
-    <value>Select VehicleStockId, ShowroomId, VehicleId, Stock from [UnicoVehicle].[vehicle].[VehicleStock] where DeletedDate is null and VehicleId = @vehicleId</value>
-    </data>
-    <data name="GetVehicleStockbyId" xml:space="preserve">
-    <value>Select ShowroomId, VehicleId, Stock from [UnicoVehicle].[vehicle].[VehicleStock] where DeletedDate is null and VehicleStockId = @vehicleStockId</value>
+    <value>Select VehicleStockId, ShowroomId, VehicleId, VehicleStock from [UnicoVehicle].[vehicle].[VehicleStock] where DeletedDate is null and VehicleId = @vehicleId</value>
     </data>
     <data name="InsertVehicleStock" xml:space="preserve">
-    <value>Insert into [UnicoVehicle].[vehicle].[VehicleStock] (ShowroomId, VehicleId, Stock, CreatedDate) values (@showroomId, @vehicleId, @stock, @createdDate)</value>
+    <value>Insert into [UnicoVehicle].[vehicle].[VehicleStock] (ShowroomId, VehicleId, VehicleStock, CreatedDate) values (@showroomId, @vehicleId, @stock, @createdDate)</value>
     </data>
     <data name="UpdateVehicleStock" xml:space="preserve">
-    <value>Update [UnicoVehicle].[vehicle].[VehicleStock] set Stock = @stock, ModifiedDate = @modifiedDate where VehicleStockId = @vehicleStockId</value>
+    <value>Update [UnicoVehicle].[vehicle].[VehicleStock] set VehicleStock = @stock, ModifiedDate = @modifiedDate where VehicleStockId = @vehicleStockId</value>
     </data>
     <data name="GetVehicleFeaturesbyId" xml:space="preserve">
     <value>Select VehicleFeaturesId, AirbagCount, hasPowerSteering, hasPowerFrontWindow, hasPowerRearWindow, hasSunRoof, hasSeatCover,
@@ -136,7 +133,7 @@
     </data>
     <data name="InsertVehicleFeatures" xml:space="preserve">
     <value>Insert into [UnicoVehicle].[vehicle].[VehicleFeature] (
-            AirbagCount = @airbagCount, hasPowerSteering, hasPowerFrontWindow, hasPowerRearWindow, hasSunRoof, hasSeatCover,
+            VehicleId, AirbagCount, hasPowerSteering, hasPowerFrontWindow, hasPowerRearWindow, hasSunRoof, hasSeatCover,
             hasBluetooth, hasWIFI, hasAUXSupport, hasUSB, hasiPod, hasRadio, hasCarPlay, hasAndroidAuto, hasNavigation, hasCompass,
             hasFrontSpeaker, hasMiddleSpeaker, hasRearSpeaker, hasClimateControl, hasWeatherSensingWiper, hasAC, hasHeater,
             hasRemoteTrunkOpener, hasRemoteEngineStart, hasLowFuelLight, hasOilChangeLight, hasVehicleServiceLight, hasRangeMeter,
@@ -145,13 +142,76 @@
             hasFoldableSeat, hasKeylessEntry, hasFingerprintDoorUnlock, NumberofUSBPorts, hasCigaretteLighter, hasLuggageNet,
             hasConvertibleRoof, hasLaneChangeIndicator, hasGearShiftIndicator, hasFogLamp, hasDigitalWatch, hasDrivingMode, hasGloveCompartment,
             hasHeadLightCleaner, hasRearLightCleaner, hasRearViewAdjustmentSwitch, hasAlloyWheel, hasCarCover, hasCentralLock, hasChildSafety,
-            hasNightModeMirror, CreatedDate) values (@showroomId, @vehicleId, @stock, @createdDate)</value>
+            hasNightModeMirror, CreatedDate) values (@vehicleId, @airbagCount, @hasPowerSteering, @hasPowerFrontWindow, @hasPowerRearWindow,
+            @hasSunRoof, @hasSeatCover, @hasBluetooth, @hasWIFI, @hasAUXSupport, @hasUSB, @hasiPod, @hasRadio, @hasCarPlay, @hasAndroidAuto,
+            @hasNavigation, @hasCompass, @hasFrontSpeaker, @hasMiddleSpeaker, @hasRearSpeaker, @hasClimateControl, @hasWeatherSensingWiper,
+            @hasAC, @hasHeater, @hasRemoteTrunkOpener, @hasRemoteEngineStart, @hasLowFuelLight, @hasOilChangeLight, @hasVehicleServiceLight,
+            @hasRangeMeter, @hasMileageMeter, @hasTemperatureScale, @hasTrunkLight, @hasRearACDuct, @hasAdjustableHeadRest, @hasHeadRest,
+            @hasBucketSeat, @hasSeatBelt, @hasCupHolder, @hasABS, @hasFrontHeatedSeat, @hasRearHeatedSeat, @hasMassageChair,
+            @hasSeatInfotainment, @hasCruiseControl, @hasFoldableSeat, @hasKeylessEntry, @hasFingerprintDoorUnlock, @numberofUSBPorts,
+            @hasCigaretteLighter, @hasLuggageNet, @hasConvertibleRoof, @hasLaneChangeIndicator, @hasGearShiftIndicator, @hasFogLamp,
+            @hasDigitalWatch, @hasDrivingMode, @hasGloveCompartment, @hasHeadLightCleaner, @hasRearLightCleaner, @hasRearViewAdjustmentSwitch,
+            @hasAlloyWheel, @hasCarCover, @hasCentralLock, @hasChildSafety, @hasNightModeMirror, @createdDate)</value>
     </data>
     <data name="UpdateVehicleFeatures" xml:space="preserve">
-    <value>Update [UnicoVehicle].[vehicle].[VehicleName] set VehicleName = @vehicleName, ModifiedDate = @modifiedDate where VehicleNameId = @vehicleNameId</value>
+    <value>Update [UnicoVehicle].[vehicle].[VehicleFeature] set
+            AirbagCount = @airbagCount, hasPowerSteering = @hasPowerSteering, hasPowerFrontWindow = @hasPowerFrontWindow,
+            hasPowerRearWindow = @hasPowerRearWindow, hasSunRoof = @hasSunRoof, hasSeatCover = @hasSeatCover, hasBluetooth = @hasBluetooth,
+            hasWIFI = @hasWIFI, hasAUXSupport = @hasAUXSupport, hasUSB = @hasUSB, hasiPod = @hasiPod, hasRadio = @hasRadio,
+            hasCarPlay = @hasCarPlay, hasAndroidAuto = @hasAndroidAuto, hasNavigation = @hasNavigation, hasCompass = @hasCompass,
+            hasFrontSpeaker = @hasFrontSpeaker, hasMiddleSpeaker = @hasMiddleSpeaker, hasRearSpeaker = @hasRearSpeaker,
+            hasClimateControl = @hasClimateControl, hasWeatherSensingWiper = @hasWeatherSensingWiper, hasAC = @hasAC, hasHeater = @hasHeater,
+            hasRemoteTrunkOpener = @hasRemoteTrunkOpener, hasRemoteEngineStart = @hasRemoteEngineStart, hasLowFuelLight = @hasLowFuelLight,
+            hasOilChangeLight = @hasOilChangeLight, hasVehicleServiceLight = @hasVehicleServiceLight, hasRangeMeter = @hasRangeMeter,
+            hasMileageMeter = @hasMileageMeter, hasTemperatureScale = @hasTemperatureScale, hasTrunkLight = @hasTrunkLight,
+            hasRearACDuct = @hasRearACDuct, hasAdjustableHeadRest = @hasAdjustableHeadRest, hasHeadRest = @hasHeadRest,
+            hasBucketSeat = @hasBucketSeat, hasSeatBelt = @hasSeatBelt, hasCupHolder = @hasCupHolder, hasABS = @hasABS,
+            hasFrontHeatedSeat = @hasFrontHeatedSeat, hasRearHeatedSeat = @hasRearHeatedSeat, hasMassageChair = @hasMassageChair,
+            hasSeatInfotainment = @hasSeatInfotainment, hasCruiseControl = @hasCruiseControl, hasFoldableSeat = @hasFoldableSeat,
+            hasKeylessEntry = @hasKeylessEntry, hasFingerprintDoorUnlock = @hasFingerprintDoorUnlock, NumberofUSBPorts = @numberofUSBPorts,
+            hasCigaretteLighter = @hasCigaretteLighter, hasLuggageNet = @hasLuggageNet, hasConvertibleRoof = @hasConvertibleRoof,
+            hasLaneChangeIndicator = @hasLaneChangeIndicator, hasGearShiftIndicator = @hasGearShiftIndicator, hasFogLamp = @hasFogLamp,
+            hasDigitalWatch = @hasDigitalWatch, hasDrivingMode = @hasDrivingMode, hasGloveCompartment = @hasGloveCompartment,
+            hasHeadLightCleaner = @hasHeadLightCleaner, hasRearLightCleaner = @hasRearLightCleaner,
+            hasRearViewAdjustmentSwitch = @hasRearViewAdjustmentSwitch, hasAlloyWheel = @hasAlloyWheel, hasCarCover = @hasCarCover,
+            hasCentralLock = @hasCentralLock, hasChildSafety = @hasChildSafety, hasNightModeMirror = @hasNightModeMirror,
+            ModifiedDate = @modifiedDate where VehicleId = @vehicleId</value>
     </data>
     <data name="DeleteVehicleFeatures" xml:space="preserve">
-    <value>Update [UnicoVehicle].[vehicle].[VehicleFeature] set DeletedDate = @deletedDate where VehicleFeaturesId = @vehicleFeaturesId</value>
+    <value>Update [UnicoVehicle].[vehicle].[VehicleFeature] set DeletedDate = @deletedDate where VehicleId = @vehicleId</value>
+    </data>
+    <data name="GetVehicleId" xml:space="preserve">
+    <value>Select Max(VehicleId) as VehicleId from [UnicoVehicle].[vehicle].[Vehicle]</value>
+    </data>
+    <data name="GetVehiclePricebyShowroom" xml:space="preserve">
+    <value>Select VehiclePriceId, ShowroomId, VehicleId, VehiclePrice from [UnicoVehicle].[vehicle].[VehiclePrice] where DeletedDate is null and ShowroomId = @showroomId</value>
+    </data>
+    <data name="GetVehiclePricebyVehicle" xml:space="preserve">
+    <value>Select VehiclePriceId, ShowroomId, VehicleId, VehiclePrice from [UnicoVehicle].[vehicle].[VehiclePrice] where DeletedDate is null and VehicleId = @vehicleId</value>
+    </data>
+    <data name="InsertVehiclePrice" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[vehicle].[VehiclePrice] (ShowroomId, VehicleId, VehiclePrice, CreatedDate) values (@showroomId, @vehicleId, @price, @createdDate)</value>
+    </data>
+    <data name="UpdateVehiclePrice" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[VehiclePrice] set VehiclePrice = @price, ModifiedDate = @modifiedDate where VehiclePriceId = @vehiclePriceId</value>
+    </data>
+    <data name="GetTestDrivebyShowroom" xml:space="preserve">
+    <value>Select TestDriveId, UserId, VehicleId, TestDriveStatusId, TestDriveDateTime from [UnicoVehicle].[vehicle].[TestDrive] where DeletedDate is null and ShowroomId = @showroomId</value>
+    </data>
+    <data name="GetTestDrivebyShowroomandVehicle" xml:space="preserve">
+    <value>Select TestDriveId, UserId, TestDriveStatusId, TestDriveDateTime from [UnicoVehicle].[vehicle].[TestDrive] where DeletedDate is null and ShowroomId = @showroomId and VehicleId = @vehicleId</value>
+    </data>
+    <data name="GetTestDrivebyUser" xml:space="preserve">
+    <value>Select TestDriveId, ShowroomId, VehicleId, TestDriveStatusId, TestDriveDateTime from [UnicoVehicle].[vehicle].[TestDrive] where DeletedDate is null and UserId = @userId</value>
+    </data>
+    <data name="GetTestDrivebyId" xml:space="preserve">
+    <value>Select UserId, ShowroomId, VehicleId, TestDriveStatusId, TestDriveDateTime from [UnicoVehicle].[vehicle].[TestDrive] where DeletedDate is null and TestDriveId = @testDriveId</value>
+    </data>
+    <data name="InsertTestDrive" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[vehicle].[TestDrive] (UserId, ShowroomId, VehicleId, TestDriveStatusId, TestDriveDateTime, CreatedDate) values (@userId, @showroomId, @vehicleId, @testDriveStatusId, @testDriveDateTime, @createdDate)</value>
+    </data>
+    <data name="UpdateTestDrive" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[TestDrive] set TestDriveDateTime = @testDriveDateTime, TestDriveStatusId = @testDriveStatusId, ModifiedDate = @modifiedDate where TestDriveId = @testDriveId</value>
     </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

@@ -171,5 +171,29 @@ namespace UnicoVehicle.DAL
 
             return _vehicle;
         }
+
+        public User GetUserbyId(int id)
+        {
+            _command = _utils.CommandGenerator(ResourceFiles.MescellaneousResources.GetUserbyId);
+            _command.Parameters.AddWithValue("@userId", id);
+            _reader = _command.ExecuteReader();
+
+            User _user = new User();
+
+            while (_reader.Read())
+            {
+                _user = new User()
+                {
+                    UserId = id,
+                    FirstName = _reader["FirstName"].ToString(),
+                    LastName = _reader["LastName"].ToString()
+                };
+            }
+
+            _reader.Close();
+            _connection.CloseConnection();
+
+            return _user;
+        }
     }
 }

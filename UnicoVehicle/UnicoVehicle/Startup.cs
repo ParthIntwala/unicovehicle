@@ -61,6 +61,9 @@ namespace UnicoVehicle
             services.AddTransient<IVehicleDAL, VehicleDAL>();
             services.AddTransient<IVehicleReviewDAL, VehicleReviewDAL>();
             services.AddTransient<IVehicleFeatureDAL, VehicleFeatureDAL>();
+            services.AddTransient<IVehicleStockDAL, VehicleStockDAL>();
+            services.AddTransient<IVehiclePriceDAL, VehiclePriceDAL>();
+            services.AddTransient<ITestDriveDAL, TestDriveDAL>();
             //BLL Classes
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();
@@ -85,6 +88,9 @@ namespace UnicoVehicle
             services.AddTransient<IVehicleVariantBLL, VehicleVariantBLL>();
             services.AddTransient<IVehicleBLL, VehicleBLL>();
             services.AddTransient<IVehicleReviewBLL, VehicleReviewBLL>();
+            services.AddTransient<IVehicleStockBLL, VehicleStockBLL>();
+            services.AddTransient<IVehiclePriceBLL, VehiclePriceBLL>();
+            services.AddTransient<ITestDriveBLL, TestDriveBLL>();
             //services.AddTransient<>();
             services.AddControllers();
         }

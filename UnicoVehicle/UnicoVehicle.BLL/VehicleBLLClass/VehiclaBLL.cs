@@ -142,16 +142,29 @@ namespace UnicoVehicle.BLL
         public bool InsertVehicle(Vehicle vehicle)
         {
             _status = _vehicleDAL.InsertVehicle(vehicle);
+
+            if(_status)
+            {
+                int id = _vehicleDAL.GetLastVehicleId();
+
+                if(id == -1)
+                {
+                    return false;
+                }
+
+                _status = _vehicleFeaturesDAL.InsertVehicleFeature(vehicle.VehicleFeatures, id);
+            }
+
             return _status;
         }
 
-        public bool DeleteVehicle(int id, int featId)
+        public bool DeleteVehicle(int id)
         {
             _status = _vehicleDAL.DeleteVehicle(id);
 
             if(_status)
             {
-                _status = _vehicleFeaturesDAL.DeleteVehicleFeature(featId);
+                _status = _vehicleFeaturesDAL.DeleteVehicleFeature(id);
             }
 
             return _status;
@@ -160,6 +173,12 @@ namespace UnicoVehicle.BLL
         public bool UpdateVehicle(Vehicle vehicle, int vehicleId)
         {
             _status = _vehicleDAL.UpdateVehicle(vehicle, vehicleId);
+
+            if(_status)
+            {
+                _status = _vehicleFeaturesDAL.UpdateVehicleFeature(vehicle.VehicleFeatures);
+            }
+
             return _status;
         }
     }

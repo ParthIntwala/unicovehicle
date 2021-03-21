@@ -197,12 +197,6 @@ namespace UnicoVehicle.DAL.ResourceFiles {
             }
         }
         
-        internal static string GetVehicleStockbyId {
-            get {
-                return ResourceManager.GetString("GetVehicleStockbyId", resourceCulture);
-            }
-        }
-        
         internal static string InsertVehicleStock {
             get {
                 return ResourceManager.GetString("InsertVehicleStock", resourceCulture);
@@ -236,6 +230,72 @@ namespace UnicoVehicle.DAL.ResourceFiles {
         internal static string DeleteVehicleFeatures {
             get {
                 return ResourceManager.GetString("DeleteVehicleFeatures", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehicleId {
+            get {
+                return ResourceManager.GetString("GetVehicleId", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehiclePricebyShowroom {
+            get {
+                return ResourceManager.GetString("GetVehiclePricebyShowroom", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehiclePricebyVehicle {
+            get {
+                return ResourceManager.GetString("GetVehiclePricebyVehicle", resourceCulture);
+            }
+        }
+        
+        internal static string InsertVehiclePrice {
+            get {
+                return ResourceManager.GetString("InsertVehiclePrice", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateVehiclePrice {
+            get {
+                return ResourceManager.GetString("UpdateVehiclePrice", resourceCulture);
+            }
+        }
+        
+        internal static string GetTestDrivebyShowroom {
+            get {
+                return ResourceManager.GetString("GetTestDrivebyShowroom", resourceCulture);
+            }
+        }
+        
+        internal static string GetTestDrivebyShowroomandVehicle {
+            get {
+                return ResourceManager.GetString("GetTestDrivebyShowroomandVehicle", resourceCulture);
+            }
+        }
+        
+        internal static string GetTestDrivebyUser {
+            get {
+                return ResourceManager.GetString("GetTestDrivebyUser", resourceCulture);
+            }
+        }
+        
+        internal static string GetTestDrivebyId {
+            get {
+                return ResourceManager.GetString("GetTestDrivebyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertTestDrive {
+            get {
+                return ResourceManager.GetString("InsertTestDrive", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateTestDrive {
+            get {
+                return ResourceManager.GetString("UpdateTestDrive", resourceCulture);
             }
         }
     }

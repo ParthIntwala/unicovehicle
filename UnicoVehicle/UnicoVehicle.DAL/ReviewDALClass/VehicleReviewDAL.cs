@@ -32,7 +32,7 @@ namespace UnicoVehicle.DAL
             {
                 _review = new VehicleReview()
                 {
-                    User = new DTO.Miscellaneous.User
+                    User = new User
                     {
                         UserId = int.Parse(_reviewReader["UserId"].ToString()),
                     },
@@ -65,7 +65,7 @@ namespace UnicoVehicle.DAL
             {
                 _review = new VehicleReview
                 {
-                    User = new DTO.Miscellaneous.User
+                    User = new User
                     {
                         UserId = int.Parse(_reviewReader["UserId"].ToString()),
                     },

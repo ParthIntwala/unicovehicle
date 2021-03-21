@@ -25,6 +25,8 @@
     <Folder Include="ReviewDALClass\Interfaces\" />
     <Folder Include="VehicleDALClass\" />
     <Folder Include="VehicleDALClass\Interfaces\" />
+    <Folder Include="OrderDALClass\" />
+    <Folder Include="OrderDALClass\Interface\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Country\DALResources.resx">
@@ -63,6 +65,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MescellaneousResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="ResourceFiles\OrderDALResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OrderDALResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="DALResources.Designer.cs" />
@@ -94,6 +100,9 @@
     </Compile>
     <Compile Update="ResourceFiles\MescellaneousResources.Designer.cs">
       <DependentUpon>MescellaneousResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ResourceFiles\OrderDALResources.Designer.cs">
+      <DependentUpon>OrderDALResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

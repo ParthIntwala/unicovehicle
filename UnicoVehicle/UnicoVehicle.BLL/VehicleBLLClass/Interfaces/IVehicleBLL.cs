@@ -12,7 +12,7 @@ namespace UnicoVehicle.BLL
         public List<Vehicle> GetVehiclebyFuel(int id, int nameId);
         public List<Vehicle> GetVehiclebyVehicleType(int id, int nameId);
         public List<Vehicle> GetVehiclebyName(int id);
-        public bool DeleteVehicle(int id, int featId);
+        public bool DeleteVehicle(int id);
         public bool UpdateVehicle(Vehicle vehicle, int vehicleId);
     }
 }

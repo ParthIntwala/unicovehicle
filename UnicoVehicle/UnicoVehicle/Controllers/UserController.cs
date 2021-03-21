@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using UnicoVehicle.BLL;
-using UnicoVehicle.DTO.Miscellaneous;
+using UnicoVehicle.DTO;
 
 namespace UnicoVehicle.Controllers
 {
