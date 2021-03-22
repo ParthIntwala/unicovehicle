@@ -64,6 +64,7 @@ namespace UnicoVehicle
             services.AddTransient<IVehicleStockDAL, VehicleStockDAL>();
             services.AddTransient<IVehiclePriceDAL, VehiclePriceDAL>();
             services.AddTransient<ITestDriveDAL, TestDriveDAL>();
+            services.AddTransient<IOrderDAL, OrderDAL>();
             //BLL Classes
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();
@@ -91,6 +92,7 @@ namespace UnicoVehicle
             services.AddTransient<IVehicleStockBLL, VehicleStockBLL>();
             services.AddTransient<IVehiclePriceBLL, VehiclePriceBLL>();
             services.AddTransient<ITestDriveBLL, TestDriveBLL>();
+            services.AddTransient<IOrderBLL, OrderBLL>();
             //services.AddTransient<>();
             services.AddControllers();
         }

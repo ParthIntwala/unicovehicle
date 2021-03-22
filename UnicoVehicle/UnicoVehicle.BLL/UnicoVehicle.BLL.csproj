@@ -23,5 +23,7 @@
     <Folder Include="ReviewBLLClass\Interfaces\" />
     <Folder Include="VehicleBLLClass\" />
     <Folder Include="VehicleBLLClass\Interfaces\" />
+    <Folder Include="OrderBLLClass\" />
+    <Folder Include="OrderBLLClass\Interfaces\" />
   </ItemGroup>
 </Project>

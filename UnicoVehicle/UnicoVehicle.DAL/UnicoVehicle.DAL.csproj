@@ -26,7 +26,7 @@
     <Folder Include="VehicleDALClass\" />
     <Folder Include="VehicleDALClass\Interfaces\" />
     <Folder Include="OrderDALClass\" />
-    <Folder Include="OrderDALClass\Interface\" />
+    <Folder Include="OrderDALClass\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Condition=" '$(EnableDefaultEmbeddedResourceItems)' == 'true' " Update="Country\DALResources.resx">

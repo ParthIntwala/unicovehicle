@@ -9,6 +9,27 @@
 	<resheader name="reader">
 		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>
+	<data name="GetOrderbyShowroom" xml:space="preserve">
+    <value>Select OrderId, CustomerId, VehicleId, ShowroomId, OrderStatusId, FinalPrice, hasLoan, DeliveryDate from [UnicoVehicle].[order].[Order] where DeletedDate is null and ShowroomId = @showroomId</value>
+    </data>
+    <data name="GetOrderbyShowroomandVehicle" xml:space="preserve">
+    <value>Select OrderId, CustomerId, VehicleId, ShowroomId, OrderStatusId, FinalPrice, hasLoan, DeliveryDate from [UnicoVehicle].[order].[Order] where DeletedDate is null and ShowroomId = @showroomId and VehicleId = @vehicleId</value>
+    </data>
+    <data name="GetOrderbyCustomer" xml:space="preserve">
+    <value>Select OrderId, CustomerId, VehicleId, ShowroomId, OrderStatusId, FinalPrice, hasLoan, DeliveryDate from [UnicoVehicle].[order].[Order] where DeletedDate is null and CustomerId = @customerId</value>
+    </data>
+    <data name="GetOrderbyId" xml:space="preserve">
+    <value>Select OrderId, CustomerId, VehicleId, ShowroomId, OrderStatusId, FinalPrice, hasLoan, DeliveryDate from [UnicoVehicle].[order].[Order] where DeletedDate is null and OrderId = @orderId</value>
+    </data>
+    <data name="GetOrderbyShowroomCustomer" xml:space="preserve">
+    <value>Select OrderId, CustomerId, VehicleId, ShowroomId, OrderStatusId, FinalPrice, hasLoan, DeliveryDate from [UnicoVehicle].[order].[Order] where DeletedDate is null and ShowroomId = @showroomId and CustomerId = @customerId</value>
+    </data>
+    <data name="InsertOrder" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[order].[Order] (CustomerId, VehicleId, ShowroomId, OrderStatusId, FinalPrice, hasLoan, DeliveryDate, CreatedDate) values (@customerId, @vehicleId, @showroomId, @orderStatusId, @finalPrice, @hasLoan, @deliveryDate, @createdDate)</value>
+    </data>
+    <data name="UpdateOrder" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[TestDrive] set OrderStatusId = @orderStatusId, FinalPrice = @finalPrice, DeliveryDate = @deliveryDate, ModifiedDate = @modifiedDate where OrderId = @orderId</value>
+    </data>
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
 	</resheader>

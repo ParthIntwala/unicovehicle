@@ -46,5 +46,47 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 resourceCulture = value;
             }
         }
+        
+        internal static string GetOrderbyShowroom {
+            get {
+                return ResourceManager.GetString("GetOrderbyShowroom", resourceCulture);
+            }
+        }
+        
+        internal static string GetOrderbyShowroomandVehicle {
+            get {
+                return ResourceManager.GetString("GetOrderbyShowroomandVehicle", resourceCulture);
+            }
+        }
+        
+        internal static string GetOrderbyCustomer {
+            get {
+                return ResourceManager.GetString("GetOrderbyCustomer", resourceCulture);
+            }
+        }
+        
+        internal static string GetOrderbyId {
+            get {
+                return ResourceManager.GetString("GetOrderbyId", resourceCulture);
+            }
+        }
+        
+        internal static string GetOrderbyShowroomCustomer {
+            get {
+                return ResourceManager.GetString("GetOrderbyShowroomCustomer", resourceCulture);
+            }
+        }
+        
+        internal static string InsertOrder {
+            get {
+                return ResourceManager.GetString("InsertOrder", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateOrder {
+            get {
+                return ResourceManager.GetString("UpdateOrder", resourceCulture);
+            }
+        }
     }
 }
