@@ -28,7 +28,22 @@
     <value>Insert into [UnicoVehicle].[order].[Order] (CustomerId, VehicleId, ShowroomId, OrderStatusId, FinalPrice, hasLoan, DeliveryDate, CreatedDate) values (@customerId, @vehicleId, @showroomId, @orderStatusId, @finalPrice, @hasLoan, @deliveryDate, @createdDate)</value>
     </data>
     <data name="UpdateOrder" xml:space="preserve">
-    <value>Update [UnicoVehicle].[vehicle].[TestDrive] set OrderStatusId = @orderStatusId, FinalPrice = @finalPrice, DeliveryDate = @deliveryDate, ModifiedDate = @modifiedDate where OrderId = @orderId</value>
+    <value>Update [UnicoVehicle].[order].[Order] set FinalPrice = @finalPrice, DeliveryDate = @deliveryDate, ModifiedDate = @modifiedDate where OrderId = @orderId</value>
+    </data>
+    <data name="UpdateOrderStatus" xml:space="preserve">
+    <value>Update [UnicoVehicle].[order].[Order] set OrderStatusId = @orderStatusId where OrderId = @orderId</value>
+    </data>
+    <data name="GetmaxOrderId" xml:space="preserve">
+    <value>Select Max(OrderId) as OrderId from [UnicoVehicle].[order].[Order] where DeletedDate is null</value>
+    </data>
+    <data name="GetPostBuyingDetailbyId" xml:space="preserve">
+    <value>Select PostBuyingDetailId, InsuranceCompanyId, InsuranceTypeId, LoanEMI, InsurancePremium, RemainingFreeService, InsuranceValidUpto, TaxValidUpto, PaymentReceived from [UnicoVehicle].[order].[PostBuyingDetail] where DeletedDate is null and OrderId = @orderId</value>
+    </data>
+    <data name="InsertPostBuyingDetail" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[order].[PostBuyingDetail] (OrderId, InsuranceCompanyId, InsuranceTypeId, LoanEMI, InsurancePremium, RemainingFreeService, InsuranceValidUpto, TaxValidUpto, CreatedDate) values (@orderId, @insuranceCompanyId, @insuranceTypeId, @loanEMI, @insurancePremium, @remainingFreeService, @insuranceValidUpto, @taxValidUpto, @createdDate)</value>
+    </data>
+    <data name="UpdatePostBuyingDetail" xml:space="preserve">
+    <value>Update [UnicoVehicle].[order].[PostBuyingDetail] set InsuranceCompanyId = @insuranceCompanyId, InsuranceTypeId = @insuranceTypeId, InsurancePremium = @insurancePremium, InsuranceValidUpto = @insuranceValidUpto, TaxValidUpto = @taxValidUpto, ModifiedDate = @modifiedDate where PostBuyingDetailId = @postBuyingDetailId</value>
     </data>
 	<resheader name="writer">
 		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

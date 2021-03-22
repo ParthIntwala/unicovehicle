@@ -88,5 +88,35 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("UpdateOrder", resourceCulture);
             }
         }
+        
+        internal static string UpdateOrderStatus {
+            get {
+                return ResourceManager.GetString("UpdateOrderStatus", resourceCulture);
+            }
+        }
+        
+        internal static string GetmaxOrderId {
+            get {
+                return ResourceManager.GetString("GetmaxOrderId", resourceCulture);
+            }
+        }
+        
+        internal static string GetPostBuyingDetailbyId {
+            get {
+                return ResourceManager.GetString("GetPostBuyingDetailbyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertPostBuyingDetail {
+            get {
+                return ResourceManager.GetString("InsertPostBuyingDetail", resourceCulture);
+            }
+        }
+        
+        internal static string UpdatePostBuyingDetail {
+            get {
+                return ResourceManager.GetString("UpdatePostBuyingDetail", resourceCulture);
+            }
+        }
     }
 }

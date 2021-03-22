@@ -98,15 +98,28 @@ namespace UnicoVehicle.BLL
             return _order;
         }
 
-        public bool InsertOrder(Order order)
+        public int InsertOrder(Order order)
         {
+            int orderId = -1;
             _status = _orderDAL.InsertOrder(order);
-            return _status;
+
+            if(_status)
+            {
+                orderId = _orderDAL.GetOrderId();
+            }
+
+            return orderId;
         }
 
         public bool UpdateOrder(Order order, int orderId)
         {
             _status = _orderDAL.UpdateOrder(order, orderId);
+            return _status;
+        }
+
+        public bool UpdateOrderStatus(Status status, int orderId)
+        {
+            _status = _orderDAL.UpdateOrderStatus(status, orderId);
             return _status;
         }
     }

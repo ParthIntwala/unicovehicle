@@ -268,7 +268,6 @@ namespace UnicoVehicle.DAL
         {
             _orderCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.UpdateOrder);
             _orderCommand.Parameters.AddWithValue("@orderId", id);
-            _orderCommand.Parameters.AddWithValue("@orderStatusId", order.OrderStatus.StatusId);
             _orderCommand.Parameters.AddWithValue("@deliveryDate", order.DeliveryDate);
             _orderCommand.Parameters.AddWithValue("@finalPrice", order.FinalPrice);
             _orderCommand.Parameters.AddWithValue("@modifiedDate", DateTime.Now);
@@ -284,6 +283,44 @@ namespace UnicoVehicle.DAL
             {
                 return false;
             }
+        }
+
+        public bool UpdateOrderStatus(Status status, int id)
+        {
+            _orderCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.UpdateOrderStatus);
+            _orderCommand.Parameters.AddWithValue("@orderId", id);
+            _orderCommand.Parameters.AddWithValue("@orderStatusId", status.StatusId);
+            _orderCommand.Parameters.AddWithValue("@modifiedDate", DateTime.Now);
+
+            _success = _orderCommand.ExecuteNonQuery();
+            _connection.CloseConnection();
+
+            if (_success > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public int GetOrderId()
+        {
+            _orderCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.GetmaxOrderId);
+            _orderReader = _orderCommand.ExecuteReader();
+
+            int orderId = -1;
+
+            while (_orderReader.Read())
+            {
+                orderId = int.Parse(_orderReader["OrderId"].ToString());
+            }
+
+            _orderReader.Close();
+            _connection.CloseConnection();
+
+            return orderId;
         }
     }
 }

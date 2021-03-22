@@ -10,7 +10,8 @@ namespace UnicoVehicle.BLL
         public List<Order> GetOrderbyShowroom(int id);
         public List<Order> GetOrderbyShowroomandVehicle(int showroomId, int vehicleId);
         public List<Order> GetOrderbyShowroomCustomer(int customerId, int showroomId);
-        public bool InsertOrder(Order order);
+        public int InsertOrder(Order order);
         public bool UpdateOrder(Order order, int orderId);
+        public bool UpdateOrderStatus(Status status, int orderId);
     }
 }

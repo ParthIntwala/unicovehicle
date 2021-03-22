@@ -28,16 +28,23 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPost]
-        public bool InsertOrder([FromBody] Order order)
+        public int InsertOrder([FromBody] Order order)
         {
-            _status = _orderBLL.InsertOrder(order);
-            return _status;
+            int orderId = _orderBLL.InsertOrder(order);
+            return orderId;
         }
 
         [HttpPut("{Id}")]
         public bool UpdateOrder([FromBody] Order order, int id)
         {
             _status = _orderBLL.UpdateOrder(order, id);
+            return _status;
+        }
+
+        [HttpPut]
+        public bool UpdateOrderStatus([FromBody] Status orderStatus, int id)
+        {
+            _status = _orderBLL.UpdateOrderStatus(orderStatus, id);
             return _status;
         }
     }
