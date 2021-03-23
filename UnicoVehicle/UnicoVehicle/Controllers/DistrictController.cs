@@ -20,13 +20,6 @@ namespace UnicoVehicle.Controllers
             _districtBLL = districtBll;
         }
 
-        [HttpGet]
-        public List<District> GetStates(int id)
-        {
-            List<District> _allDistricts = _districtBLL.Get(id);
-            return _allDistricts;
-        }
-
         [HttpGet("{Id}")]
         public District GetDistrictsbyId(int id)
         {

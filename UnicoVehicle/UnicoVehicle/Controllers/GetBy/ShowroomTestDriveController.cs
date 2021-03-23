@@ -10,20 +10,20 @@ namespace UnicoVehicle.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class UserTestDriveController : Controller
+    public class ShowroomTestDriveController : Controller
     {
         private readonly ITestDriveBLL _testDriveBll;
 
-        public UserTestDriveController(ITestDriveBLL testDriveBll)
+        public ShowroomTestDriveController(ITestDriveBLL testDriveBll)
         {
             _testDriveBll = testDriveBll;
         }
 
         [HttpGet("{id}")]
-        public List<TestDrive> GetTestDrivebyUser(int id)
+        public List<TestDrive> GetTestDrivebyShowroom(int id)
         {
-            List<TestDrive> _testDrive = _testDriveBll.GetTestDrivebyUser(id);
-            return _testDrive;
+            List<TestDrive> testDrive = _testDriveBll.GetTestDrivebyShowroom(id);
+            return testDrive;
         }
     }
 }

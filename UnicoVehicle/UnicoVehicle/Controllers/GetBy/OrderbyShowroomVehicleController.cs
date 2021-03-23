@@ -20,7 +20,7 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet("{id}")]
-        public List<Order> GetOrderbyShowroomVehicle(int id, int vehicleId)
+        public List<Order> GetOrderbyShowroomandVehicle(int id, int vehicleId)
         {
             List<Order> _order = _orderBLL.GetOrderbyShowroomandVehicle(id, vehicleId);
             return _order;

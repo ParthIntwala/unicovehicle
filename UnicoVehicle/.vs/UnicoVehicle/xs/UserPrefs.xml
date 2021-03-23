@@ -4,9 +4,7 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UnicoVehicle" expanded="True">
-            <Node name="UnicoVehicle" expanded="True">
-              <Node name="Controllers" expanded="True" />
-            </Node>
+            <Node name="UnicoVehicle" expanded="True" />
           </Node>
         </State>
       </Pad>

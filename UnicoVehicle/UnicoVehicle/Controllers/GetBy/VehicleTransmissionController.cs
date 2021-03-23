@@ -10,19 +10,19 @@ namespace UnicoVehicle.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class VehiclebyVariantController : Controller
+    public class VehicleTransmissionController : Controller
     {
         private readonly IVehicleBLL _vehicleBll;
 
-        public VehiclebyVariantController(IVehicleBLL vehicleBLL)
+        public VehicleTransmissionController(IVehicleBLL vehicleBLL)
         {
             _vehicleBll = vehicleBLL;
         }
 
         [HttpGet("{id}")]
-        public Vehicle GetVehiclebyVariant(int id, int nameId)
+        public List<Vehicle> GetVehiclebyTransmission(int id, int nameId)
         {
-            Vehicle vehicle = _vehicleBll.GetVehiclebyVariant(id, nameId);
+            List<Vehicle> vehicle = _vehicleBll.GetVehiclebyTransmission(id, nameId);
             return vehicle;
         }
     }

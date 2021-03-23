@@ -20,17 +20,10 @@ namespace UnicoVehicle.Controllers
             _vehicleBll = vehicleBLL;
         }
 
-        [HttpGet("{Id}")]
+        [HttpGet("{id}")]
         public Vehicle GetVehiclebyId(int id)
         {
             Vehicle vehicle = _vehicleBll.GetVehiclebyId(id);
-            return vehicle;
-        }
-
-        [HttpGet]
-        public List<Vehicle> GetVehiclebyTransmission(int id, int nameId)
-        {
-            List<Vehicle> vehicle = _vehicleBll.GetVehiclebyTransmission(id, nameId);
             return vehicle;
         }
 

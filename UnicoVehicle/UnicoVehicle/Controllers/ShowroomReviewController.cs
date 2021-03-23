@@ -20,13 +20,6 @@ namespace UnicoVehicle.Controllers
             _showroomReviewBll = showroomReviewBLL;
         }
 
-        [HttpGet]
-        public List<ShowroomReview> GetShowroomReview()
-        {
-            List<ShowroomReview> _showroomReview = _showroomReviewBll.Get();
-            return _showroomReview;
-        }
-
         [HttpGet("{Id}")]
         public ShowroomReview GetShowroomReviewbyId(int id)
         {

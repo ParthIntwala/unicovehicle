@@ -20,13 +20,6 @@ namespace UnicoVehicle.Controllers
             _stateBll = stateBll;
         }
 
-        [HttpGet]
-        public List<State> GetStates(int id)
-        {
-            List<State> _allStates = _stateBll.Get(id);
-            return _allStates;
-        }
-
         [HttpGet("{Id}")]
         public State GetStatesbyId(int id)
         {

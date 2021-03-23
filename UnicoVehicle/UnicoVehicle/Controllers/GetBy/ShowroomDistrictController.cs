@@ -20,7 +20,7 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet("{Id}")]
-        public List<Showroom> GetShowroom(int Id)
+        public List<Showroom> GetShowroombyDistrict(int Id)
         {
             List<Showroom> _showroom = _showroomBll.GetDistrict(Id);
             return _showroom;

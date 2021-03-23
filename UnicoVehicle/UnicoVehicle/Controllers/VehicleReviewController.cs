@@ -20,13 +20,6 @@ namespace UnicoVehicle.Controllers
             _vehicleReviewBLL = vehicleReviewBLL;
         }
 
-        [HttpGet]
-        public List<VehicleReview> GetVehicleReview()
-        {
-            List<VehicleReview> _vehicleReview = _vehicleReviewBLL.Get();
-            return _vehicleReview;
-        }
-
         [HttpGet("{Id}")]
         public VehicleReview GetVehicleReviewbyId(int id)
         {

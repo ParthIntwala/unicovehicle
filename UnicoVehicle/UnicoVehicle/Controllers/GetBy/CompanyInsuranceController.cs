@@ -19,10 +19,10 @@ namespace UnicoVehicle.Controllers
             _insuranceTypeBll = insuranceTypeBll;
         }
 
-        [HttpGet]
-        public List<InsuranceType> GetInsuranceType(int companyId)
+        [HttpGet("{id}")]
+        public List<InsuranceType> GetInsuranceTypebyCompany(int id)
         {
-            List<InsuranceType> _insuranceType = _insuranceTypeBll.Get(companyId);
+            List<InsuranceType> _insuranceType = _insuranceTypeBll.Get(id);
             return _insuranceType;
         }
     }

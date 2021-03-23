@@ -20,13 +20,6 @@ namespace UnicoVehicle.Controllers
             _vehicleStockBll = vehicleStockBll;
         }
 
-        [HttpGet]
-        public List<VehicleStock> GetVehicleStockbyVehicle(int id)
-        {
-            List<VehicleStock> _stock = _vehicleStockBll.GetbyVehicle(id);
-            return _stock;
-        }
-
         [HttpGet("{id}")]
         public List<VehicleStock> GetVehicleStockbyShowroom(int id)
         {

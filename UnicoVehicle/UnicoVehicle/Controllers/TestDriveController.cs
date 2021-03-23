@@ -27,13 +27,6 @@ namespace UnicoVehicle.Controllers
             return testDrive;
         }
 
-        [HttpGet]
-        public List<TestDrive> GetTestDrivebyShowroomandVehicle(int showroomId, int vehicleId)
-        {
-            List<TestDrive> testDrive = _testDriveBll.GetTestDrivebyShowroomandVehicle(showroomId, vehicleId);
-            return testDrive;
-        }
-
         [HttpPost]
         public bool InsertVehicle([FromBody] TestDrive testDrive)
         {
