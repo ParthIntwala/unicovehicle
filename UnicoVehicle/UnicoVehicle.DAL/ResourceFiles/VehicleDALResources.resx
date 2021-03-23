@@ -220,10 +220,10 @@
             DeletedDate is null and VehicleId = @vehicleId </value>
     </data>
     <data name="InsertImages" xml:space="preserve">
-    <value>Insert into [UnicoVehicle].[vehicle].[VehicleImages] (VehicleImagesId, VehicleId, FrontSide, RearSide, LeftSide, RightSide,
+    <value>Insert into [UnicoVehicle].[vehicle].[VehicleImages] (VehicleId, FrontSide, RearSide, LeftSide, RightSide,
             TopView, SeatsLeftView, SeatsRightView, Engine, FrontPanel, FrontSeat, MiddleSeat, RearSeat, Trunk, Grill, HeadLight, RearLight,
             Wheel, DoorHandle, SideMirror, SteeringWheel, ODOMeter, GearHandBreakMechanism, InfotainmentSystem, RearACVents, CreatedDate)
-            values (@vehicleImagesId, @vehicleId, @frontSide, @rearSide, @leftSide, @rightSide, @topView, @seatsLeftView, @seatsRightView,
+            values (@vehicleId, @frontSide, @rearSide, @leftSide, @rightSide, @topView, @seatsLeftView, @seatsRightView,
             @engine, @frontPanel, @frontSeat, @middleSeat, @rearSeat, @trunk, @grill, @headLight, @rearLight, @wheel, @doorHandle,
             @sideMirror, @steeringWheel, @odoMeter, @gearMechanism, @infotainmentSystem, @rearACVents, @createdDate)</value>
     </data>

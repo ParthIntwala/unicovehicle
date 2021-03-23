@@ -1,8 +1,8 @@
 ﻿using UnicoVehicle.DTO;
 
-namespace UnicoVehicle.DAL
+namespace UnicoVehicle.BLL
 {
-    public interface IVehicleImagesDAL
+    public interface IVehicleImageBLL
     {
         public VehicleImages GetVehicleImagesbyId(int id);
         public bool InsertVehicleImages(VehicleImages image, int id);
