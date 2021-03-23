@@ -13,6 +13,6 @@ namespace UnicoVehicle.DAL
         public bool InsertOrder(Order order);
         public bool UpdateOrder(Order order, int id);
         public bool UpdateOrderStatus(Status status, int id);
-        public int GetOrderId();
+        public int GetOrderId(Order order);
     }
 }

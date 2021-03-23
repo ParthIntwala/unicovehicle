@@ -10,13 +10,13 @@
         <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="GetAccessories" xml:space="preserve">
-    <value>Select AccessoriesId, AccessoryTypeId, Accessory, Price from [UnicoVehicle].[vehicle].[Accessories] where DeletedDate is null </value>
+    <value>Select AccessoriesId, AccessoryBrandId, VehicleNameId, AccessoryTypeId, Accessory, Price from [UnicoVehicle].[vehicle].[Accessories] where DeletedDate is null </value>
     </data>
-    <data name="GetAccessorybyId" xml:space="preserve">
-    <value>Select AccessoryTypeId, Accessory, Price from [UnicoVehicle].[vehicle].[Accessories] where DeletedDate is null and AccessoriesId = @accessoriesId</value>
+    <data name="GetAccessoriesbyId" xml:space="preserve">
+    <value>Select AccessoryTypeId, AccessoryBrandId, VehicleNameId, Accessory, Price from [UnicoVehicle].[vehicle].[Accessories] where DeletedDate is null and AccessoriesId = @accessoriesId </value>
     </data>
     <data name="InsertAccessory" xml:space="preserve">
-    <value>Insert into [UnicoVehicle].[vehicle].[Accessories] (AccessoryTypeId, Accessory, Price, CreatedDate) values (@accessoryTypeId, @accessory, @price, @createdDate)</value>
+    <value>Insert into [UnicoVehicle].[vehicle].[Accessories] (VehicleNameId, AccessoryBrandId, AccessoryTypeId, Accessory, Price, CreatedDate) values (@vehicleNameId, @accessoryBrandId, @accessoryTypeId, @accessory, @price, @createdDate)</value>
     </data>
     <data name="DeleteAccessory" xml:space="preserve">
     <value>Update [UnicoVehicle].[vehicle].[Accessories] set DeletedDate = @deletedDate where AccessoriesId = @accessoriesId</value>
@@ -212,6 +212,29 @@
     </data>
     <data name="UpdateTestDrive" xml:space="preserve">
     <value>Update [UnicoVehicle].[vehicle].[TestDrive] set TestDriveDateTime = @testDriveDateTime, TestDriveStatusId = @testDriveStatusId, ModifiedDate = @modifiedDate where TestDriveId = @testDriveId</value>
+    </data>
+    <data name="GetImagesbyId" xml:space="preserve">
+    <value>Select VehicleImagesId, FrontSide, RearSide, LeftSide, RightSide, TopView, SeatsLeftView, SeatsRightView, Engine,
+            FrontPanel, FrontSeat, MiddleSeat, RearSeat, Trunk, Grill, HeadLight, RearLight, Wheel, DoorHandle, SideMirror, SteeringWheel,
+            ODOMeter, GearHandBreakMechanism, InfotainmentSystem, RearACVents from [UnicoVehicle].[vehicle].[VehicleImages] where
+            DeletedDate is null and VehicleId = @vehicleId </value>
+    </data>
+    <data name="InsertImages" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[vehicle].[VehicleImages] (VehicleImagesId, VehicleId, FrontSide, RearSide, LeftSide, RightSide,
+            TopView, SeatsLeftView, SeatsRightView, Engine, FrontPanel, FrontSeat, MiddleSeat, RearSeat, Trunk, Grill, HeadLight, RearLight,
+            Wheel, DoorHandle, SideMirror, SteeringWheel, ODOMeter, GearHandBreakMechanism, InfotainmentSystem, RearACVents, CreatedDate)
+            values (@vehicleImagesId, @vehicleId, @frontSide, @rearSide, @leftSide, @rightSide, @topView, @seatsLeftView, @seatsRightView,
+            @engine, @frontPanel, @frontSeat, @middleSeat, @rearSeat, @trunk, @grill, @headLight, @rearLight, @wheel, @doorHandle,
+            @sideMirror, @steeringWheel, @odoMeter, @gearMechanism, @infotainmentSystem, @rearACVents, @createdDate)</value>
+    </data>
+    <data name="UpdateImages" xml:space="preserve">
+    <value>Update [UnicoVehicle].[vehicle].[VehicleImages] set FrontSide = @frontSide, RearSide = @rearSide, LeftSide = @leftSide,
+            RightSide = @rightSide, TopView = @topView, SeatsLeftView = @seatsLeftView, SeatsRightView = @seatsRightView, Engine = @engine,
+            FrontPanel = @frontPanel, FrontSeat = @frontSeat, MiddleSeat = @middleSeat, RearSeat = @rearSeat, Trunk = @trunk, Grill = @grill,
+            HeadLight = @headLight, RearLight = @rearLight, Wheel = @wheel, DoorHandle = @doorHandle, SideMirror = @sideMirror,
+            SteeringWheel = @steeringWheel, ODOMeter = @odoMeter, GearHandBreakMechanism = @gearMechanism,
+            InfotainmentSystem = @infotainmentSystem, RearACVents = @rearACVents, ModifiedDate = @modifiedDate where
+            VehicleImagesId = @vehicleImagesId</value>
     </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

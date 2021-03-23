@@ -1,10 +1,10 @@
 ﻿using System;
 namespace UnicoVehicle.DTO
 {
-    public class VehicheImages
+    public class VehicleImages
     {
-        public int VehicheImagesId { get; set; }
-        public Vehicle Vehicle { get; set; }
+        public int VehicleImagesId { get; set; }
+        public Miscellaneous.Vehicle Vehicle { get; set; }
         public string FrontSide { get; set; }
         public string RearSide { get; set; }
         public string LeftSide { get; set; }

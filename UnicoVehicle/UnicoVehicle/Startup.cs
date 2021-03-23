@@ -66,6 +66,9 @@ namespace UnicoVehicle
             services.AddTransient<ITestDriveDAL, TestDriveDAL>();
             services.AddTransient<IOrderDAL, OrderDAL>();
             services.AddTransient<IPostBuyingDetailDAL, PostBuyingDetailDAL>();
+            services.AddTransient<IAccessoryBrandDAL, AccessoryBrandDAL>();
+            services.AddTransient<IAccessoriesDAL, AccessoriesDAL>();
+            services.AddTransient<IBoughtAccessoriesDAL, BoughtAccessoriesDAL>();
             //BLL Classes
             services.AddTransient<ICountryBll, CountryBll>();
             services.AddTransient<IStateBLL, StateBLL>();
@@ -95,6 +98,9 @@ namespace UnicoVehicle
             services.AddTransient<ITestDriveBLL, TestDriveBLL>();
             services.AddTransient<IOrderBLL, OrderBLL>();
             services.AddTransient<IPostBuyingDetailBLL, PostBuyingDetailBLL>();
+            services.AddTransient<IAccessoryBrandBLL, AccessoryBrandBLL>();
+            services.AddTransient<IAccessoriesBLL, AccessoriesBLL>();
+            services.AddTransient<IBoughtAccessoriesBLL, BoughtAccessoriesBLL>();
             //services.AddTransient<>();
             services.AddControllers();
         }

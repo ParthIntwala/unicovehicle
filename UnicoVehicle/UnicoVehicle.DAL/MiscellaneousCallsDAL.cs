@@ -11,7 +11,6 @@ namespace UnicoVehicle.DAL
         private readonly IUtils _utils;
         private SqlCommand _command;
         private SqlDataReader _reader;
-        int _success;
 
         public MiscellaneousCallsDAL(Connection connection, IUtils utils)
         {

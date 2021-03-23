@@ -105,7 +105,7 @@ namespace UnicoVehicle.BLL
 
             if(_status)
             {
-                orderId = _orderDAL.GetOrderId();
+                orderId = _orderDAL.GetOrderId(order);
             }
 
             return orderId;

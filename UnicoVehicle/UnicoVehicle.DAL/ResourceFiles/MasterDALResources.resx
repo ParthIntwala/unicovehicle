@@ -99,6 +99,18 @@
     <data name="DeleteCylinderArrangement" xml:space="preserve">
     <value>Update [UnicoVehicle].[master].[CylinderArrangement] set DeletedDate = @deletedDate where CylinderArrangementId = @cylinderArrangementId</value>
     </data>
+    <data name="GetAccessoryBrand" xml:space="preserve">
+    <value>Select AccessoryBrandId, AccessoryBrand from [UnicoVehicle].[master].[AccessoryBrand] where DeletedDate is null </value>
+    </data>
+    <data name="GetAccessoryBrandbyId" xml:space="preserve">
+    <value>Select AccessoryBrand from [UnicoVehicle].[master].[AccessoryBrand] where DeletedDate is null and AccessoryBrandId = @accessoryBrandId </value>
+    </data>
+    <data name="InsertAccessoryBrand" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[AccessoryBrand] (AccessoryBrand, CreatedDate) values (@accessoryBrand, @createdDate)</value>
+    </data>
+    <data name="DeleteAccessoryBrand" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[AccessoryBrand] set DeletedDate = @deletedDate where AccessoryBrandId = @accessoryBrandId</value>
+    </data>
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>

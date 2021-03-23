@@ -8,5 +8,6 @@ namespace UnicoVehicle.DTO
         public string AccessoriesName { get; set; }
         public double Price { get; set; }
         public AccessoryBrand AccessoryBrand { get; set; }
+        public VehicleName VehicleName { get; set; }
     }
 }

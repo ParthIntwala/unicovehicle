@@ -3,8 +3,7 @@ namespace UnicoVehicle.DTO
 {
     public class BoughtAccessories
     {
-        public List<int> BoughtAccessoriesId { get; set; }
-        public Miscellaneous.Order Order { get; set; }
-        public List<Accessories> Accessories { get; set; }
+        public int BoughtAccessoriesId { get; set; }
+        public Accessories Accessories { get; set; }
     }
 }

@@ -226,5 +226,29 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("DeleteCylinderArrangement", resourceCulture);
             }
         }
+        
+        internal static string GetAccessoryBrand {
+            get {
+                return ResourceManager.GetString("GetAccessoryBrand", resourceCulture);
+            }
+        }
+        
+        internal static string GetAccessoryBrandbyId {
+            get {
+                return ResourceManager.GetString("GetAccessoryBrandbyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertAccessoryBrand {
+            get {
+                return ResourceManager.GetString("InsertAccessoryBrand", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteAccessoryBrand {
+            get {
+                return ResourceManager.GetString("DeleteAccessoryBrand", resourceCulture);
+            }
+        }
     }
 }

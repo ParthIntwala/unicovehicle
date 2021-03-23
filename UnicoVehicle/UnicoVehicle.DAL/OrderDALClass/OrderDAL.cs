@@ -51,8 +51,8 @@ namespace UnicoVehicle.DAL
                     {
                         CustomerId = int.Parse(_orderReader["CustomerId"].ToString()),
                     },
-                    FinalPrice = double.Parse(_orderReader["TestDriveStatusId"].ToString()),
-                    hasLoan = bool.Parse(_orderReader["TestDriveStatusId"].ToString())
+                    FinalPrice = double.Parse(_orderReader["FinalPrice"].ToString()),
+                    hasLoan = bool.Parse(_orderReader["hasLoan"].ToString())
                 };
 
                 _orders.Add(_order);
@@ -94,8 +94,8 @@ namespace UnicoVehicle.DAL
                     {
                         CustomerId = int.Parse(_orderReader["CustomerId"].ToString()),
                     },
-                    FinalPrice = double.Parse(_orderReader["TestDriveStatusId"].ToString()),
-                    hasLoan = bool.Parse(_orderReader["TestDriveStatusId"].ToString())
+                    FinalPrice = double.Parse(_orderReader["FinalPrice"].ToString()),
+                    hasLoan = bool.Parse(_orderReader["hasLoan"].ToString())
                 };
             }
 
@@ -137,8 +137,8 @@ namespace UnicoVehicle.DAL
                     {
                         CustomerId = int.Parse(_orderReader["CustomerId"].ToString()),
                     },
-                    FinalPrice = double.Parse(_orderReader["TestDriveStatusId"].ToString()),
-                    hasLoan = bool.Parse(_orderReader["TestDriveStatusId"].ToString())
+                    FinalPrice = double.Parse(_orderReader["FinalPrice"].ToString()),
+                    hasLoan = bool.Parse(_orderReader["hasLoan"].ToString())
                 };
 
                 _orders.Add(_order);
@@ -181,8 +181,8 @@ namespace UnicoVehicle.DAL
                     {
                         CustomerId = id,
                     },
-                    FinalPrice = double.Parse(_orderReader["TestDriveStatusId"].ToString()),
-                    hasLoan = bool.Parse(_orderReader["TestDriveStatusId"].ToString())
+                    FinalPrice = double.Parse(_orderReader["FinalPrice"].ToString()),
+                    hasLoan = bool.Parse(_orderReader["hasLoan"].ToString())
                 };
 
                 _orders.Add(_order);
@@ -226,8 +226,8 @@ namespace UnicoVehicle.DAL
                     {
                         CustomerId = customerId,
                     },
-                    FinalPrice = double.Parse(_orderReader["TestDriveStatusId"].ToString()),
-                    hasLoan = bool.Parse(_orderReader["TestDriveStatusId"].ToString())
+                    FinalPrice = double.Parse(_orderReader["FinalPrice"].ToString()),
+                    hasLoan = bool.Parse(_orderReader["hasLoan"].ToString())
                 };
 
                 _orders.Add(_order);
@@ -305,9 +305,13 @@ namespace UnicoVehicle.DAL
             }
         }
 
-        public int GetOrderId()
+        public int GetOrderId(Order order)
         {
             _orderCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.GetmaxOrderId);
+            _orderCommand.Parameters.AddWithValue("@customerId", order.Customer.CustomerId);
+            _orderCommand.Parameters.AddWithValue("@showroomId", order.Showroom.ShowroomId);
+            _orderCommand.Parameters.AddWithValue("@vehicleId", order.Vehicle.VehicleId);
+            _orderCommand.Parameters.AddWithValue("@orderStatusId", order.OrderStatus.StatusId);
             _orderReader = _orderCommand.ExecuteReader();
 
             int orderId = -1;

@@ -118,5 +118,23 @@ namespace UnicoVehicle.DAL.ResourceFiles {
                 return ResourceManager.GetString("UpdatePostBuyingDetail", resourceCulture);
             }
         }
+        
+        internal static string GetBoughtAccessories {
+            get {
+                return ResourceManager.GetString("GetBoughtAccessories", resourceCulture);
+            }
+        }
+        
+        internal static string InsertBoughtAccessories {
+            get {
+                return ResourceManager.GetString("InsertBoughtAccessories", resourceCulture);
+            }
+        }
+        
+        internal static string DeleteBoughtAccessories {
+            get {
+                return ResourceManager.GetString("DeleteBoughtAccessories", resourceCulture);
+            }
+        }
     }
 }

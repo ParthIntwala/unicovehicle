@@ -53,9 +53,9 @@ namespace UnicoVehicle.DAL.ResourceFiles {
             }
         }
         
-        internal static string GetAccessorybyId {
+        internal static string GetAccessoriesbyId {
             get {
-                return ResourceManager.GetString("GetAccessorybyId", resourceCulture);
+                return ResourceManager.GetString("GetAccessoriesbyId", resourceCulture);
             }
         }
         
@@ -296,6 +296,24 @@ namespace UnicoVehicle.DAL.ResourceFiles {
         internal static string UpdateTestDrive {
             get {
                 return ResourceManager.GetString("UpdateTestDrive", resourceCulture);
+            }
+        }
+        
+        internal static string GetImagesbyId {
+            get {
+                return ResourceManager.GetString("GetImagesbyId", resourceCulture);
+            }
+        }
+        
+        internal static string InsertImages {
+            get {
+                return ResourceManager.GetString("InsertImages", resourceCulture);
+            }
+        }
+        
+        internal static string UpdateImages {
+            get {
+                return ResourceManager.GetString("UpdateImages", resourceCulture);
             }
         }
     }

@@ -22,7 +22,7 @@ namespace UnicoVehicle.DAL
 
         public PostBuyingDetail GetPostBuyingDetailbyId(int id)
         {
-            _buyingDetailCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.GetOrderbyId);
+            _buyingDetailCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.GetPostBuyingDetailbyId);
             _buyingDetailCommand.Parameters.AddWithValue("@orderId", id);
             _buyingDetailReader = _buyingDetailCommand.ExecuteReader();
 
@@ -59,7 +59,7 @@ namespace UnicoVehicle.DAL
 
         public bool InsertPostBuyingDetail(PostBuyingDetail postBuyingDetail)
         {
-            _buyingDetailCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.InsertOrder);
+            _buyingDetailCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.InsertPostBuyingDetail);
             _buyingDetailCommand.Parameters.AddWithValue("@insuranceCompanyId", postBuyingDetail.InsuranceCompany.InsuranceCompanyId);
             _buyingDetailCommand.Parameters.AddWithValue("@insuranceTypeId", postBuyingDetail.InsuranceType.InsuranceTypeId);
             _buyingDetailCommand.Parameters.AddWithValue("@insuranceValidUpto", postBuyingDetail.InsuranceValidity);
@@ -86,35 +86,15 @@ namespace UnicoVehicle.DAL
 
         public bool UpdatePostBuyingDetail(PostBuyingDetail postBuyingDetail, int id)
         {
-            _buyingDetailCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.UpdateOrder);
+            _buyingDetailCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.UpdatePostBuyingDetail);
             _buyingDetailCommand.Parameters.AddWithValue("@postBuyingDetailId", id);
             _buyingDetailCommand.Parameters.AddWithValue("@insuranceCompanyId", postBuyingDetail.InsuranceCompany.InsuranceCompanyId);
             _buyingDetailCommand.Parameters.AddWithValue("@insuranceTypeId", postBuyingDetail.InsuranceType.InsuranceTypeId);
             _buyingDetailCommand.Parameters.AddWithValue("@insurancePremium", postBuyingDetail.InsurancePremium);
             _buyingDetailCommand.Parameters.AddWithValue("@taxValidUpto", postBuyingDetail.TaxValidity);
-            _buyingDetailCommand.Parameters.AddWithValue("@modifiedDate", DateTime.Now);
-
-            _success = _buyingDetailCommand.ExecuteNonQuery();
-            _connection.CloseConnection();
-
-            if (_success > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public bool UpdatePostBuyingDetailStatus(PostBuyingDetail postBuyingDetail, int id)
-        {
-            _buyingDetailCommand = _utils.CommandGenerator(ResourceFiles.OrderDALResources.UpdateOrder);
-            _buyingDetailCommand.Parameters.AddWithValue("@postBuyingDetailId", id);
-            _buyingDetailCommand.Parameters.AddWithValue("@insuranceCompanyId", postBuyingDetail.InsuranceCompany.InsuranceCompanyId);
-            _buyingDetailCommand.Parameters.AddWithValue("@insuranceTypeId", postBuyingDetail.InsuranceType.InsuranceTypeId);
-            _buyingDetailCommand.Parameters.AddWithValue("@insurancePremium", postBuyingDetail.InsurancePremium);
-            _buyingDetailCommand.Parameters.AddWithValue("@taxValidUpto", postBuyingDetail.TaxValidity);
+            _buyingDetailCommand.Parameters.AddWithValue("@insuranceValidUpto", postBuyingDetail.InsuranceValidity);
+            _buyingDetailCommand.Parameters.AddWithValue("@paymentReceived", postBuyingDetail.PaymentReceived);
+            _buyingDetailCommand.Parameters.AddWithValue("@remainingFreeService", postBuyingDetail.FreeService);
             _buyingDetailCommand.Parameters.AddWithValue("@modifiedDate", DateTime.Now);
 
             _success = _buyingDetailCommand.ExecuteNonQuery();
