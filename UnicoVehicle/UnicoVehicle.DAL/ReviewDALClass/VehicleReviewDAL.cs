@@ -20,9 +20,42 @@ namespace UnicoVehicle.DAL
             _connection = connection;
         }
 
-        public List<VehicleReview> GetVehicleReview()
+        public List<VehicleReview> GetVehicleReviewbyUser(int id)
         {
-            _reviewCommand = _utils.CommandGenerator(ResourceFiles.ReviewDALResources.GetVehicleReview);
+            _reviewCommand = _utils.CommandGenerator(ResourceFiles.ReviewDALResources.GetVehicleReviewbyUser);
+            _reviewReader = _reviewCommand.ExecuteReader();
+
+            VehicleReview _review;
+            List<VehicleReview> _reviews = new List<VehicleReview>();
+
+            while (_reviewReader.Read())
+            {
+                _review = new VehicleReview()
+                {
+                    User = new User
+                    {
+                        UserId = id,
+                    },
+                    Vehicle = new DTO.Miscellaneous.Vehicle
+                    {
+                        VehicleId = int.Parse(_reviewReader["VehicleId"].ToString()),
+                    },
+                    Review = _reviewReader["VehicleReview"].ToString(),
+                    VehicleReviewId = int.Parse(_reviewReader["VehicleReviewId"].ToString()),
+                };
+
+                _reviews.Add(_review);
+            }
+
+            _reviewReader.Close();
+            _connection.CloseConnection();
+
+            return _reviews;
+        }
+
+        public List<VehicleReview> GetVehicleReviewbyVehicle(int id)
+        {
+            _reviewCommand = _utils.CommandGenerator(ResourceFiles.ReviewDALResources.GetVehicleReviewbyVehicle);
             _reviewReader = _reviewCommand.ExecuteReader();
 
             VehicleReview _review;
@@ -38,7 +71,7 @@ namespace UnicoVehicle.DAL
                     },
                     Vehicle = new DTO.Miscellaneous.Vehicle
                     {
-                        VehicleId = int.Parse(_reviewReader["VehicleId"].ToString()),
+                        VehicleId = id,
                     },
                     Review = _reviewReader["VehicleReview"].ToString(),
                     VehicleReviewId = int.Parse(_reviewReader["VehicleReviewId"].ToString()),

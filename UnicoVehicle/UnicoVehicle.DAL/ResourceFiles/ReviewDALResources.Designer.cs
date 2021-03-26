@@ -47,9 +47,15 @@ namespace UnicoVehicle.DAL.ResourceFiles {
             }
         }
         
-        internal static string GetShowroomReview {
+        internal static string GetShowroomReviewbyUser {
             get {
-                return ResourceManager.GetString("GetShowroomReview", resourceCulture);
+                return ResourceManager.GetString("GetShowroomReviewbyUser", resourceCulture);
+            }
+        }
+        
+        internal static string GetShowroomReviewbyShowroom {
+            get {
+                return ResourceManager.GetString("GetShowroomReviewbyShowroom", resourceCulture);
             }
         }
         
@@ -77,9 +83,15 @@ namespace UnicoVehicle.DAL.ResourceFiles {
             }
         }
         
-        internal static string GetVehicleReview {
+        internal static string GetVehicleReviewbyUser {
             get {
-                return ResourceManager.GetString("GetVehicleReview", resourceCulture);
+                return ResourceManager.GetString("GetVehicleReviewbyUser", resourceCulture);
+            }
+        }
+        
+        internal static string GetVehicleReviewbyVehicle {
+            get {
+                return ResourceManager.GetString("GetVehicleReviewbyVehicle", resourceCulture);
             }
         }
         

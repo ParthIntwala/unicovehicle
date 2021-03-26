@@ -20,9 +20,22 @@ namespace UnicoVehicle.BLL
             _miscellaneousCallsBLL = miscellaneousCallsBLL;
         }
 
-        public List<ShowroomReview> Get()
+        public List<ShowroomReview> GetbyUser(int id)
         {
-            List<ShowroomReview> _showroomReview = _showroomReviewDAL.GetShowroomReview();
+            List<ShowroomReview> _showroomReview = _showroomReviewDAL.GetShowroomReviewbyUser(id);
+
+            foreach (ShowroomReview showroomReview in _showroomReview)
+            {
+                showroomReview.User = _miscellaneousCallsDAL.GetUserbyId(showroomReview.User.UserId);
+                showroomReview.Showroom = _miscellaneousCallsBLL.GetShowroombyId(showroomReview.Showroom.ShowroomId);
+            }
+
+            return _showroomReview;
+        }
+
+        public List<ShowroomReview> GetbyShowroom(int id)
+        {
+            List<ShowroomReview> _showroomReview = _showroomReviewDAL.GetShowroomReviewbyShowroom(id);
 
             foreach (ShowroomReview showroomReview in _showroomReview)
             {

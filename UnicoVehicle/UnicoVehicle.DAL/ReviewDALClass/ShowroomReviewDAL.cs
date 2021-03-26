@@ -20,9 +20,44 @@ namespace UnicoVehicle.DAL
             _connection = connection;
         }
 
-        public List<ShowroomReview> GetShowroomReview()
+        public List<ShowroomReview> GetShowroomReviewbyUser(int id)
         {
-            _reviewCommand = _utils.CommandGenerator(ResourceFiles.ReviewDALResources.GetShowroomReview);
+            _reviewCommand = _utils.CommandGenerator(ResourceFiles.ReviewDALResources.GetShowroomReviewbyUser);
+            _reviewCommand.Parameters.AddWithValue("@userId", id);
+            _reviewReader = _reviewCommand.ExecuteReader();
+
+            ShowroomReview _review;
+            List<ShowroomReview> _reviews = new List<ShowroomReview>();
+
+            while (_reviewReader.Read())
+            {
+                _review = new ShowroomReview()
+                {
+                    User = new DTO.Miscellaneous.User
+                    {
+                        UserId = id,
+                    },
+                    Showroom = new DTO.Miscellaneous.Showroom
+                    {
+                        ShowroomId = int.Parse(_reviewReader["ShowroomId"].ToString()),
+                    },
+                    Review = _reviewReader["ShowroomReview"].ToString(),
+                    ShowroomReviewId = int.Parse(_reviewReader["ShowroomReviewId"].ToString()),
+                };
+
+                _reviews.Add(_review);
+            }
+
+            _reviewReader.Close();
+            _connection.CloseConnection();
+
+            return _reviews;
+        }
+
+        public List<ShowroomReview> GetShowroomReviewbyShowroom(int id)
+        {
+            _reviewCommand = _utils.CommandGenerator(ResourceFiles.ReviewDALResources.GetShowroomReviewbyUser);
+            _reviewCommand.Parameters.AddWithValue("@showroomId", id);
             _reviewReader = _reviewCommand.ExecuteReader();
 
             ShowroomReview _review;
@@ -38,7 +73,7 @@ namespace UnicoVehicle.DAL
                     },
                     Showroom = new DTO.Miscellaneous.Showroom
                     {
-                        ShowroomId = int.Parse(_reviewReader["ShowroomId"].ToString()),
+                        ShowroomId = id,
                     },
                     Review = _reviewReader["ShowroomReview"].ToString(),
                     ShowroomReviewId = int.Parse(_reviewReader["ShowroomReviewId"].ToString()),
