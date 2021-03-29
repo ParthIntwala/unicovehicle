@@ -10,7 +10,7 @@
         <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="GetUserbyId" xml:space="preserve">
-    <value>Select UserTypeId, FirstName, LastName from [UnicoVehicle].[user].[User] where DeletedDate is null and UserId = @userId</value>
+    <value>Select UserTypeId, FirstName, LastName, EmailId from [UnicoVehicle].[user].[User] where DeletedDate is null and UserId = @userId</value>
     </data>
     <data name="DeleteUser" xml:space="preserve">
     <value>Update [UnicoVehicle].[user].[User] set DeletedDate = @deletedDate where UserId = @userId</value>

@@ -38,6 +38,7 @@ namespace UnicoVehicle.DAL
                     },
                     FirstName = _userReader["FirstName"].ToString(),
                     LastName = _userReader["LastName"].ToString(),
+                    Email = _userReader["EmailId"].ToString(),
                 };
             }
 

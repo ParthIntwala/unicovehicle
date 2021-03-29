@@ -4,11 +4,17 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UnicoVehicle" expanded="True">
-            <Node name="UnicoVehicle.DAL" expanded="True">
-              <Node name="CountryDALClass" expanded="True" />
-              <Node name="MasterDALClass" expanded="True">
-                <Node name="Interfaces" expanded="True" />
+            <Node name="UnicoVehicle" expanded="True" />
+            <Node name="UnicoVehicle.BLL" expanded="True">
+              <Node name="RegistrationBLLClass" expanded="True">
+                <Node name="Interfaces" expanded="True">
+                  <Node name="IRegistrationBLL.cs" selected="True" />
+                </Node>
               </Node>
+            </Node>
+            <Node name="UnicoVehicle.DAL" expanded="True">
+              <Node name="RegistrationDALCLass" expanded="True" />
+              <Node name="ResourceFiles" expanded="True" />
             </Node>
           </Node>
         </State>
