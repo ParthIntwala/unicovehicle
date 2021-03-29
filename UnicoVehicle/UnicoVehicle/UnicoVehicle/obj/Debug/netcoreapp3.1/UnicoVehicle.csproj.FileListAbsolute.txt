@@ -66,3 +66,7 @@
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/obj/Debug/netcoreapp3.1/UnicoVehicle.dll
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/obj/Debug/netcoreapp3.1/UnicoVehicle.pdb
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/obj/Debug/netcoreapp3.1/UnicoVehicle.genruntimeconfig.cache
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll

@@ -16,7 +16,7 @@
     <value>Select UserId from [UnicoVehicle].[user].[User] where DeletedDate is Null and EmailId = @emailId</value>
     </data>
 	<data name="Login" xml:space="preserve">
-    <value>Select UserId, UserTypeId from [UnicoVehicle].[user].[User] where DeletedDate is Null and EmailId = @emailId and Password = @password</value>
+    <value>Select UserId, UserTypeId, FirstName, LastName from [UnicoVehicle].[user].[User] where DeletedDate is Null and EmailId = @emailId and Password = @password</value>
     </data>
 	<data name="ChangePassword" xml:space="preserve">
     <value>Update [UnicoVehicle].[user].[User] set Password = @password, ModifiedDate = @modifiedDate where UserId = @userId</value>

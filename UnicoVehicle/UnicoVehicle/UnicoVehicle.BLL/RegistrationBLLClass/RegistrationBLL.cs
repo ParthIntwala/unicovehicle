@@ -21,7 +21,7 @@ namespace UnicoVehicle.BLL
 
             if (userId != -1)
             {
-                return "User Already Exists!";
+                return "User Already Exists! Try Logging In";
             }
 
             _status = _registrationDAL.RegisterUser(register);
@@ -36,13 +36,16 @@ namespace UnicoVehicle.BLL
             }
         }
 
-        public dynamic Login(LoginUser login)
+        public LoginUser Login(LoginUser login)
         {
             int userId = _registrationDAL.GetUser(login.Email);
 
             if (userId == -1)
             {
-                return "You aren't registered with us, Kindly Register yourself before logging in again!";
+                return new LoginUser
+                {
+                    UserId = -1,
+                };
             }
 
             LoginUser user = _registrationDAL.Login(login);

@@ -47,7 +47,7 @@ namespace UnicoVehicle.DAL
             _registerCommand.Parameters.AddWithValue("@lastName", register.LastName);
             _registerCommand.Parameters.AddWithValue("@emailId", register.Email);
             _registerCommand.Parameters.AddWithValue("@password", register.Password);
-            _registerCommand.Parameters.AddWithValue("@deletedDate", DateTime.Now);
+            _registerCommand.Parameters.AddWithValue("@createdDate", DateTime.Now);
 
             _success = _registerCommand.ExecuteNonQuery();
             _connection.CloseConnection();
@@ -97,6 +97,8 @@ namespace UnicoVehicle.DAL
                 {
                     UserId = int.Parse(_registerReader["UserId"].ToString()),
                     UserTypeId = int.Parse(_registerReader["UserTypeId"].ToString()),
+                    FirstName = _registerReader["FirstName"].ToString(),
+                    LastName = _registerReader["LastName"].ToString(),
                 };
             }
 
