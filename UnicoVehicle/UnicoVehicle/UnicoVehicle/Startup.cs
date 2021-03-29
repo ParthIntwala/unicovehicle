@@ -13,6 +13,8 @@ using Microsoft.Extensions.Logging;
 using UnicoVehicle.Utilities;
 using UnicoVehicle.DAL;
 using UnicoVehicle.BLL;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace UnicoVehicle
 {
@@ -106,6 +108,14 @@ namespace UnicoVehicle
             services.AddTransient<IVehicleImageBLL, VehicleImageBLL>();
             services.AddTransient<IRegistrationBLL, RegistrationBLL>();
             //services.AddTransient<>();
+
+            services.ConfigureJWTAuthentication();
+            services.AddAuthorization( options =>
+                {
+                    options.DefaultPolicy = new AuthorizationPolicyBuilder(JwtBearerDefaults.AuthenticationScheme).RequireAuthenticatedUser().Build();
+                }
+            );
+
             services.AddControllers();
         }
 

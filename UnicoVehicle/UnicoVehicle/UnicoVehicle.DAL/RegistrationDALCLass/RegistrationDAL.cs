@@ -82,18 +82,18 @@ namespace UnicoVehicle.DAL
             }
         }
 
-        public LoginUser Login(LoginUser login)
+        public RegisterUser Login(RegisterUser login)
         {
             _registerCommand = _utils.CommandGenerator(ResourceFiles.RegistrationDALResources.Login);
             _registerCommand.Parameters.AddWithValue("@emailId", login.Email);
             _registerCommand.Parameters.AddWithValue("@password", login.Password);
             _registerReader = _registerCommand.ExecuteReader();
 
-            LoginUser loggedIn = new LoginUser();
+            RegisterUser loggedIn = new RegisterUser();
 
             while (_registerReader.Read())
             {
-                loggedIn = new LoginUser
+                loggedIn = new RegisterUser
                 {
                     UserId = int.Parse(_registerReader["UserId"].ToString()),
                     UserTypeId = int.Parse(_registerReader["UserTypeId"].ToString()),

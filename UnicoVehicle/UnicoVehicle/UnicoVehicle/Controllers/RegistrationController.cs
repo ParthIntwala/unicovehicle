@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using UnicoVehicle.BLL;
 using UnicoVehicle.DTO;
 using UnicoVehicle;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UnicoVehicle.Controllers
 {
@@ -22,13 +23,18 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpGet]
-        public string Login(LoginUser login)
+        public string Login(RegisterUser login)
         {
-            LoginUser _user = _registrationBll.Login(login);
+            RegisterUser _user = _registrationBll.Login(login);
 
             if(_user.UserId == -1)
             {
                 return "You are not Registered! Consider, registering yourself before you try to log in again";
+            }
+
+            if (_user.UserId == 0)
+            {
+                return "Password Incorrect!";
             }
 
             string token = Authenticate.GenerateJSONWebToken(_user);
@@ -44,10 +50,10 @@ namespace UnicoVehicle.Controllers
         }
 
         [HttpPut("{Id}")]
-        public bool UpdatePassword([FromBody] string password, int id)
+        public bool UpdatePassword([FromBody] RegisterUser user, int id)
         {
-            _status = _registrationBll.UpdatePassword(password, id);
-            return _status;
+            _status = _registrationBll.UpdatePassword(user.Password, id);
+            return true;
         }
     }
 }

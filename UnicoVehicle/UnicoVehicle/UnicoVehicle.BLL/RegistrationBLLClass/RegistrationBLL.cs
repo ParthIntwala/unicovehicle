@@ -36,19 +36,19 @@ namespace UnicoVehicle.BLL
             }
         }
 
-        public LoginUser Login(LoginUser login)
+        public RegisterUser Login(RegisterUser login)
         {
             int userId = _registrationDAL.GetUser(login.Email);
 
             if (userId == -1)
             {
-                return new LoginUser
+                return new RegisterUser
                 {
                     UserId = -1,
                 };
             }
 
-            LoginUser user = _registrationDAL.Login(login);
+            RegisterUser user = _registrationDAL.Login(login);
 
             return user;
         }

@@ -70,3 +70,7 @@
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Logging.dll
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Tokens.dll
 /Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/System.IdentityModel.Tokens.Jwt.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
