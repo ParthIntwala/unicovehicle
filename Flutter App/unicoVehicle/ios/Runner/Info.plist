@@ -4,6 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Require permission to select the required images</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Require permission to capture the required images</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Require permission to capture the sound when the video is being recorder</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
