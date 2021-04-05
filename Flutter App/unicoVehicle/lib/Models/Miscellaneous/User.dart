@@ -1,7 +1,7 @@
 class User {
-  final int userId;
-  final String firstName;
-  final String lastName;
+  final int? userId;
+  final String? firstName;
+  final String? lastName;
 
   User({
     this.firstName,

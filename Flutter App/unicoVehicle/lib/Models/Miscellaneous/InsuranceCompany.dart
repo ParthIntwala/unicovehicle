@@ -1,6 +1,6 @@
 class InsuranceCompany {
-  final int insuranceCompanyId;
-  final String insuranceCompany;
+  final int? insuranceCompanyId;
+  final String? insuranceCompany;
 
   InsuranceCompany({
     this.insuranceCompany,

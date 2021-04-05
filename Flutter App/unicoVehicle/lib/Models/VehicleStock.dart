@@ -2,10 +2,10 @@ import './Miscellaneous/Showroom.dart';
 import './Miscellaneous/Vehicle.dart';
 
 class VehicleStock {
-  final int vehicleStockId;
-  final Showroom showroom;
-  final Vehicle vehicle;
-  final int stock;
+  final int? vehicleStockId;
+  final Showroom? showroom;
+  final Vehicle? vehicle;
+  final int? stock;
 
   VehicleStock({
     this.showroom,

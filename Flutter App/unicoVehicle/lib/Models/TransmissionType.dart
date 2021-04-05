@@ -1,6 +1,6 @@
 class TransmissionType {
-  final int transmissionTypeId;
-  final String transmissionType;
+  final int? transmissionTypeId;
+  final String? transmissionType;
 
   TransmissionType({
     this.transmissionType,

@@ -2,10 +2,10 @@ import './Miscellaneous/Showroom.dart';
 import './Miscellaneous/User.dart';
 
 class ShowroomReview {
-  final int showroomReviewId;
-  final Showroom showroom;
-  final User user;
-  final String review;
+  final int? showroomReviewId;
+  final Showroom? showroom;
+  final User? user;
+  final String? review;
 
   ShowroomReview({
     this.review,

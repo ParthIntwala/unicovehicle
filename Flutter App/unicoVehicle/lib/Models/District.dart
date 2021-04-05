@@ -1,9 +1,9 @@
 import './Miscellaneous/State.dart';
 
 class District {
-  final int districtId;
-  final String district;
-  final State state;
+  final int? districtId;
+  final String? district;
+  final State? state;
 
   District({
     this.district,

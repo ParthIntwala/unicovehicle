@@ -1,6 +1,6 @@
 class CylinderArrangement {
-  final int cylinderArrangementId;
-  final String cylinderArrangement;
+  final int? cylinderArrangementId;
+  final String? cylinderArrangement;
 
   CylinderArrangement({
     this.cylinderArrangement,

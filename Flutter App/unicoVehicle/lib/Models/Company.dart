@@ -1,10 +1,10 @@
 import './Miscellaneous/District.dart';
 
 class Company {
-  final int companyId;
-  final District district;
-  final String companyName;
-  final String companyHead;
+  final int? companyId;
+  final District? district;
+  final String? companyName;
+  final String? companyHead;
 
   Company({
     this.companyHead,

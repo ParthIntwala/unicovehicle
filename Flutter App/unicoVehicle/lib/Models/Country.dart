@@ -1,6 +1,6 @@
 class Country {
-  final int countryId;
-  final String country;
+  final int? countryId;
+  final String? country;
 
   Country({
     this.country,

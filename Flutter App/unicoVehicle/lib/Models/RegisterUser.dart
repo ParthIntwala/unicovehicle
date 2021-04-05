@@ -1,10 +1,10 @@
 class RegisterUser {
-  final int userId;
-  final int userTypeId;
-  final String firstName;
-  final String lastName;
-  final String email;
-  final String password;
+  final int? userId;
+  final int? userTypeId;
+  final String? firstName;
+  final String? lastName;
+  final String? email;
+  final String? password;
 
   RegisterUser({
     this.email,

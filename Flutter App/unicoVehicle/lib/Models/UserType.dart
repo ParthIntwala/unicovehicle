@@ -1,6 +1,6 @@
 class UserType {
-  final int userTypeId;
-  final String userType;
+  final int? userTypeId;
+  final String? userType;
 
   UserType({
     this.userType,

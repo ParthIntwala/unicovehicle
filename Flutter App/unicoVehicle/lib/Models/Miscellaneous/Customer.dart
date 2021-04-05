@@ -1,8 +1,8 @@
 import './User.dart';
 
 class Customer {
-  final int customerId;
-  final User user;
+  final int? customerId;
+  final User? user;
 
   Customer({
     this.customerId,

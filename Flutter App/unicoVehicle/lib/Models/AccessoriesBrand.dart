@@ -1,6 +1,6 @@
 class AccessoriesBrand {
-  final int accessoriesBrandId;
-  final String accessoriesBrand;
+  final int? accessoriesBrandId;
+  final String? accessoriesBrand;
 
   AccessoriesBrand({
     this.accessoriesBrand,

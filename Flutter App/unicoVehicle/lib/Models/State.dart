@@ -1,9 +1,9 @@
 import './Country.dart';
 
 class State {
-  final int stateId;
-  final String state;
-  final Country country;
+  final int? stateId;
+  final String? state;
+  final Country? country;
 
   State({
     this.country,
