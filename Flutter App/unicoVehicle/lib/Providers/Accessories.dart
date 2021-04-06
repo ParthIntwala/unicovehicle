@@ -25,11 +25,12 @@ class AccessoriesProvider extends ChangeNotifier {
       }
 
       var body = jsonDecode(response.body) as List<dynamic>;
-
       List<Accessories> loadedAccessories = [];
 
       body
-          .map((accessory) => loadedAccessories.add(Accessories(
+          .map(
+            (accessory) => loadedAccessories.add(
+              Accessories(
                 accessoriesBrand: AccessoriesBrand(
                   accessoriesBrand: accessory["accessoryBrand"]
                       ["accessoriesBrandName"],
@@ -52,7 +53,9 @@ class AccessoriesProvider extends ChangeNotifier {
                   vehicleName: accessory["vehicleName"]["name"],
                   vehicleNameId: accessory["vehicleName"]["vehicleNameId"],
                 ),
-              )))
+              ),
+            ),
+          )
           .toList();
 
       _accessories = loadedAccessories;
@@ -67,13 +70,52 @@ class AccessoriesProvider extends ChangeNotifier {
     try {
       var response = await http.post(
         Uri.parse(BaseURL.accessoriesUrl),
-        body: jsonEncode({
-          "AccessoriesType": accessories.accessoriesType,
-          "AccessoriesName": accessories.accessoriesName,
-          "AccessoryBrand": accessories.accessoriesBrand,
-          "Price": accessories.price,
-          "VehicleName": accessories.vehicleName,
+        body: json.encode({
+          'AccessoriesType': {
+            'AccessoriesTypeId': accessories.accessoriesType!.accessoriesTypeId
+          },
+          'AccessoriesName': accessories.accessoriesName,
+          'AccessoryBrand': {
+            'AccessoryBrandId':
+                accessories.accessoriesBrand!.accessoriesBrandId,
+          },
+          'Price': accessories.price,
+          'VehicleName': {
+            'VehicleNameId': accessories.vehicleName!.vehicleNameId,
+          },
         }),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+      );
+    } catch (err) {
+      throw (err);
+    }
+  }
+
+  Future<void> updateAccessories(int id, Accessories accessories) async {
+    try {
+      var response = await http.put(
+        Uri.parse("${BaseURL.accessoriesUrl}/$id"),
+        body: json.encode({
+          "AccessoriesName": accessories.accessoriesName,
+          "Price": accessories.price
+        }),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+      );
+    } catch (err) {
+      throw (err);
+    }
+  }
+
+  Future<void> deleteAccessories(int id) async {
+    try {
+      var response = await http.delete(
+        Uri.parse("${BaseURL.accessoriesUrl}/$id"),
       );
     } catch (err) {
       throw (err);

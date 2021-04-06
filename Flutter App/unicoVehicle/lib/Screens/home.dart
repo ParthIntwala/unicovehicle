@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
-import '../Providers/Accessories.dart';
-import '../Providers/FuelType.dart';
+import '../Providers/AccessoryBrand.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -18,15 +17,15 @@ class HomeScreen extends StatelessWidget {
       tabBuilder: (ctx, index) => CupertinoTabView(
         builder: (ctx) => Scaffold(
           appBar: CupertinoNavigationBar(
-            middle: Text("Unocò Vehicle"),
+            middle: Text("Unicò Vehicle"),
           ),
           body: SafeArea(
             child: Center(
               child: ElevatedButton(
                 child: Text("Fetch"),
                 onPressed: () {
-                  Provider.of<AccessoriesProvider>(context, listen: false)
-                      .fetchAccessories();
+                  Provider.of<AccessoryBrandProvider>(context, listen: false)
+                      .deleteAccessoriesBrand(3);
                 },
               ),
             ),

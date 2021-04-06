@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import './Screens/home.dart';
 import './Providers/FuelType.dart';
 import './Providers/Accessories.dart';
+import './Providers/AccessoriesType.dart';
+import './Providers/AccessoryBrand.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +23,12 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (ctx) => AccessoriesProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => AccessoriesTypeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => AccessoryBrandProvider(),
         ),
       ],
       child: MaterialApp(

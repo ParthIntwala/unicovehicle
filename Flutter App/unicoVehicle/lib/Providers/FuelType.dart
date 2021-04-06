@@ -13,7 +13,59 @@ class FuelTypeProvider extends ChangeNotifier {
   }
 
   Future<void> fetchFuelType() async {
-    var response = await http.get(Uri.parse(BaseURL.fuelTypeUrl));
-    print(jsonDecode(response.body));
+    try {
+      var response = await http.get(Uri.parse(BaseURL.fuelTypeUrl));
+
+      if (response.body.isEmpty) {
+        return;
+      }
+
+      var body = jsonDecode(response.body) as List<dynamic>;
+      List<FuelType> loadedfuelType = [];
+
+      body
+          .map(
+            (fuelType) => loadedfuelType.add(
+              FuelType(
+                fuelType: fuelType["fuelTypeName"],
+                fuelTypeId: fuelType["fuelTypeId"],
+              ),
+            ),
+          )
+          .toList();
+
+      _fuelType = loadedfuelType;
+
+      notifyListeners();
+    } catch (err) {
+      throw err;
+    }
+  }
+
+  Future<void> addFuelType(FuelType fuelType) async {
+    try {
+      var response = await http.post(
+        Uri.parse(BaseURL.fuelTypeUrl),
+        body: json.encode({
+          "FuelTypeName": fuelType.fuelType,
+        }),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+      );
+    } catch (err) {
+      throw (err);
+    }
+  }
+
+  Future<void> deleteFuelType(int id) async {
+    try {
+      var response = await http.delete(
+        Uri.parse("${BaseURL.fuelTypeUrl}/$id"),
+      );
+    } catch (err) {
+      throw (err);
+    }
   }
 }
