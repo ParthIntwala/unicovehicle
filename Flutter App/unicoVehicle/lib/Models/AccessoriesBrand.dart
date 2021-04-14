@@ -1,9 +1,9 @@
 class AccessoriesBrand {
   final int? accessoriesBrandId;
-  final String? accessoriesBrand;
+  final String accessoriesBrand;
 
   AccessoriesBrand({
-    this.accessoriesBrand,
+    required this.accessoriesBrand,
     this.accessoriesBrandId,
   });
 }

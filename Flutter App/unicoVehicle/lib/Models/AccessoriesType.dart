@@ -1,9 +1,9 @@
 class AccessoriesType {
   final int? accessoriesTypeId;
-  final String? accessoriesType;
+  final String accessoriesType;
 
   AccessoriesType({
-    this.accessoriesType,
+    required this.accessoriesType,
     this.accessoriesTypeId,
   });
 }

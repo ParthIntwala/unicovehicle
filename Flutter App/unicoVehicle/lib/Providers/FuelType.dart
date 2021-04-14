@@ -14,7 +14,13 @@ class FuelTypeProvider extends ChangeNotifier {
 
   Future<void> fetchFuelType() async {
     try {
-      var response = await http.get(Uri.parse(BaseURL.fuelTypeUrl));
+      var response = await http.get(
+        Uri.parse(BaseURL.fuelTypeUrl),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
+      );
 
       if (response.body.isEmpty) {
         return;
@@ -22,6 +28,8 @@ class FuelTypeProvider extends ChangeNotifier {
 
       var body = jsonDecode(response.body) as List<dynamic>;
       List<FuelType> loadedfuelType = [];
+
+      print(body);
 
       body
           .map(

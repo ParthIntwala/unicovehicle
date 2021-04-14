@@ -7,15 +7,15 @@ class Accessories {
   final AccessoriesBrand? accessoriesBrand;
   final AccessoriesType? accessoriesType;
   final VehicleName? vehicleName;
-  final String? accessoriesName;
-  final double? price;
+  final String accessoriesName;
+  final double price;
 
   Accessories({
     this.accessoriesBrand,
     this.accessoriesId,
-    this.accessoriesName,
+    required this.accessoriesName,
     this.accessoriesType,
-    this.price,
+    required this.price,
     this.vehicleName,
   });
 }

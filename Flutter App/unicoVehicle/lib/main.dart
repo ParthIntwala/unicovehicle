@@ -7,10 +7,11 @@ import './Providers/FuelType.dart';
 import './Providers/Accessories.dart';
 import './Providers/AccessoriesType.dart';
 import './Providers/AccessoryBrand.dart';
+import './Providers/BoughtAccessories.dart';
 
 void main() {
-  runApp(MyApp());
   HttpOverrides.global = new MyHttpOverrides();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -29,6 +30,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (ctx) => AccessoryBrandProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => BoughtAccessoriesProvider(),
         ),
       ],
       child: MaterialApp(

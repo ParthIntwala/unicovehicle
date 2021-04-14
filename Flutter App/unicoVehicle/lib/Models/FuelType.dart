@@ -1,9 +1,9 @@
 class FuelType {
   final int? fuelTypeId;
-  final String? fuelType;
+  final String fuelType;
 
   FuelType({
-    this.fuelType,
+    required this.fuelType,
     this.fuelTypeId,
   });
 }

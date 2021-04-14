@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
-import '../Providers/AccessoryBrand.dart';
+import '../Providers/FuelType.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -23,9 +23,11 @@ class HomeScreen extends StatelessWidget {
             child: Center(
               child: ElevatedButton(
                 child: Text("Fetch"),
-                onPressed: () {
-                  Provider.of<AccessoryBrandProvider>(context, listen: false)
-                      .deleteAccessoriesBrand(3);
+                onPressed: () async {
+                  print("Button Pressed");
+                  await Provider.of<FuelTypeProvider>(context, listen: false)
+                      .fetchFuelType();
+                  print("Function Over");
                 },
               ),
             ),
