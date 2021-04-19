@@ -5,6 +5,7 @@
   </PropertyGroup>
 
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Unico' " />
   <ItemGroup>
     <ProjectReference Include="..\UnicoVehicle.DAL\UnicoVehicle.DAL.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
