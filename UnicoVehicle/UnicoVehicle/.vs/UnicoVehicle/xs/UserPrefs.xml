@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{113FDCED-19CE-4C54-A260-12C37E137339}|Unico">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle/Startup.cs">
+    <Files>
+      <File FileName="UnicoVehicle/Startup.cs" Line="117" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UnicoVehicle" expanded="True">
+            <Node name="UnicoVehicle" expanded="True">
+              <Node name="Startup.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="RUN" Name="RUN">
+      <Items>
+        <StartupItem ItemId="{113FDCED-19CE-4C54-A260-12C37E137339}" ItemName="UnicoVehicle" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.ItemProperties.UnicoVehicle PreferredExecutionTarget="/Applications/Safari.app" />
+</Properties>

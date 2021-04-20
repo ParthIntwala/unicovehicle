@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="GetUserbyId" xml:space="preserve">
+    <value>Select UserTypeId, FirstName, LastName, EmailId from [UnicoVehicle].[user].[User] where DeletedDate is null and UserId = @userId</value>
+    </data>
+    <data name="DeleteUser" xml:space="preserve">
+    <value>Update [UnicoVehicle].[user].[User] set DeletedDate = @deletedDate where UserId = @userId</value>
+    </data>
+    <data name="UpdateUser" xml:space="preserve">
+    <value>Update [UnicoVehicle].[user].[User] set FirstName = @firstName, LastName = @lastName, ModifiedDate = @modifiedDate where UserId = @userId</value>
+    </data>
+    <data name="GetCustomer" xml:space="preserve">
+    <value>Select CustomerId, UserId from [UnicoVehicle].[user].[Customer] where DeletedDate is null </value>
+    </data>
+    <data name="GetCustomerbyId" xml:space="preserve">
+    <value>Select UserId, DistrictId, Address, Photograph, DrivingLicenseNumber, StandardIDNumber, IncomeTaxIDNumber, LastITReturn, BankPassbookPhoto from [UnicoVehicle].[user].[Customer] where DeletedDate is null and CustomerId = @customerId</value>
+    </data>
+    <data name="InsertCustomer" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[user].[Customer] (UserId, DistrictId, Address, Photograph, DrivingLicenseNumber, StandardIDNumber, IncomeTaxIDNumber, LastITReturn, BankPassbookPhoto, CreatedDate) values (@userId, @districtId, @address, @photograph, @drivingLicenseNumber, @standardIDNumber, @incomeTaxIDNumber, @lastITReturn, @bankPassbookPhoto, @createdDate)</value>
+    </data>
+    <data name="DeleteCustomer" xml:space="preserve">
+    <value>Update [UnicoVehicle].[user].[Customer] set DeletedDate = @deletedDate where CustomerId = @customerId</value>
+    </data>
+    <data name="UpdateCustomer" xml:space="preserve">
+    <value>Update [UnicoVehicle].[user].[Customer] set DistrictId = @districtId, Address = @address, Photograph = @photograph, DrivingLicenseNumber = @drivingLicenseNumber, LastITReturn = @lastITReturn, BankPassbookPhoto = @bankPassbookPhoto, ModifiedDate = @modifiedDate where CustomerId = @customerId</value>
+    </data>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+</root>

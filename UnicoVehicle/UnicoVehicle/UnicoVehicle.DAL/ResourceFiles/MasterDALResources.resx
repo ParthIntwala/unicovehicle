@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="GetAccessoriesType" xml:space="preserve">
+    <value>Select AccessoriesTypeId, AccessoriesType from [UnicoVehicle].[master].[AccessoriesType] where DeletedDate is null </value>
+    </data>
+    <data name="GetAccessoriesTypebyId" xml:space="preserve">
+    <value>Select AccessoriesType from [UnicoVehicle].[master].[AccessoriesType] where DeletedDate is null and AccessoriesTypeId = @accessoriesTypeId</value>
+    </data>
+    <data name="InsertAccessoriesType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[AccessoriesType] (AccessoriesType, CreatedDate) values (@accessoriesType, @createdDate)</value>
+    </data>
+    <data name="DeleteAccessoriesType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[AccessoriesType] set DeletedDate = @deletedDate where AccessoriesTypeId = @accessoriesTypeId</value>
+    </data>
+    <data name="UpdateAccessoriesType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[AccessoriesType] set ModifiedDate = @modifiedDate, AccessoriesType = @accessoriesType where AccessoriesTypeId = @accessoriesTypeId</value>
+    </data>
+    <data name="GetFuelType" xml:space="preserve">
+    <value>Select FuelTypeId, FuelType from [UnicoVehicle].[master].[FuelType] where DeletedDate is null </value>
+    </data>
+    <data name="GetFuelTypebyId" xml:space="preserve">
+    <value>Select FuelType from [UnicoVehicle].[master].[FuelType] where DeletedDate is null and FuelTypeId = @fuelTypeId</value>
+    </data>
+    <data name="InsertFuelType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[FuelType] (FuelType, CreatedDate) values (@fuelType, @createdDate)</value>
+    </data>
+    <data name="DeleteFuelType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[FuelType] set DeletedDate = @deletedDate where FuelTypeId = @fuelTypeId</value>
+    </data>
+    <data name="GetVehicleType" xml:space="preserve">
+    <value>Select VehicleTypeId, VehicleType from [UnicoVehicle].[master].[VehicleType] where DeletedDate is null </value>
+    </data>
+    <data name="GetVehicleTypebyId" xml:space="preserve">
+    <value>Select VehicleType from [UnicoVehicle].[master].[VehicleType] where DeletedDate is null and VehicleTypeId = @vehicleTypeId</value>
+    </data>
+    <data name="InsertVehicleType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[VehicleType] (VehicleType, CreatedDate) values (@vehicleType, @createdDate)</value>
+    </data>
+    <data name="DeleteVehicleType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[VehicleType] set DeletedDate = @deletedDate where VehicleTypeId = @vehicleTypeId</value>
+    </data>
+    <data name="GetUserType" xml:space="preserve">
+    <value>Select UserTypeId, UserType from [UnicoVehicle].[master].[UserType] where DeletedDate is null </value>
+    </data>
+    <data name="GetUserTypebyId" xml:space="preserve">
+    <value>Select UserType from [UnicoVehicle].[master].[UserType] where DeletedDate is null and UserTypeId = @userTypeId</value>
+    </data>
+    <data name="InsertUserType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[UserType] (UserType, CreatedDate) values (@userType, @createdDate)</value>
+    </data>
+    <data name="DeleteUserType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[UserType] set DeletedDate = @deletedDate where UserTypeId = @userTypeId</value>
+    </data>
+    <data name="GetTransmissionType" xml:space="preserve">
+    <value>Select TransmissionTypeId, TransmissionType from [UnicoVehicle].[master].[TransmissionType] where DeletedDate is null </value>
+    </data>
+    <data name="GetTransmissionTypebyId" xml:space="preserve">
+    <value>Select TransmissionType from [UnicoVehicle].[master].[TransmissionType] where DeletedDate is null and TransmissionTypeId = @transmissionTypeId</value>
+    </data>
+    <data name="InsertTransmissionType" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[TransmissionType] (TransmissionType, CreatedDate) values (@transmissionType, @createdDate)</value>
+    </data>
+    <data name="DeleteTransmissionType" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[TransmissionType] set DeletedDate = @deletedDate where TransmissionTypeId = @transmissionTypeId</value>
+    </data>
+    <data name="GetStatus" xml:space="preserve">
+    <value>Select StatusId, Status from [UnicoVehicle].[master].[Status] where DeletedDate is null </value>
+    </data>
+    <data name="GetStatusbyId" xml:space="preserve">
+    <value>Select Status from [UnicoVehicle].[master].[Status] where DeletedDate is null and StatusId = @statusId</value>
+    </data>
+    <data name="InsertStatus" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[Status] (Status, CreatedDate) values (@status, @createdDate)</value>
+    </data>
+    <data name="DeleteStatus" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[Status] set DeletedDate = @deletedDate where StatusId = @statusId</value>
+    </data>
+    <data name="UpdateStatus" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[STatus] set ModifiedDate = @modifiedDate, Status = @status where StatusId = @statusId</value>
+    </data>
+    <data name="GetCylinderArrangement" xml:space="preserve">
+    <value>Select CylinderArrangementId, CylinderArrangement from [UnicoVehicle].[master].[CylinderArrangement] where DeletedDate is null </value>
+    </data>
+    <data name="GetCylinderArrangementbyId" xml:space="preserve">
+    <value>Select CylinderArrangement from [UnicoVehicle].[master].[CylinderArrangement] where DeletedDate is null and CylinderArrangementId = @cylinderArrangementId</value>
+    </data>
+    <data name="InsertCylinderArrangement" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[CylinderArrangement] (CylinderArrangement, CreatedDate) values (@cylinderArrangement, @createdDate)</value>
+    </data>
+    <data name="DeleteCylinderArrangement" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[CylinderArrangement] set DeletedDate = @deletedDate where CylinderArrangementId = @cylinderArrangementId</value>
+    </data>
+    <data name="GetAccessoryBrand" xml:space="preserve">
+    <value>Select AccessoryBrandId, AccessoryBrand from [UnicoVehicle].[master].[AccessoryBrand] where DeletedDate is null </value>
+    </data>
+    <data name="GetAccessoryBrandbyId" xml:space="preserve">
+    <value>Select AccessoryBrand from [UnicoVehicle].[master].[AccessoryBrand] where DeletedDate is null and AccessoryBrandId = @accessoryBrandId </value>
+    </data>
+    <data name="InsertAccessoryBrand" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[master].[AccessoryBrand] (AccessoryBrand, CreatedDate) values (@accessoryBrand, @createdDate)</value>
+    </data>
+    <data name="DeleteAccessoryBrand" xml:space="preserve">
+    <value>Update [UnicoVehicle].[master].[AccessoryBrand] set DeletedDate = @deletedDate where AccessoryBrandId = @accessoryBrandId</value>
+    </data>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+</root>

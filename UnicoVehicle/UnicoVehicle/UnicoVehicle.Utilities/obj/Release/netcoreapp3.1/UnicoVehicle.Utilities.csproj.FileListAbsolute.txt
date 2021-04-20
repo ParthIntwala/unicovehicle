@@ -1,0 +1,8 @@
+/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/bin/Release/netcoreapp3.1/UnicoVehicle.Utilities.deps.json
+/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/bin/Release/netcoreapp3.1/UnicoVehicle.Utilities.dll
+/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/bin/Release/netcoreapp3.1/UnicoVehicle.Utilities.pdb
+/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/obj/Release/netcoreapp3.1/UnicoVehicle.Utilities.AssemblyInfoInputs.cache
+/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/obj/Release/netcoreapp3.1/UnicoVehicle.Utilities.AssemblyInfo.cs
+/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/obj/Release/netcoreapp3.1/UnicoVehicle.Utilities.csproj.CoreCompileInputs.cache
+/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/obj/Release/netcoreapp3.1/UnicoVehicle.Utilities.dll
+/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/obj/Release/netcoreapp3.1/UnicoVehicle.Utilities.pdb

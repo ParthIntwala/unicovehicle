@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="RegisterUser" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[user].[User] (UserTypeId, FirstName, LastName, EmailId, Password, CreatedDate) values (@userTypeId, @fistName, @lastName, @emailId, @password, @createdDate)</value>
+    </data>
+	<data name="UserExist" xml:space="preserve">
+    <value>Select UserId from [UnicoVehicle].[user].[User] where DeletedDate is Null and EmailId = @emailId</value>
+    </data>
+	<data name="Login" xml:space="preserve">
+    <value>Select UserId, UserTypeId, FirstName, LastName from [UnicoVehicle].[user].[User] where DeletedDate is Null and EmailId = @emailId and Password = @password</value>
+    </data>
+	<data name="ChangePassword" xml:space="preserve">
+    <value>Update [UnicoVehicle].[user].[User] set Password = @password, ModifiedDate = @modifiedDate where UserId = @userId</value>
+    </data>
+	<data name="FindUser" xml:space="preserve">
+    <value>Select FirstName from [UnicoVehicle].[user].[User] where DeletedDate is Null and UserId = @userId</value>
+    </data>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+</root>
