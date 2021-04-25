@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
-import '../Providers/FuelType.dart';
+import '../Providers/BoughtAccessories.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -25,8 +25,9 @@ class HomeScreen extends StatelessWidget {
                 child: Text("Fetch"),
                 onPressed: () async {
                   print("Button Pressed");
-                  await Provider.of<FuelTypeProvider>(context, listen: false)
-                      .fetchFuelType();
+                  await Provider.of<BoughtAccessoriesProvider>(context,
+                          listen: false)
+                      .fetchAccessoriesBought(1);
                   print("Function Over");
                 },
               ),

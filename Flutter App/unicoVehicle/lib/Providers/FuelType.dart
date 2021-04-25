@@ -29,8 +29,6 @@ class FuelTypeProvider extends ChangeNotifier {
       var body = jsonDecode(response.body) as List<dynamic>;
       List<FuelType> loadedfuelType = [];
 
-      print(body);
-
       body
           .map(
             (fuelType) => loadedfuelType.add(

@@ -2,10 +2,10 @@ import './Accessories.dart';
 
 class BoughtAccessories {
   final int? boughtAccessoriesId;
-  final Accessories? accessories;
+  final Accessories accessories;
 
   BoughtAccessories({
-    this.accessories,
+    required this.accessories,
     this.boughtAccessoriesId,
   });
 }
