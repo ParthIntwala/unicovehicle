@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
-import '../Providers/BoughtAccessories.dart';
+import '../Providers/District.dart';
+import '../Models/District.dart';
+import '../Models/Miscellaneous/State.dart' as local;
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -25,9 +27,9 @@ class HomeScreen extends StatelessWidget {
                 child: Text("Fetch"),
                 onPressed: () async {
                   print("Button Pressed");
-                  await Provider.of<BoughtAccessoriesProvider>(context,
-                          listen: false)
-                      .fetchAccessoriesBought(1);
+                  await Provider.of<DistrictProvider>(context, listen: false)
+                      .deleteDistrict(3);
+
                   print("Function Over");
                 },
               ),

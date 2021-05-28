@@ -1,7 +1,7 @@
 class BaseURL {
-  static String _url = "https://192.168.1.13:5001/";
+  static String _url = "https://192.168.1.10:5001/";
 
-  static String accessoriesUrl = "${_url}Accessories";
+  static String accessories = "${_url}Accessories";
   static String accessoryBrand = "${_url}AccessoryBrand";
   static String accessoriesType = "${_url}AccessoriesType";
   static String boughtAccessories = "${_url}BoughtAccessories";
@@ -13,8 +13,9 @@ class BaseURL {
   static String cylinderArrangement = "${_url}CylinderArrangement";
   static String district = "${_url}District";
   static String districtState = "${_url}DistrictState";
-  static String fuelTypeUrl = "${_url}FuelType";
+  static String fuelType = "${_url}FuelType";
   static String insuranceType = "${_url}InsuranceType";
+  static String insuranceCompany = "${_url}InsuranceCompany";
   static String companyInsurance = "${_url}CompanyInsurance";
   static String order = "${_url}Order";
   static String orderbyCustomer = "${_url}OrderbyCustomer";

@@ -18,7 +18,7 @@ class AccessoriesProvider extends ChangeNotifier {
 
   Future<void> fetchAccessories() async {
     try {
-      var response = await http.get(Uri.parse(BaseURL.accessoriesUrl));
+      var response = await http.get(Uri.parse(BaseURL.accessories));
 
       if (response.body.isEmpty) {
         return;
@@ -69,7 +69,7 @@ class AccessoriesProvider extends ChangeNotifier {
   Future<void> addAccessories(Accessories accessories) async {
     try {
       var response = await http.post(
-        Uri.parse(BaseURL.accessoriesUrl),
+        Uri.parse(BaseURL.accessories),
         body: json.encode({
           'AccessoriesType': {
             'AccessoriesTypeId': accessories.accessoriesType!.accessoriesTypeId
@@ -97,7 +97,7 @@ class AccessoriesProvider extends ChangeNotifier {
   Future<void> updateAccessories(int id, Accessories accessories) async {
     try {
       var response = await http.put(
-        Uri.parse("${BaseURL.accessoriesUrl}/$id"),
+        Uri.parse("${BaseURL.accessories}/$id"),
         body: json.encode({
           "AccessoriesName": accessories.accessoriesName,
           "Price": accessories.price
@@ -115,7 +115,7 @@ class AccessoriesProvider extends ChangeNotifier {
   Future<void> deleteAccessories(int id) async {
     try {
       var response = await http.delete(
-        Uri.parse("${BaseURL.accessoriesUrl}/$id"),
+        Uri.parse("${BaseURL.accessories}/$id"),
       );
     } catch (err) {
       throw (err);

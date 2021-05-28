@@ -25,10 +25,10 @@ class AccessoriesTypeProvider extends ChangeNotifier {
 
       body
           .map(
-            (fuelType) => loadedAccessoriesType.add(
+            (accessoryType) => loadedAccessoriesType.add(
               AccessoriesType(
-                accessoriesType: fuelType["accessories"],
-                accessoriesTypeId: fuelType["accessoriesTypeId"],
+                accessoriesType: accessoryType["accessories"],
+                accessoriesTypeId: accessoryType["accessoriesTypeId"],
               ),
             ),
           )

@@ -15,7 +15,7 @@ class FuelTypeProvider extends ChangeNotifier {
   Future<void> fetchFuelType() async {
     try {
       var response = await http.get(
-        Uri.parse(BaseURL.fuelTypeUrl),
+        Uri.parse(BaseURL.fuelType),
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json"
@@ -51,7 +51,7 @@ class FuelTypeProvider extends ChangeNotifier {
   Future<void> addFuelType(FuelType fuelType) async {
     try {
       var response = await http.post(
-        Uri.parse(BaseURL.fuelTypeUrl),
+        Uri.parse(BaseURL.fuelType),
         body: json.encode({
           "FuelTypeName": fuelType.fuelType,
         }),
@@ -68,7 +68,7 @@ class FuelTypeProvider extends ChangeNotifier {
   Future<void> deleteFuelType(int id) async {
     try {
       var response = await http.delete(
-        Uri.parse("${BaseURL.fuelTypeUrl}/$id"),
+        Uri.parse("${BaseURL.fuelType}/$id"),
       );
     } catch (err) {
       throw (err);

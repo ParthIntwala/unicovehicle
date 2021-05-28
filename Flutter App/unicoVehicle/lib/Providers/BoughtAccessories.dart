@@ -32,7 +32,7 @@ class BoughtAccessoriesProvider extends ChangeNotifier {
       body.map((product) {
         bought.add(
           BoughtAccessories(
-            boughtAccessoriesId: product["boughtAccessoriesId"],
+            accessoriesId: product["boughtAccessoriesId"],
             accessories: new Accessories(
               accessoriesName: product["accessories"]["accessoriesName"],
               price: product["accessories"]["price"],
@@ -80,27 +80,53 @@ class BoughtAccessoriesProvider extends ChangeNotifier {
 
   Future<void> addBoughtAccessories(
       int id, List<BoughtAccessories> accessoriesBought) async {
+    List<Map<String, dynamic>> body = [];
+
+    accessoriesBought.forEach((element) {
+      body.add({
+        "Accessories": {"AccessoriesId": element.accessories.accessoriesId}
+      });
+    });
+
+    String bodyString = body.toString();
+
     try {
+      print("ABC");
       var response = await http.post(
         Uri.parse(BaseURL.boughtAccessories + "/$id"),
-        body: json.encode({
-          "AccessoryBrandName": accessoriesBought,
-        }),
+        body: json.encode(body),
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json"
         },
       );
+      print("XYZ");
     } catch (err) {
       throw (err);
     }
   }
 
-  Future<void> deleteAccessoriesBrand(int id) async {
+  Future<void> updateAccessoriesBrand(
+      int id, List<BoughtAccessories> accessoriesBought) async {
+    List<Map<String, dynamic>> body = [];
+
+    accessoriesBought.forEach((element) {
+      body.add({
+        "Accessories": {"AccessoriesId": element.accessories.accessoriesId}
+      });
+    });
+
     try {
-      var response = await http.delete(
-        Uri.parse("${BaseURL.accessoryBrand}/$id"),
+      print("ABC");
+      var response = await http.put(
+        Uri.parse(BaseURL.boughtAccessories + "/$id"),
+        body: json.encode(body),
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json"
+        },
       );
+      print("XYZ");
     } catch (err) {
       throw (err);
     }
