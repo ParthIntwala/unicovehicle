@@ -1,5 +1,5 @@
 class BaseURL {
-  static String _url = "https://192.168.1.10:5001/";
+  static String _url = "https://192.168.1.3:5001/";
 
   static String accessories = "${_url}Accessories";
   static String accessoryBrand = "${_url}AccessoryBrand";

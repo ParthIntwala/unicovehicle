@@ -3,20 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import './Screens/home.dart';
-import './Providers/FuelType.dart';
 import './Providers/Accessories.dart';
 import './Providers/AccessoriesType.dart';
 import './Providers/AccessoryBrand.dart';
 import './Providers/BoughtAccessories.dart';
 import './Providers/Company.dart';
 import './Providers/Country.dart';
-import './Providers/DistrictState.dart';
 import './Providers/CylinderArrangement.dart';
-import './Providers/InsuranceCompany.dart';
-import './Providers/InsuranceType.dart';
 import './Providers/CompanyInsurance.dart';
 import './Providers/CompanyCountry.dart';
+import './Providers/CompanybyCountry.dart';
+import './Providers/Customer.dart';
 import './Providers/District.dart';
+import './Providers/DistrictState.dart';
+import './Providers/FuelType.dart';
+import './Providers/InsuranceCompany.dart';
+import './Providers/InsuranceType.dart';
 
 void main() {
   HttpOverrides.global = new MyHttpOverrides();
@@ -28,9 +30,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (ctx) => FuelTypeProvider(),
-        ),
         ChangeNotifierProvider(
           create: (ctx) => AccessoriesProvider(),
         ),
@@ -53,22 +52,31 @@ class MyApp extends StatelessWidget {
           create: (ctx) => CylinderArrangementProvider(),
         ),
         ChangeNotifierProvider(
-          create: (ctx) => DistrictStateProvider(),
-        ),
-        ChangeNotifierProvider(
-          create: (ctx) => InsuranceCompanyProvider(),
-        ),
-        ChangeNotifierProvider(
-          create: (ctx) => InsuranceTypeProvider(),
-        ),
-        ChangeNotifierProvider(
           create: (ctx) => CompanyInsuranceProvider(),
         ),
         ChangeNotifierProvider(
           create: (ctx) => CompanyCountryProvider(),
         ),
         ChangeNotifierProvider(
+          create: (ctx) => CompanybyCountryProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => CustomerProvider(),
+        ),
+        ChangeNotifierProvider(
           create: (ctx) => DistrictProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => DistrictStateProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => FuelTypeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => InsuranceCompanyProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => InsuranceTypeProvider(),
         ),
       ],
       child: MaterialApp(

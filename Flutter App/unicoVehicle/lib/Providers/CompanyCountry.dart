@@ -6,6 +6,7 @@ import '../Models/CompanyCountry.dart';
 import '../Utilities/BaseURL.dart';
 import '../Models/Miscellaneous/Company.dart';
 import '../Models/Miscellaneous/District.dart';
+import '../Models/Country.dart';
 
 class CompanyCountryProvider extends ChangeNotifier {
   Future<void> addCompanyCountry(CompanyCountry companyCountry) async {
@@ -18,6 +19,9 @@ class CompanyCountryProvider extends ChangeNotifier {
           },
           "company": {
             "companyId": companyCountry.company?.companyId,
+          },
+          "country": {
+            "countryId": companyCountry.country?.countryId,
           },
           "isOperational": companyCountry.isOperational,
           "CountryHead": companyCountry.countryHead,
@@ -70,7 +74,7 @@ class CompanyCountryProvider extends ChangeNotifier {
       CompanyCountry companyCountry = new CompanyCountry();
       var body = jsonDecode(response.body);
 
-      if (body["insuranceTypeId"] == 0) {
+      if (body["CompanyCountryId"] == 0) {
         return companyCountry;
       }
 
@@ -81,6 +85,9 @@ class CompanyCountryProvider extends ChangeNotifier {
           companyId: body["company"]["companyId"],
           company: body["company"]["companyName"],
         ),
+        country: Country(
+            country: body["country"]["countryName"],
+            countryId: body["country"]["countryId"]),
         district: District(
           district: body["district"]["districtName"],
           districtId: body["district"]["districtId"],

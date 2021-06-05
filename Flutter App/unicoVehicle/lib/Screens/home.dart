@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:provider/provider.dart';
 
-import '../Providers/District.dart';
-import '../Models/District.dart';
-import '../Models/Miscellaneous/State.dart' as local;
+import '../Models/Customer.dart';
+import '../Models/Miscellaneous/District.dart';
+import '../Models/Miscellaneous/User.dart';
+import '../Providers/Customer.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -27,8 +28,8 @@ class HomeScreen extends StatelessWidget {
                 child: Text("Fetch"),
                 onPressed: () async {
                   print("Button Pressed");
-                  await Provider.of<DistrictProvider>(context, listen: false)
-                      .deleteDistrict(3);
+                  await Provider.of<CustomerProvider>(context, listen: false)
+                      .deleteCustomer(3);
 
                   print("Function Over");
                 },
