@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\UnicoVehicle.Utilities\UnicoVehicle.Utilities.csproj" />
     <ProjectReference Include="..\UnicoVehicle.DTO\UnicoVehicle.DTO.csproj" />
+    <ProjectReference Include="..\UnicoVehicle.Utilities\UnicoVehicle.Utilities.csproj" />
   </ItemGroup>
 </Project>

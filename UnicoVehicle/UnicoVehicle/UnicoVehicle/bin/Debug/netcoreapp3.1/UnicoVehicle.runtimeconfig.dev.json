@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "/Users/parthintwala/.dotnet/store/|arch|/|tfm|",
-      "/Users/parthintwala/.nuget/packages"
+      "C:\\Users\\Parth\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Parth\\.nuget\\packages"
     ]
   }
 }

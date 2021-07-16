@@ -88,6 +88,33 @@ namespace UnicoVehicle.DAL
                 return false;
             }
         }
+
+        public DTO.Details.District GetDistrictbyId(int id)
+        {
+            _districtCommand = _utils.CommandGenerator(ResourceFiles.CountryDALResources.GetDistrictbyId);
+            _districtCommand.Parameters.AddWithValue("@districtId", id);
+            _districtReader = _districtCommand.ExecuteReader();
+
+            DTO.Details.District _district = new DTO.Details.District();
+
+            while (_districtReader.Read())
+            {
+                _district = new DTO.Details.District()
+                {
+                    DistrictId = int.Parse(_districtReader["DistrictId"].ToString()),
+                    DistrictName = _districtReader["District"].ToString(),
+                    State = new State()
+                    {
+                        StateId = int.Parse(_districtReader["StateId"].ToString()),
+                    },
+                };
+            }
+
+            _districtReader.Close();
+            _connection.CloseConnection();
+
+            return _district;
+        }
     }
 }
 

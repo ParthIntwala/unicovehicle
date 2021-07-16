@@ -56,7 +56,7 @@ namespace UnicoVehicle.DAL
 
         public List<ShowroomReview> GetShowroomReviewbyShowroom(int id)
         {
-            _reviewCommand = _utils.CommandGenerator(ResourceFiles.ReviewDALResources.GetShowroomReviewbyUser);
+            _reviewCommand = _utils.CommandGenerator(ResourceFiles.ReviewDALResources.GetShowroomReviewbyShowroom);
             _reviewCommand.Parameters.AddWithValue("@showroomId", id);
             _reviewReader = _reviewCommand.ExecuteReader();
 

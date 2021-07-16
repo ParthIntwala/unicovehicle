@@ -8,5 +8,6 @@ namespace UnicoVehicle.DAL
         public bool DeleteDistrict(int id);
         public List<District> GetDistrict(int id);
         public bool InsertDistrict(string district, int stateId);
+        public DTO.Details.District GetDistrictbyId(int id);
     }
 }

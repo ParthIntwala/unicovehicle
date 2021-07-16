@@ -41,6 +41,10 @@ namespace UnicoVehicle.DAL
                     {
                         DistrictId = int.Parse(_companyCountryReader["DistrictId"].ToString()),
                     },
+                    Country = new Country
+                    {
+                        CountryId = int.Parse(_companyCountryReader["CountryId"].ToString()),
+                    },
                     CountryHead = _companyCountryReader["CountryHead"].ToString(),
                     isOperational = bool.Parse(_companyCountryReader["isOperational"].ToString()),
                 };
@@ -56,6 +60,7 @@ namespace UnicoVehicle.DAL
         {
             _companyCountryCommand = _utils.CommandGenerator(ResourceFiles.CompanyDALResources.InsertCompanyCountry);
             _companyCountryCommand.Parameters.AddWithValue("@districtId", company.District.DistrictId);
+            _companyCountryCommand.Parameters.AddWithValue("@countryId", company.Company.CompanyId);
             _companyCountryCommand.Parameters.AddWithValue("@companyId", company.Company.CompanyId);
             _companyCountryCommand.Parameters.AddWithValue("@countryHead", company.CountryHead);
             _companyCountryCommand.Parameters.AddWithValue("@isOperational", company.isOperational);
@@ -128,7 +133,7 @@ namespace UnicoVehicle.DAL
             {
                 _company = new CompanyCountry()
                 {
-                    CompanyCountryId = id,
+                    CompanyCountryId = int.Parse(_companyCountryReader["CompanyCountryId"].ToString()),
                     Company = new DTO.Miscellaneous.Company
                     {
                         CompanyId = int.Parse(_companyCountryReader["CompanyId"].ToString()),
@@ -136,6 +141,10 @@ namespace UnicoVehicle.DAL
                     District = new DTO.Miscellaneous.District
                     {
                         DistrictId = int.Parse(_companyCountryReader["DistrictId"].ToString()),
+                    },
+                    Country = new Country
+                    {
+                        CountryId = int.Parse(_companyCountryReader["CountryId"].ToString()),
                     },
                     CountryHead = _companyCountryReader["CountryHead"].ToString(),
                     isOperational = bool.Parse(_companyCountryReader["isOperational"].ToString()),

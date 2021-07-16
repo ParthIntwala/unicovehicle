@@ -33,5 +33,12 @@ namespace UnicoVehicle.Controllers
             _status = _districtBLL.DeleteDistrict(id);
             return _status;
         }
+
+        [HttpGet("{Id}")]
+        public DTO.Details.District GetDistrictbyId(int id)
+        {
+            DTO.Details.District district = _districtBLL.GetDistrictbyId(id);
+            return district;
+        }
     }
 }

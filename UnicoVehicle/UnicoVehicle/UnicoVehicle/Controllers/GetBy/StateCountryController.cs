@@ -10,11 +10,11 @@ namespace UnicoVehicle.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class StateCompanyController : Controller
+    public class StateCountryController : Controller
     {
         private readonly IStateBLL _stateBll;
 
-        public StateCompanyController(IStateBLL stateBll)
+        public StateCountryController(IStateBLL stateBll)
         {
             _stateBll = stateBll;
         }

@@ -14,17 +14,17 @@ namespace UnicoVehicle.DTO
         public int Passenger { get; set; }
         public int Cylinder { get; set; }
         public int EngineSize { get; set; }
-        public float HorsePower { get; set; }
-        public float Torque { get; set; }
-        public float Mileage { get; set; }
-        public float Height { get; set; }
-        public float Width { get; set; }
-        public float Length { get; set; }
-        public float GroundClearance { get; set; }
-        public float WheelBase { get; set; }
-        public float FuelTankSize { get; set; }
-        public float KerbWeight { get; set; }
-        public float GrossWeight { get; set; }
+        public double HorsePower { get; set; }
+        public double Torque { get; set; }
+        public double Mileage { get; set; }
+        public double Height { get; set; }
+        public double Width { get; set; }
+        public double Length { get; set; }
+        public double GroundClearance { get; set; }
+        public double WheelBase { get; set; }
+        public double FuelTankSize { get; set; }
+        public double KerbWeight { get; set; }
+        public double GrossWeight { get; set; }
         public VehicleFeatures VehicleFeatures { get; set; }
     }
 }

@@ -10,13 +10,15 @@ namespace UnicoVehicle.BLL
         private readonly ITestDriveDAL _testDriveDAL;
         private readonly IMiscellaneousCallsBLL _miscellaneousCallsBLL;
         private readonly IMiscellaneousCallsDAL _miscellaneousCallsDAL;
+        private readonly IStatusBLL _statusBLL;
         bool _status;
 
-        public TestDriveBLL(ITestDriveDAL testDriveDAL, IMiscellaneousCallsBLL miscellaneousCallsBLL, IMiscellaneousCallsDAL miscellaneousCallsDAL)
+        public TestDriveBLL(ITestDriveDAL testDriveDAL, IStatusBLL statusBLL, IMiscellaneousCallsBLL miscellaneousCallsBLL, IMiscellaneousCallsDAL miscellaneousCallsDAL)
         {
             _testDriveDAL = testDriveDAL;
             _miscellaneousCallsBLL = miscellaneousCallsBLL;
             _miscellaneousCallsDAL = miscellaneousCallsDAL;
+            _statusBLL = statusBLL;
         }
 
         public List<TestDrive> GetTestDrivebyShowroom(int id)
@@ -28,6 +30,7 @@ namespace UnicoVehicle.BLL
                 testDrive.Showroom = _miscellaneousCallsBLL.GetShowroombyId(testDrive.Showroom.ShowroomId);
                 testDrive.Vehicle = _miscellaneousCallsBLL.GetVehiclebyId(testDrive.Vehicle.VehicleId);
                 testDrive.User = _miscellaneousCallsDAL.GetUserbyId(testDrive.User.UserId);
+                testDrive.TestDriveStatus = _statusBLL.GetStatusbyId(testDrive.TestDriveStatus.StatusId);
             }
 
             return _testDrive;
@@ -39,6 +42,7 @@ namespace UnicoVehicle.BLL
 
             foreach (TestDrive testDrive in _testDrive)
             {
+                testDrive.TestDriveStatus = _statusBLL.GetStatusbyId(testDrive.TestDriveStatus.StatusId);
                 testDrive.Showroom = _miscellaneousCallsBLL.GetShowroombyId(testDrive.Showroom.ShowroomId);
                 testDrive.Vehicle = _miscellaneousCallsBLL.GetVehiclebyId(testDrive.Vehicle.VehicleId);
                 testDrive.User = _miscellaneousCallsDAL.GetUserbyId(testDrive.User.UserId);
@@ -56,6 +60,7 @@ namespace UnicoVehicle.BLL
                 testDrive.Showroom = _miscellaneousCallsBLL.GetShowroombyId(testDrive.Showroom.ShowroomId);
                 testDrive.Vehicle = _miscellaneousCallsBLL.GetVehiclebyId(testDrive.Vehicle.VehicleId);
                 testDrive.User = _miscellaneousCallsDAL.GetUserbyId(testDrive.User.UserId);
+                testDrive.TestDriveStatus = _statusBLL.GetStatusbyId(testDrive.TestDriveStatus.StatusId);
             }
 
             return _testDrive;
@@ -70,6 +75,7 @@ namespace UnicoVehicle.BLL
                 _testDrive.Showroom = _miscellaneousCallsBLL.GetShowroombyId(_testDrive.Showroom.ShowroomId);
                 _testDrive.Vehicle = _miscellaneousCallsBLL.GetVehiclebyId(_testDrive.Vehicle.VehicleId);
                 _testDrive.User = _miscellaneousCallsDAL.GetUserbyId(_testDrive.User.UserId);
+                _testDrive.TestDriveStatus = _statusBLL.GetStatusbyId(_testDrive.TestDriveStatus.StatusId);
             }
 
             return _testDrive;

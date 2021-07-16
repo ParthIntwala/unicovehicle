@@ -4250,41 +4250,43 @@
     ]
   },
   "packageFolders": {
-    "/Users/parthintwala/.nuget/packages/": {}
+    "C:\\Users\\Parth\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle/UnicoVehicle.csproj",
+      "projectUniqueName": "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle\\UnicoVehicle.csproj",
       "projectName": "UnicoVehicle",
-      "projectPath": "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle/UnicoVehicle.csproj",
-      "packagesPath": "/Users/parthintwala/.nuget/packages/",
-      "outputPath": "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle/obj/",
+      "projectPath": "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle\\UnicoVehicle.csproj",
+      "packagesPath": "C:\\Users\\Parth\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/parthintwala/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Parth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.BLL/UnicoVehicle.BLL.csproj": {
-              "projectPath": "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.BLL/UnicoVehicle.BLL.csproj"
+            "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle.BLL\\UnicoVehicle.BLL.csproj": {
+              "projectPath": "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle.BLL\\UnicoVehicle.BLL.csproj"
             },
-            "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.DAL/UnicoVehicle.DAL.csproj": {
-              "projectPath": "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.DAL/UnicoVehicle.DAL.csproj"
+            "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle.DAL\\UnicoVehicle.DAL.csproj": {
+              "projectPath": "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle.DAL\\UnicoVehicle.DAL.csproj"
             },
-            "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.DTO/UnicoVehicle.DTO.csproj": {
-              "projectPath": "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.DTO/UnicoVehicle.DTO.csproj"
+            "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle.DTO\\UnicoVehicle.DTO.csproj": {
+              "projectPath": "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle.DTO\\UnicoVehicle.DTO.csproj"
             },
-            "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/UnicoVehicle.Utilities.csproj": {
-              "projectPath": "/Users/parthintwala/Desktop/UnicoVehicle/UnicoVehicle.Utilities/UnicoVehicle.Utilities.csproj"
+            "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle.Utilities\\UnicoVehicle.Utilities.csproj": {
+              "projectPath": "C:\\Users\\Parth\\Documents\\Parth\\UnicoVehicle\\UnicoVehicle.Utilities\\UnicoVehicle.Utilities.csproj"
             }
           }
         }
@@ -4330,7 +4332,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

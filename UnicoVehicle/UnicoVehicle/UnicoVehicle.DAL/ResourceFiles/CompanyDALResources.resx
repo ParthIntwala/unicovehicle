@@ -1,66 +1,171 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>2.0</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <data name="GetCompany" xml:space="preserve">
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="GetCompany" xml:space="preserve">
     <value>Select CompanyId, DistrictId, CompanyName, CompanyHead from [UnicoVehicle].[company].[Company] where DeletedDate is null </value>
-    </data>
-    <data name="GetCompanybyId" xml:space="preserve">
+  </data>
+  <data name="GetCompanybyId" xml:space="preserve">
     <value>Select DistrictId, CompanyName, CompanyHead from [UnicoVehicle].[company].[Company] where DeletedDate is null and CompanyId = @companyId</value>
-    </data>
-    <data name="InsertCompany" xml:space="preserve">
+  </data>
+  <data name="InsertCompany" xml:space="preserve">
     <value>Insert into [UnicoVehicle].[company].[Company] (DistrictId, CompanyName, CompanyHead, CreatedDate) values (@districtId, @companyName, @companyHead, @createdDate)</value>
-    </data>
-    <data name="DeleteCompany" xml:space="preserve">
+  </data>
+  <data name="DeleteCompany" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[Company] set DeletedDate = @deletedDate where CompanyId = @companyId</value>
-    </data>
-    <data name="UpdateCompany" xml:space="preserve">
+  </data>
+  <data name="UpdateCompany" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[Company] set DistrictId = @districtId, CompanyName = @companyName, CompanyHead = @companyHead, ModifiedDate = @modifiedDate where CompanyId = @companyId</value>
-    </data>
-    <data name="GetCompanybyCountry" xml:space="preserve">
-    <value>Select CompanyCountryId, DistrictId, CompanyId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null and CompanyId = @companyId</value>
-    </data>
-    <data name="GetCompanyCountrybyId" xml:space="preserve">
-    <value>Select DistrictId, CompanyId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null and CompanyCountryId = @companyCountryId</value>
-    </data>
-    <data name="InsertCompanyCountry" xml:space="preserve">
-    <value>Insert into [UnicoVehicle].[company].[CompanyCountry] (CompanyId, DistrictId, Countryhead, isOperational, CreatedDate) values (@companyId, @districtId, @countryHead, @isOperational, @createdDate)</value>
-    </data>
-    <data name="DeleteCompanyCountry" xml:space="preserve">
+  </data>
+  <data name="GetCompanybyCountry" xml:space="preserve">
+    <value>Select CompanyCountryId, CountryId, DistrictId, CompanyId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null and CountryId = @countryId</value>
+  </data>
+  <data name="GetCompanyCountrybyId" xml:space="preserve">
+    <value>Select DistrictId, CompanyId, CountryId, CountryHead, isOperational from [UnicoVehicle].[company].[CompanyCountry] where DeletedDate is null and CompanyCountryId = @companyCountryId</value>
+  </data>
+  <data name="InsertCompanyCountry" xml:space="preserve">
+    <value>Insert into [UnicoVehicle].[company].[CompanyCountry] (CompanyId, CountryId, DistrictId, Countryhead, isOperational, CreatedDate) values (@companyId, @countryId, @districtId, @countryHead, @isOperational, @createdDate)</value>
+  </data>
+  <data name="DeleteCompanyCountry" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[CompanyCountry] set DeletedDate = @deletedDate where CompanyCountryId = @companyCountryId</value>
-    </data>
-    <data name="UpdateCompanyCountry" xml:space="preserve">
+  </data>
+  <data name="UpdateCompanyCountry" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[CompanyCountry] set DistrictId = @districtId, CountryHead = @countryHead, isOperational = @isOperational, ModifiedDate = @modifiedDate where CompanyCountryId = @companyCountryId</value>
-    </data>
-    <data name="GetShowroom" xml:space="preserve">
+  </data>
+  <data name="GetShowroom" xml:space="preserve">
     <value>Select ShowroomId, CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational from [UnicoVehicle].[company].[Showroom] where DeletedDate is null </value>
-    </data>
-    <data name="GetShowroombyId" xml:space="preserve">
+  </data>
+  <data name="GetShowroombyId" xml:space="preserve">
     <value>Select CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational from [UnicoVehicle].[company].[Showroom] where DeletedDate is null and ShowroomId = @showroomId</value>
-    </data>
-    <data name="InsertShowroom" xml:space="preserve">
+  </data>
+  <data name="InsertShowroom" xml:space="preserve">
     <value>Insert into [UnicoVehicle].[company].[Showroom] (CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational, CreatedDate) values (@companyId, @districtId, @showroomName, @AddressLine1, @pincode, @branchManager, @hasSales, @hasService, @isOperational, @createdDate)</value>
-    </data>
-    <data name="DeleteShowroom" xml:space="preserve">
+  </data>
+  <data name="DeleteShowroom" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[Showroom] set DeletedDate = @deletedDate where ShowroomId = @showroomId</value>
-    </data>
-    <data name="UpdateShowroom" xml:space="preserve">
+  </data>
+  <data name="UpdateShowroom" xml:space="preserve">
     <value>Update [UnicoVehicle].[company].[Showroom] set DistrictId = @districtId, ShowroomName = @showroomName, AddressLine1 = @addressLine1, Pincode = @pincode, BranchManager = @branchManager, hasSales = @hasSales, hasService = @hasService, isOperational = @isOperational, ModifiedDate = @modifiedDate where ShowroomId = @showroomId</value>
-    </data>
-    <data name="GetShowroombyDistrict" xml:space="preserve">
+  </data>
+  <data name="GetShowroombyDistrict" xml:space="preserve">
     <value>Select ShowroomId, CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational from [UnicoVehicle].[company].[Showroom] where DeletedDate is null and DistrictId = @districtId</value>
-    </data>
-    <data name="GetShowroombyCompany" xml:space="preserve">
+  </data>
+  <data name="GetShowroombyCompany" xml:space="preserve">
     <value>Select ShowroomId, CompanyId, DistrictId, ShowroomName, AddressLine1, Pincode, BranchManager, hasSales, hasService, isOperational from [UnicoVehicle].[company].[Showroom] where DeletedDate is null and CompanyId = @companyId</value>
-    </data>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
+  </data>
 </root>

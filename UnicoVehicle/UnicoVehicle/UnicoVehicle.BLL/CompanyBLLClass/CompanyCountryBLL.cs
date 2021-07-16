@@ -8,13 +8,15 @@ namespace UnicoVehicle.BLL
     public class CompanyCountryBLL : ICompanyCountryBLL
     {
         private readonly ICompanyCountryDAL _companyCountryDAL;
+        private readonly ICountryDAL _countryDAL;
         private readonly IMiscellaneousCallsDAL _miscellaneousCallsDAL;
         bool _status;
 
-        public CompanyCountryBLL(IMiscellaneousCallsDAL miscellaneousCallsDAL, ICompanyCountryDAL companyCountryDAL)
+        public CompanyCountryBLL(IMiscellaneousCallsDAL miscellaneousCallsDAL, ICountryDAL countryDAL, ICompanyCountryDAL companyCountryDAL)
         {
             _miscellaneousCallsDAL = miscellaneousCallsDAL;
             _companyCountryDAL = companyCountryDAL;
+            _countryDAL = countryDAL;
         }
 
         public CompanyCountry GetCompanyCountrybyId(int id)
@@ -25,6 +27,7 @@ namespace UnicoVehicle.BLL
             {
                 _company.District = _miscellaneousCallsDAL.GetDistrictbyId(_company.District.DistrictId);
                 _company.Company = _miscellaneousCallsDAL.GetCompanybyId(_company.Company.CompanyId);
+                _company.Country = _countryDAL.GetCountrybyId(_company.Country.CountryId);
             }
 
             return _company;
@@ -38,6 +41,7 @@ namespace UnicoVehicle.BLL
             {
                 _company.District = _miscellaneousCallsDAL.GetDistrictbyId(_company.District.DistrictId);
                 _company.Company = _miscellaneousCallsDAL.GetCompanybyId(_company.Company.CompanyId);
+                _company.Country = _countryDAL.GetCountrybyId(_company.Country.CountryId);
             }
 
             return _companies;
