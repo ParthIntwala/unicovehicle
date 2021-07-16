@@ -49,8 +49,6 @@ class DistrictProvider extends ChangeNotifier {
         return district;
       }
 
-      print(body);
-
       district = districts.District(
         districtId: body["districtId"],
         district: body["districtName"],

@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true
+            },
+            "previewLimit": 50,
+            "server": "167.86.127.38",
+            "port": 1434,
+            "driver": "MSSQL",
+            "name": "SaritaInfotech",
+            "database": "shc",
+            "username": "sarita",
+            "password": "Sarita@2021$"
+        }
+    ]
+}

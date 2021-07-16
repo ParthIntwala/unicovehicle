@@ -19,6 +19,20 @@ import './Providers/DistrictState.dart';
 import './Providers/FuelType.dart';
 import './Providers/InsuranceCompany.dart';
 import './Providers/InsuranceType.dart';
+import './Providers/Order.dart';
+import './Providers/OrderBy.dart';
+import './Providers/PostBuyingDetail.dart';
+import './Providers/Showroom.dart';
+import './Providers/Showroomby.dart';
+import './Providers/ShowroomReview.dart';
+import './Providers/ShowroomReviewby.dart';
+import './Providers/State.dart';
+import './Providers/Stateby.dart';
+import './Providers/Status.dart';
+import './Providers/TestDrive.dart';
+import './Providers/TestDriveby.dart';
+import './Providers/TransmissionType.dart';
+import './Providers/User.dart';
 
 void main() {
   HttpOverrides.global = new MyHttpOverrides();
@@ -77,6 +91,48 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (ctx) => InsuranceTypeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => OrderProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => OrderByProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => PostBuyingDetailProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => ShowroomProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => ShowroombyProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => ShowroomReviewProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => ShowroomReviewbyProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => StateProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => StatebyProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => StatusProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => TestDriveProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => TestDrivebyProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => TransmissionTypeProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => UserProvider(),
         ),
       ],
       child: MaterialApp(

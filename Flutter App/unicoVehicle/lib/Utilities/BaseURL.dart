@@ -1,5 +1,5 @@
 class BaseURL {
-  static String _url = "https://192.168.1.3:5001/";
+  static String _url = "https://192.168.1.9:5001/";
 
   static String accessories = "${_url}Accessories";
   static String accessoryBrand = "${_url}AccessoryBrand";
@@ -35,7 +35,7 @@ class BaseURL {
   static String testDrive = "${_url}TestDrive";
   static String testDriveShowroomVehicle = "${_url}ShowroomVehicle";
   static String userTestDrive = "${_url}UserTestDrive";
-  static String showroomTestDrive = "${_url}showroowTestDrive";
+  static String showroomTestDrive = "${_url}ShowroomTestDrive";
   static String transmissionType = "${_url}TransmissionType";
   static String user = "${_url}User";
   static String userType = "${_url}UserType";
