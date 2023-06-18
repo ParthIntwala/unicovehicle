@@ -54,20 +54,30 @@ class _HomeScreenState extends State<HomeScreen> {
                 margin: const EdgeInsets.symmetric(vertical: 20),
                 child: FlutterCarousel(
                   items: [
-                    Container(
-                      color: Colors.red,
+                    Image.asset(
+                      "assets/F12017.jpeg",
+                      height: 200,
+                      width: width * 0.95,
                     ),
-                    Container(
-                      color: Colors.blue,
+                    Image.asset(
+                      "assets/Lewis.png",
+                      height: 200,
+                      width: width * 0.95,
                     ),
-                    Container(
-                      color: Colors.green,
+                    Image.asset(
+                      "assets/MclarenF1.jpeg",
+                      height: 200,
+                      width: width * 0.95,
                     ),
-                    Container(
-                      color: Colors.yellow,
+                    Image.asset(
+                      "assets/Senna.jpeg",
+                      height: 200,
+                      width: width * 0.95,
                     ),
-                    Container(
-                      color: Colors.orange,
+                    Image.asset(
+                      "assets/SF90.png",
+                      height: 200,
+                      width: width * 0.95,
                     ),
                   ],
                   options: CarouselOptions(
@@ -81,6 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     height: 200,
                     enlargeCenterPage: true,
+                    aspectRatio: 1.78,
                   ),
                 ),
               ),
@@ -107,12 +118,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.black,
                         ),
                       ),
-                      GridView.builder(
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                                crossAxisCount: 2),
-                        itemBuilder: (ctx, index) => null,
-                      )
+                      SizedBox(
+                        height: 300,
+                        child: GridView.builder(
+                          gridDelegate:
+                              const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2),
+                          itemBuilder: (ctx, index) => null,
+                        ),
+                      ),
                     ],
                   ),
                 ),
