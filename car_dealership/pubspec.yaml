@@ -67,6 +67,15 @@ flutter:
     - assets/MclarenF1.jpeg
     - assets/Senna.jpeg
     - assets/SF90.png
+    - assets/Aston Martin.png
+    - assets/BMW.png
+    - assets/Ferrari.png
+    - assets/Lexus.png
+    - assets/Lincoln.png
+    - assets/Maserati.png
+    - assets/Mercedes Benz.png
+    - assets/Porsche.png
+    - assets/Tesla.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
