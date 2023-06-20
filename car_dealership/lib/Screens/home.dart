@@ -27,8 +27,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
-        leading: IconButton(
-          icon: Icon(
+        leading: CupertinoButton(
+          child: Icon(
             Icons.logout,
             size: 20,
             color: Themes.themeColor2,
@@ -41,11 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Themes.themeColor1,
         middle: Text(
           "Welcome, $name",
-          style: TextStyle(
-            fontSize: 20,
-            color: Themes.themeColor2,
-            fontWeight: FontWeight.bold,
-          ),
+          style: Themes.navigationBarTheme,
         ),
       ),
       child: SafeArea(
@@ -60,9 +56,17 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 30,
               ),
-              const Text("Partners"),
+              Text(
+                "Our Partners",
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Themes.themeColor1,
+                  decoration: TextDecoration.none,
+                ),
+                textAlign: TextAlign.center,
+              ),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
               BrandGrid(
                 width: width,

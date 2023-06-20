@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 //screens
@@ -7,6 +8,8 @@ import './Screens/booktestdrive.dart';
 import './Screens/buy.dart';
 import './Screens/compare.dart';
 import './Screens/sell.dart';
+//utilities
+import './Utilities/themes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,11 +20,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return CupertinoApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      theme: CupertinoThemeData(
+        primaryColor: Themes.themeColor2,
+        barBackgroundColor: Themes.themeColor1,
+        brightness: Brightness.light,
+        scaffoldBackgroundColor: Colors.white,
       ),
       home: const LoginScreen(),
       routes: {

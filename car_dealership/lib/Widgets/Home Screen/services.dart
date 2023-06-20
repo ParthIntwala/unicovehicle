@@ -48,26 +48,36 @@ class Services extends StatelessWidget {
                   mainAxisSpacing: 10,
                   crossAxisCount: 1,
                 ),
-                children: const [
-                  ServiceGrid(
-                    icon: CupertinoIcons.car_detailed,
-                    title: "Buy Car",
-                    path: BuyScreen.buyScreenRoute,
+                children: [
+                  GestureDetector(
+                    onTap: () => Navigator.of(context).pushNamed(
+                        BuyScreen.buyScreenRoute,
+                        arguments: "Parth"),
+                    child: const ServiceGrid(
+                      icon: CupertinoIcons.car_detailed,
+                      title: "Buy Car",
+                    ),
                   ),
-                  ServiceGrid(
-                    icon: Icons.car_rental,
-                    title: "Sell Car",
-                    path: SellScreen.sellScreenRoute,
+                  GestureDetector(
+                    onTap: () => SellScreen.sellScreenRoute,
+                    child: const ServiceGrid(
+                      icon: Icons.car_rental,
+                      title: "Sell Car",
+                    ),
                   ),
-                  ServiceGrid(
-                    icon: CupertinoIcons.speedometer,
-                    title: "Book a test drive",
-                    path: BookTestDriveScreen.bookTestDriveScreenRoute,
+                  GestureDetector(
+                    onTap: () => BookTestDriveScreen.bookTestDriveScreenRoute,
+                    child: const ServiceGrid(
+                      icon: CupertinoIcons.speedometer,
+                      title: "Book a test drive",
+                    ),
                   ),
-                  ServiceGrid(
-                    icon: CupertinoIcons.list_bullet,
-                    title: "Compare prices",
-                    path: CompareScreen.compareScreenRoute,
+                  GestureDetector(
+                    onTap: () => CompareScreen.compareScreenRoute,
+                    child: const ServiceGrid(
+                      icon: CupertinoIcons.list_bullet,
+                      title: "Compare prices",
+                    ),
                   ),
                 ],
               ),

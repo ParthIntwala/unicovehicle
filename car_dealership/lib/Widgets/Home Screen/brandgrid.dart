@@ -33,6 +33,7 @@ class BrandGrid extends StatelessWidget {
       ),
       height: width - 20,
       child: GridView.builder(
+        physics: const NeverScrollableScrollPhysics(),
         gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
         itemBuilder: (ctx, index) => Brands(image: images[index], width: width),
