@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 //models
-import '../Models/dropdowncompany.dart';
+import '../Models/dropdownvalues.dart';
 //utilities
 import '../Utilities/themes.dart';
 
@@ -16,19 +16,23 @@ class BuyScreen extends StatefulWidget {
 
 class _BuyScreenState extends State<BuyScreen> {
   String name = "";
-  String selectedCompany = "Select the Company";
+  String selectedCompany = "1";
+  double width = 0;
   @override
   Widget build(BuildContext context) {
     name = ModalRoute.of(context)!.settings.arguments as String;
-    return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+    width = MediaQuery.of(context).size.width;
+    List<DropDownCompany> companies = company;
+
+    return Scaffold(
+      appBar: CupertinoNavigationBar(
         backgroundColor: Themes.themeColor1,
         middle: Text(
           "Buy a Car!",
           style: Themes.navigationBarTheme,
         ),
       ),
-      child: SafeArea(
+      body: SafeArea(
         child: Container(
           padding: const EdgeInsets.all(10),
           child: Column(
@@ -57,27 +61,40 @@ class _BuyScreenState extends State<BuyScreen> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 150,
-                child: Material(
-                  child: DropdownButton(
-                    menuMaxHeight: 300,
-                    itemHeight: 70,
-                    value: "BMW",
-                    items: company
-                        .map(
-                          (item) => DropdownMenuItem(
-                            value: item.id,
-                            child: ListTile(
-                              leading: item.image,
-                              title: Text(item.name),
+              DropdownButton(
+                padding: const EdgeInsets.all(10),
+                menuMaxHeight: 300,
+                itemHeight: 70,
+                isExpanded: true,
+                value: selectedCompany,
+                items: companies
+                    .map(
+                      (item) => DropdownMenuItem(
+                        alignment: Alignment.center,
+                        value: item.id,
+                        child: SizedBox(
+                          width: width,
+                          child: ListTile(
+                            leading: Image.asset(
+                              item.image,
+                              width: 40,
+                            ),
+                            title: SizedBox(
+                              width: width - 50,
+                              child: Text(item.name),
                             ),
                           ),
-                        )
-                        .toList(),
-                    onChanged: (selectedValue) {},
-                  ),
-                ),
+                        ),
+                      ),
+                    )
+                    .toList(),
+                onChanged: (selectedValue) {
+                  setState(() {
+                    selectedCompany = companies
+                        .firstWhere((element) => element.id == selectedValue)
+                        .id;
+                  });
+                },
               ),
             ],
           ),
