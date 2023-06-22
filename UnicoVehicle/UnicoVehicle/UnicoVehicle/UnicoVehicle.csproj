@@ -5,10 +5,16 @@
   </PropertyGroup>
 
 
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <LangVersion>11.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <LangVersion>11.0</LangVersion>
+  </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />
-    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.9.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.9.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.8" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.31.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.31.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UnicoVehicle.DAL\UnicoVehicle.DAL.csproj">

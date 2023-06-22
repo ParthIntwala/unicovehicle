@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7o2ZIB97GLIQ9o6auLQMOAbzbBhtZD8jr//qgUT5UiaYKGoOydFxFtcRRF3wA7dRi6zFEG/fk+KZkCPpYdtcZQ==",
+  "dgSpecHash": "68tu7dkTwlwQSztsqBq5e5KwbiA+No7qoisXxTFlDP49euzT/VSt7+wv3roz2hNum7hnWjZoT8hVCRcB1XLsvA==",
   "success": true,
   "projectFilePath": "/Users/parthintwala/Desktop/Unicò Vehicle/unicovehicle/UnicoVehicle/UnicoVehicle/UnicoVehicle.Utilities/UnicoVehicle.Utilities.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,7 @@
     "/Users/parthintwala/.nuget/packages/runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/parthintwala/.nuget/packages/runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "/Users/parthintwala/.nuget/packages/runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0/runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
-    "/Users/parthintwala/.nuget/packages/system.data.sqlclient/4.8.2/system.data.sqlclient.4.8.2.nupkg.sha512",
+    "/Users/parthintwala/.nuget/packages/system.data.sqlclient/4.8.5/system.data.sqlclient.4.8.5.nupkg.sha512",
     "/Users/parthintwala/.nuget/packages/system.security.accesscontrol/4.7.0/system.security.accesscontrol.4.7.0.nupkg.sha512",
     "/Users/parthintwala/.nuget/packages/system.security.principal.windows/4.7.0/system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
