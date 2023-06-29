@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="RUN">
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="RUN" Name="RUN">
+      <Items>
+        <StartupItem ItemId="{6CC2DDFA-9424-42AE-BF76-40270E4E6553}" ItemName="UnicoVehicle" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UnicoVehicle" expanded="True">
+            <Node name="UnicoVehicle" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.UnicoVehicle PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+</Properties>

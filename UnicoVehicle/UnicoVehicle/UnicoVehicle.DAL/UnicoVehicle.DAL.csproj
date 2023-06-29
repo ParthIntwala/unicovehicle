@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\UnicoVehicle.DTO\UnicoVehicle.DTO.csproj" />
+    <ProjectReference Include="..\UnicoVehicle.Utilities\UnicoVehicle.Utilities.csproj" />
+  </ItemGroup>
+</Project>

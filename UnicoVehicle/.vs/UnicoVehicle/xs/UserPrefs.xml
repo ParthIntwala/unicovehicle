@@ -1,0 +1,48 @@
+﻿<Properties StartupConfiguration="{113FDCED-19CE-4C54-A260-12C37E137339}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UnicoVehicle.DAL/CountryDALClass/CountryDAL.cs">
+    <Files>
+      <File FileName="UnicoVehicle/Controllers/StateController.cs" Line="26" Column="43" />
+      <File FileName="UnicoVehicle.BLL/CountryBLLClass/Interfaces/IStateBLL.cs" Line="10" Column="28" />
+      <File FileName="UnicoVehicle.BLL/CountryBLLClass/StateBLL.cs" Line="35" Column="45" />
+      <File FileName="UnicoVehicle.DAL/CountryDALClass/Interfaces/IStateDAL.cs" Line="11" Column="62" />
+      <File FileName="UnicoVehicle.DAL/CountryDALClass/StateDAL.cs" Line="51" Column="10" />
+      <File FileName="UnicoVehicle.DAL/CountryDALClass/CountryDAL.cs" Line="18" Column="10" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="UnicoVehicle" expanded="True">
+            <Node name="UnicoVehicle" expanded="True">
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="UnicoVehicle.BLL" expanded="True">
+              <Node name="CountryBLLClass" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+              <Node name="MasterBLLClass" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="UnicoVehicle.DAL" expanded="True">
+              <Node name="CompanyDALClass" expanded="True" />
+              <Node name="CountryDALClass" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+                <Node name="CountryDAL.cs" selected="True" />
+              </Node>
+              <Node name="MasterDALClass" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.UnicoVehicle PreferredExecutionTarget="/Applications/Safari.app" />
+</Properties>
